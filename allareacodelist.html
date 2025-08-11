@@ -1,934 +1,1394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Area Code Directory | All US & Canada Area Codes | AreaCode.Codes</title>
-    <meta name="description" content="Complete directory of all area codes in the US and Canada. Browse by number or location. Find your area code quickly with our comprehensive list.">
-    <meta name="keywords" content="area code list, all area codes, area code directory, US area codes, Canada area codes, phone area codes, area code lookup, telephone area codes">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Complete Area Code Directory | All US & Canada Area Codes">
-    <meta property="og:description" content="Browse all area codes by number or location. Complete directory of US and Canadian area codes.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://areacode.codes/allareacodelist.html">
-    
-    <!-- Canonical URL for SEO -->
-    <link rel="canonical" href="https://areacode.codes/allareacodelist.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Performance optimization: preconnect and DNS prefetch -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Initial loading style optimization -->
-    <style>
-        :root {
-            --primary-color: #3b82f6;
-            --success-color: #10b981;
-            --warning-color: #f59e0b;
-            --danger-color: #ef4444;
-            --dark-color: #1e293b;
-            --light-bg: #f1f5f9;
-            --border-color: #e2e8f0;
-            --gradient-1: linear-gradient(135deg, #4f46e5 0%, #7e22ce 100%);
-            --gradient-2: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
-            --gradient-3: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
-            --accent-orange: #f97316;
-            --accent-purple: #8b5cf6;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            background-color: var(--light-bg);
-        }
-        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
-        .text-primary { color: var(--primary-color) !important; }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-        
-        /* Hero section styling to match other pages */
-        .hero-section {
-            background: var(--gradient-1);
-            color: white;
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,100 1000,0 1000,100"/></svg>');
-            background-size: cover;
-        }
-        
-        /* Main content section styling */
-        .main-content {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            min-height: 100vh;
-        }
-        
-        /* Custom styles for area code list */
-        .sort-tabs {
-            border-bottom: 2px solid var(--border-color);
-            margin-bottom: 2rem;
-            background: white;
-            border-radius: 12px 12px 0 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-        .sort-tab {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin-right: 1rem;
-            background: transparent;
-            border: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #64748b;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        .sort-tab.active {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
-            background: linear-gradient(145deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
-        }
-        .sort-tab:hover {
-            color: var(--primary-color);
-            background: linear-gradient(145deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.02) 100%);
-        }
-        
-        .area-code-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-        .area-code-item {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            position: relative;
-            overflow: hidden;
-        }
-        .area-code-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-3);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-        .area-code-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-            text-decoration: none;
-            color: inherit;
-        }
-        .area-code-item:hover::before {
-            transform: scaleX(1);
-        }
-        .area-code-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        .area-code-location {
-            color: var(--dark-color);
-            font-weight: 500;
-            margin-bottom: 0.25rem;
-        }
-        .area-code-state {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        
-        .search-container {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin: -2rem auto 2rem auto;
-            max-width: 600px;
-            position: relative;
-            z-index: 2;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        .search-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            font-size: 1.1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-        }
-        .search-input:focus {
-            outline: none;
-            border-color: var(--accent-orange);
-            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
-        }
-        
-        .statistics-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--border-color);
-            margin-top: 2rem;
-            text-align: center;
-        }
-        
-        /* Footer styling to match other pages */
-        .footer {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            color: white;
-            padding: 3rem 0 1rem 0;
-        }
-        
-        /* Hero section styling to match other pages */
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.9), rgba(139, 92, 246, 0.8));
-            z-index: 1;
-        }
-        .hero-section .container {
-            position: relative;
-            z-index: 2;
-        }
-    </style>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRG1LR357"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JYRG1LR357');
-    </script>
-    
-    <!-- Bootstrap CSS - async loading optimization -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Font Awesome - async loading -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="areacodes.css">
-</head>
 
-<body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <!-- Unified Brand Header -->
-            <div class="row justify-content-center text-center mb-4">
-                <div class="col-lg-12">
-                    <div class="brand-logo mb-3">
-                        <div class="logo-container d-flex align-items-center justify-content-center">
-                            <div class="logo-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="fas fa-shield-alt" style="font-size: 24px; color: white;"></i>
-                            </div>
-                            <div class="logo-text ms-3">
-                                <div class="logo-main mb-0">
-                                    <a href="https://areacode.codes" class="text-white text-decoration-none" style="font-weight:bold; font-size: 2rem;">AreaCode.Codes</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complete Area Code Directory | All US & Canada Area Codes | AreaCode.Codes</title>
+        <meta name="description"
+            content="Complete directory of all area codes in the US and Canada. Browse by number or location. Find your area code quickly with our comprehensive list.">
+        <meta name="keywords"
+            content="area code list, all area codes, area code directory, US area codes, Canada area codes, phone area codes, area code lookup, telephone area codes">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Complete Area Code Directory | All US & Canada Area Codes">
+        <meta property="og:description"
+            content="Browse all area codes by number or location. Complete directory of US and Canadian area codes.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://areacode.codes/allareacodelist.html">
+
+        <!-- Canonical URL for SEO -->
+        <link rel="canonical" href="https://areacode.codes/allareacodelist.html">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- Performance optimization: preconnect and DNS prefetch -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+        <!-- Initial loading style optimization -->
+        <style>
+            :root {
+                --primary-color: #3b82f6;
+                --success-color: #10b981;
+                --warning-color: #f59e0b;
+                --danger-color: #ef4444;
+                --dark-color: #1e293b;
+                --light-bg: #f1f5f9;
+                --border-color: #e2e8f0;
+                --gradient-1: linear-gradient(135deg, #4f46e5 0%, #7e22ce 100%);
+                --gradient-2: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+                --gradient-3: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+                --accent-orange: #f97316;
+                --accent-purple: #8b5cf6;
+            }
+
+            body {
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: var(--dark-color);
+                background-color: var(--light-bg);
+            }
+
+            .btn-primary {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+
+            .text-primary {
+                color: var(--primary-color) !important;
+            }
+
+            .container {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            /* Hero section styling to match other pages */
+            .hero-section {
+                background: var(--gradient-1);
+                color: white;
+                padding: 4rem 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,100 1000,0 1000,100"/></svg>');
+                background-size: cover;
+            }
+
+            /* Main content section styling */
+            .main-content {
+                background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+                min-height: 100vh;
+            }
+
+            /* Custom styles for area code list */
+            .sort-tabs {
+                border-bottom: 2px solid var(--border-color);
+                margin-bottom: 2rem;
+                background: white;
+                border-radius: 12px 12px 0 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
+
+            .sort-tab {
+                display: inline-block;
+                padding: 1rem 2rem;
+                margin-right: 1rem;
+                background: transparent;
+                border: none;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #64748b;
+                cursor: pointer;
+                border-bottom: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .sort-tab.active {
+                color: var(--primary-color);
+                border-bottom-color: var(--primary-color);
+                background: linear-gradient(145deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+            }
+
+            .sort-tab:hover {
+                color: var(--primary-color);
+                background: linear-gradient(145deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.02) 100%);
+            }
+
+            .area-code-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1rem;
+                margin-bottom: 2rem;
+                padding: 2rem;
+                background: white;
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            }
+
+            .area-code-item {
+                background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 1.5rem;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .area-code-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: var(--gradient-3);
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            .area-code-item:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .area-code-item:hover::before {
+                transform: scaleX(1);
+            }
+
+            .area-code-number {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--primary-color);
+                margin-bottom: 0.5rem;
+            }
+
+            .area-code-location {
+                color: var(--dark-color);
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+            }
+
+            .area-code-state {
+                color: #64748b;
+                font-size: 0.9rem;
+            }
+
+            .search-container {
+                background: white;
+                border-radius: 16px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                margin: -2rem auto 2rem auto;
+                max-width: 600px;
+                position: relative;
+                z-index: 2;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 1rem 1.5rem;
+                font-size: 1.1rem;
+                border: 2px solid var(--border-color);
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            }
+
+            .search-input:focus {
+                outline: none;
+                border-color: var(--accent-orange);
+                box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+            }
+
+            .statistics-card {
+                background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+                border-radius: 16px;
+                padding: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                border: 1px solid var(--border-color);
+                margin-top: 2rem;
+                text-align: center;
+            }
+
+            /* Footer styling to match other pages */
+            .footer {
+                background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                color: white;
+                padding: 3rem 0 1rem 0;
+            }
+
+            /* Hero section styling to match other pages */
+            .hero-section {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 4rem 0;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(135deg, rgba(79, 70, 229, 0.9), rgba(139, 92, 246, 0.8));
+                z-index: 1;
+            }
+
+            .hero-section .container {
+                position: relative;
+                z-index: 2;
+            }
+        </style>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRG1LR357"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-JYRG1LR357');
+        </script>
+
+        <!-- Bootstrap CSS - async loading optimization -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        </noscript>
+
+        <!-- Font Awesome - async loading -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        </noscript>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="areacodes.css">
+    </head>
+
+    <body>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <!-- Unified Brand Header -->
+                <div class="row justify-content-center text-center mb-4">
+                    <div class="col-lg-12">
+                        <div class="brand-logo mb-3">
+                            <div class="logo-container d-flex align-items-center justify-content-center">
+                                <div class="logo-icon"
+                                    style="background: linear-gradient(135deg, #4f46e5, #8b5cf6); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-shield-alt" style="font-size: 24px; color: white;"></i>
                                 </div>
-                                <p class="logo-sub mb-0" style="font-size: 1.1rem;">Complete Area Code Directory</p>
+                                <div class="logo-text ms-3">
+                                    <div class="logo-main mb-0">
+                                        <a href="https://areacode.codes" class="text-white text-decoration-none"
+                                            style="font-weight:bold; font-size: 2rem;">AreaCode.Codes</a>
+                                    </div>
+                                    <p class="logo-sub mb-0" style="font-size: 1.1rem;">Complete Area Code Directory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="display-4 fw-bold mb-3">All Area Codes Directory</h1>
+                <p class="lead mb-0">Browse all US and Canadian area codes by number or location</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="main-content py-5">
+            <div class="container">
+                <!-- Search Container -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="Search by area code or location...">
+                </div>
+
+                <!-- Sort Tabs and Grid Container -->
+                <div class="sort-tabs text-center">
+                    <button class="sort-tab active" data-sort="number">Sort by Number</button>
+                    <button class="sort-tab" data-sort="location">Sort by Location</button>
+                </div>
+
+                <!-- Area Code Grid -->
+                <div id="areaCodeGrid" class="area-code-grid">
+                    <a href="201.html" class="area-code-item">201</a>
+                    <a href="202.html" class="area-code-item">202</a>
+                    <a href="203.html" class="area-code-item">203</a>
+                    <a href="204.html" class="area-code-item">204</a>
+                    <a href="205.html" class="area-code-item">205</a>
+                    <a href="206.html" class="area-code-item">206</a>
+                    <a href="207.html" class="area-code-item">207</a>
+                    <a href="208.html" class="area-code-item">208</a>
+                    <a href="209.html" class="area-code-item">209</a>
+                    <a href="210.html" class="area-code-item">210</a>
+                    <a href="212.html" class="area-code-item">212</a>
+                    <a href="213.html" class="area-code-item">213</a>
+                    <a href="214.html" class="area-code-item">214</a>
+                    <a href="215.html" class="area-code-item">215</a>
+                    <a href="216.html" class="area-code-item">216</a>
+                    <a href="217.html" class="area-code-item">217</a>
+                    <a href="218.html" class="area-code-item">218</a>
+                    <a href="219.html" class="area-code-item">219</a>
+                    <a href="220.html" class="area-code-item">220</a>
+                    <a href="224.html" class="area-code-item">224</a>
+                    <a href="225.html" class="area-code-item">225</a>
+                    <a href="226.html" class="area-code-item">226</a>
+                    <a href="227.html" class="area-code-item">227</a>
+                    <a href="228.html" class="area-code-item">228</a>
+                    <a href="229.html" class="area-code-item">229</a>
+                    <a href="231.html" class="area-code-item">231</a>
+                    <a href="234.html" class="area-code-item">234</a>
+                    <a href="236.html" class="area-code-item">236</a>
+                    <a href="239.html" class="area-code-item">239</a>
+                    <a href="240.html" class="area-code-item">240</a>
+                    <a href="242.html" class="area-code-item">242</a>
+                    <a href="246.html" class="area-code-item">246</a>
+                    <a href="248.html" class="area-code-item">248</a>
+                    <a href="250.html" class="area-code-item">250</a>
+                    <a href="251.html" class="area-code-item">251</a>
+                    <a href="252.html" class="area-code-item">252</a>
+                    <a href="253.html" class="area-code-item">253</a>
+                    <a href="254.html" class="area-code-item">254</a>
+                    <a href="256.html" class="area-code-item">256</a>
+                    <a href="260.html" class="area-code-item">260</a>
+                    <a href="262.html" class="area-code-item">262</a>
+                    <a href="264.html" class="area-code-item">264</a>
+                    <a href="267.html" class="area-code-item">267</a>
+                    <a href="268.html" class="area-code-item">268</a>
+                    <a href="269.html" class="area-code-item">269</a>
+                    <a href="270.html" class="area-code-item">270</a>
+                    <a href="272.html" class="area-code-item">272</a>
+                    <a href="276.html" class="area-code-item">276</a>
+                    <a href="279.html" class="area-code-item">279</a>
+                    <a href="281.html" class="area-code-item">281</a>
+                    <a href="283.html" class="area-code-item">283</a>
+                    <a href="284.html" class="area-code-item">284</a>
+                    <a href="289.html" class="area-code-item">289</a>
+                    <a href="301.html" class="area-code-item">301</a>
+                    <a href="302.html" class="area-code-item">302</a>
+                    <a href="303.html" class="area-code-item">303</a>
+                    <a href="304.html" class="area-code-item">304</a>
+                    <a href="305.html" class="area-code-item">305</a>
+                    <a href="306.html" class="area-code-item">306</a>
+                    <a href="307.html" class="area-code-item">307</a>
+                    <a href="308.html" class="area-code-item">308</a>
+                    <a href="309.html" class="area-code-item">309</a>
+                    <a href="310.html" class="area-code-item">310</a>
+                    <a href="312.html" class="area-code-item">312</a>
+                    <a href="313.html" class="area-code-item">313</a>
+                    <a href="314.html" class="area-code-item">314</a>
+                    <a href="315.html" class="area-code-item">315</a>
+                    <a href="316.html" class="area-code-item">316</a>
+                    <a href="317.html" class="area-code-item">317</a>
+                    <a href="318.html" class="area-code-item">318</a>
+                    <a href="319.html" class="area-code-item">319</a>
+                    <a href="320.html" class="area-code-item">320</a>
+                    <a href="321.html" class="area-code-item">321</a>
+                    <a href="323.html" class="area-code-item">323</a>
+                    <a href="325.html" class="area-code-item">325</a>
+                    <a href="326.html" class="area-code-item">326</a>
+                    <a href="329.html" class="area-code-item">329</a>
+                    <a href="330.html" class="area-code-item">330</a>
+                    <a href="331.html" class="area-code-item">331</a>
+                    <a href="332.html" class="area-code-item">332</a>
+                    <a href="334.html" class="area-code-item">334</a>
+                    <a href="336.html" class="area-code-item">336</a>
+                    <a href="337.html" class="area-code-item">337</a>
+                    <a href="339.html" class="area-code-item">339</a>
+                    <a href="340.html" class="area-code-item">340</a>
+                    <a href="341.html" class="area-code-item">341</a>
+                    <a href="343.html" class="area-code-item">343</a>
+                    <a href="345.html" class="area-code-item">345</a>
+                    <a href="346.html" class="area-code-item">346</a>
+                    <a href="347.html" class="area-code-item">347</a>
+                    <a href="350.html" class="area-code-item">350</a>
+                    <a href="351.html" class="area-code-item">351</a>
+                    <a href="352.html" class="area-code-item">352</a>
+                    <a href="360.html" class="area-code-item">360</a>
+                    <a href="361.html" class="area-code-item">361</a>
+                    <a href="363.html" class="area-code-item">363</a>
+                    <a href="364.html" class="area-code-item">364</a>
+                    <a href="365.html" class="area-code-item">365</a>
+                    <a href="380.html" class="area-code-item">380</a>
+                    <a href="385.html" class="area-code-item">385</a>
+                    <a href="386.html" class="area-code-item">386</a>
+                    <a href="401.html" class="area-code-item">401</a>
+                    <a href="402.html" class="area-code-item">402</a>
+                    <a href="403.html" class="area-code-item">403</a>
+                    <a href="404areacode.html" class="area-code-item">404</a>
+                    <a href="405.html" class="area-code-item">405</a>
+                    <a href="406.html" class="area-code-item">406</a>
+                    <a href="407.html" class="area-code-item">407</a>
+                    <a href="408.html" class="area-code-item">408</a>
+                    <a href="409.html" class="area-code-item">409</a>
+                    <a href="410.html" class="area-code-item">410</a>
+                    <a href="412.html" class="area-code-item">412</a>
+                    <a href="413.html" class="area-code-item">413</a>
+                    <a href="414.html" class="area-code-item">414</a>
+                    <a href="415.html" class="area-code-item">415</a>
+                    <a href="416.html" class="area-code-item">416</a>
+                    <a href="417.html" class="area-code-item">417</a>
+                    <a href="419.html" class="area-code-item">419</a>
+                    <a href="423.html" class="area-code-item">423</a>
+                    <a href="424.html" class="area-code-item">424</a>
+                    <a href="425.html" class="area-code-item">425</a>
+                    <a href="430.html" class="area-code-item">430</a>
+                    <a href="431.html" class="area-code-item">431</a>
+                    <a href="432.html" class="area-code-item">432</a>
+                    <a href="434.html" class="area-code-item">434</a>
+                    <a href="435.html" class="area-code-item">435</a>
+                    <a href="437.html" class="area-code-item">437</a>
+                    <a href="438.html" class="area-code-item">438</a>
+                    <a href="440.html" class="area-code-item">440</a>
+                    <a href="441.html" class="area-code-item">441</a>
+                    <a href="442.html" class="area-code-item">442</a>
+                    <a href="443.html" class="area-code-item">443</a>
+                    <a href="445.html" class="area-code-item">445</a>
+                    <a href="447.html" class="area-code-item">447</a>
+                    <a href="448.html" class="area-code-item">448</a>
+                    <a href="458.html" class="area-code-item">458</a>
+                    <a href="463.html" class="area-code-item">463</a>
+                    <a href="464.html" class="area-code-item">464</a>
+                    <a href="469.html" class="area-code-item">469</a>
+                    <a href="470.html" class="area-code-item">470</a>
+                    <a href="472.html" class="area-code-item">472</a>
+                    <a href="473.html" class="area-code-item">473</a>
+                    <a href="475.html" class="area-code-item">475</a>
+                    <a href="478.html" class="area-code-item">478</a>
+                    <a href="479.html" class="area-code-item">479</a>
+                    <a href="480.html" class="area-code-item">480</a>
+                    <a href="484.html" class="area-code-item">484</a>
+                    <a href="501.html" class="area-code-item">501</a>
+                    <a href="502.html" class="area-code-item">502</a>
+                    <a href="503.html" class="area-code-item">503</a>
+                    <a href="504.html" class="area-code-item">504</a>
+                    <a href="505.html" class="area-code-item">505</a>
+                    <a href="506.html" class="area-code-item">506</a>
+                    <a href="507.html" class="area-code-item">507</a>
+                    <a href="508.html" class="area-code-item">508</a>
+                    <a href="509.html" class="area-code-item">509</a>
+                    <a href="510.html" class="area-code-item">510</a>
+                    <a href="512.html" class="area-code-item">512</a>
+                    <a href="513.html" class="area-code-item">513</a>
+                    <a href="514.html" class="area-code-item">514</a>
+                    <a href="515.html" class="area-code-item">515</a>
+                    <a href="516.html" class="area-code-item">516</a>
+                    <a href="517.html" class="area-code-item">517</a>
+                    <a href="518.html" class="area-code-item">518</a>
+                    <a href="519.html" class="area-code-item">519</a>
+                    <a href="520.html" class="area-code-item">520</a>
+                    <a href="530.html" class="area-code-item">530</a>
+                    <a href="531.html" class="area-code-item">531</a>
+                    <a href="539.html" class="area-code-item">539</a>
+                    <a href="540.html" class="area-code-item">540</a>
+                    <a href="541.html" class="area-code-item">541</a>
+                    <a href="551.html" class="area-code-item">551</a>
+                    <a href="559.html" class="area-code-item">559</a>
+                    <a href="561.html" class="area-code-item">561</a>
+                    <a href="562.html" class="area-code-item">562</a>
+                    <a href="563.html" class="area-code-item">563</a>
+                    <a href="564.html" class="area-code-item">564</a>
+                    <a href="567.html" class="area-code-item">567</a>
+                    <a href="570.html" class="area-code-item">570</a>
+                    <a href="571.html" class="area-code-item">571</a>
+                    <a href="572.html" class="area-code-item">572</a>
+                    <a href="573.html" class="area-code-item">573</a>
+                    <a href="574.html" class="area-code-item">574</a>
+                    <a href="575.html" class="area-code-item">575</a>
+                    <a href="580.html" class="area-code-item">580</a>
+                    <a href="582.html" class="area-code-item">582</a>
+                    <a href="585.html" class="area-code-item">585</a>
+                    <a href="586.html" class="area-code-item">586</a>
+                    <a href="587.html" class="area-code-item">587</a>
+                    <a href="588.html" class="area-code-item">588</a>
+                    <a href="601.html" class="area-code-item">601</a>
+                    <a href="602.html" class="area-code-item">602</a>
+                    <a href="603.html" class="area-code-item">603</a>
+                    <a href="604.html" class="area-code-item">604</a>
+                    <a href="605.html" class="area-code-item">605</a>
+                    <a href="606.html" class="area-code-item">606</a>
+                    <a href="607.html" class="area-code-item">607</a>
+                    <a href="608.html" class="area-code-item">608</a>
+                    <a href="609.html" class="area-code-item">609</a>
+                    <a href="610.html" class="area-code-item">610</a>
+                    <a href="612.html" class="area-code-item">612</a>
+                    <a href="613.html" class="area-code-item">613</a>
+                    <a href="614.html" class="area-code-item">614</a>
+                    <a href="615.html" class="area-code-item">615</a>
+                    <a href="616.html" class="area-code-item">616</a>
+                    <a href="617.html" class="area-code-item">617</a>
+                    <a href="618.html" class="area-code-item">618</a>
+                    <a href="619.html" class="area-code-item">619</a>
+                    <a href="620.html" class="area-code-item">620</a>
+                    <a href="623.html" class="area-code-item">623</a>
+                    <a href="626.html" class="area-code-item">626</a>
+                    <a href="628.html" class="area-code-item">628</a>
+                    <a href="629.html" class="area-code-item">629</a>
+                    <a href="630.html" class="area-code-item">630</a>
+                    <a href="631.html" class="area-code-item">631</a>
+                    <a href="636.html" class="area-code-item">636</a>
+                    <a href="639.html" class="area-code-item">639</a>
+                    <a href="640.html" class="area-code-item">640</a>
+                    <a href="641.html" class="area-code-item">641</a>
+                    <a href="645.html" class="area-code-item">645</a>
+                    <a href="646.html" class="area-code-item">646</a>
+                    <a href="647.html" class="area-code-item">647</a>
+                    <a href="649.html" class="area-code-item">649</a>
+                    <a href="650.html" class="area-code-item">650</a>
+                    <a href="651.html" class="area-code-item">651</a>
+                    <a href="656.html" class="area-code-item">656</a>
+                    <a href="657.html" class="area-code-item">657</a>
+                    <a href="658.html" class="area-code-item">658</a>
+                    <a href="659.html" class="area-code-item">659</a>
+                    <a href="660.html" class="area-code-item">660</a>
+                    <a href="661.html" class="area-code-item">661</a>
+                    <a href="662.html" class="area-code-item">662</a>
+                    <a href="664.html" class="area-code-item">664</a>
+                    <a href="667.html" class="area-code-item">667</a>
+                    <a href="669.html" class="area-code-item">669</a>
+                    <a href="670.html" class="area-code-item">670</a>
+                    <a href="671.html" class="area-code-item">671</a>
+                    <a href="672.html" class="area-code-item">672</a>
+                    <a href="678.html" class="area-code-item">678</a>
+                    <a href="680.html" class="area-code-item">680</a>
+                    <a href="681.html" class="area-code-item">681</a>
+                    <a href="682.html" class="area-code-item">682</a>
+                    <a href="684.html" class="area-code-item">684</a>
+                    <a href="689.html" class="area-code-item">689</a>
+                    <a href="701.html" class="area-code-item">701</a>
+                    <a href="702.html" class="area-code-item">702</a>
+                    <a href="703.html" class="area-code-item">703</a>
+                    <a href="704.html" class="area-code-item">704</a>
+                    <a href="705.html" class="area-code-item">705</a>
+                    <a href="706.html" class="area-code-item">706</a>
+                    <a href="707.html" class="area-code-item">707</a>
+                    <a href="708.html" class="area-code-item">708</a>
+                    <a href="712.html" class="area-code-item">712</a>
+                    <a href="713.html" class="area-code-item">713</a>
+                    <a href="714.html" class="area-code-item">714</a>
+                    <a href="715.html" class="area-code-item">715</a>
+                    <a href="716.html" class="area-code-item">716</a>
+                    <a href="717.html" class="area-code-item">717</a>
+                    <a href="718.html" class="area-code-item">718</a>
+                    <a href="719.html" class="area-code-item">719</a>
+                    <a href="720.html" class="area-code-item">720</a>
+                    <a href="724.html" class="area-code-item">724</a>
+                    <a href="725.html" class="area-code-item">725</a>
+                    <a href="726.html" class="area-code-item">726</a>
+                    <a href="727.html" class="area-code-item">727</a>
+                    <a href="728.html" class="area-code-item">728</a>
+                    <a href="731.html" class="area-code-item">731</a>
+                    <a href="732.html" class="area-code-item">732</a>
+                    <a href="734.html" class="area-code-item">734</a>
+                    <a href="737.html" class="area-code-item">737</a>
+                    <a href="740.html" class="area-code-item">740</a>
+                    <a href="743.html" class="area-code-item">743</a>
+                    <a href="747.html" class="area-code-item">747</a>
+                    <a href="754.html" class="area-code-item">754</a>
+                    <a href="757.html" class="area-code-item">757</a>
+                    <a href="758.html" class="area-code-item">758</a>
+                    <a href="760.html" class="area-code-item">760</a>
+                    <a href="762.html" class="area-code-item">762</a>
+                    <a href="763.html" class="area-code-item">763</a>
+                    <a href="765.html" class="area-code-item">765</a>
+                    <a href="767.html" class="area-code-item">767</a>
+                    <a href="769.html" class="area-code-item">769</a>
+                    <a href="770.html" class="area-code-item">770</a>
+                    <a href="771.html" class="area-code-item">771</a>
+                    <a href="772.html" class="area-code-item">772</a>
+                    <a href="773.html" class="area-code-item">773</a>
+                    <a href="774.html" class="area-code-item">774</a>
+                    <a href="775.html" class="area-code-item">775</a>
+                    <a href="778.html" class="area-code-item">778</a>
+                    <a href="779.html" class="area-code-item">779</a>
+                    <a href="780.html" class="area-code-item">780</a>
+                    <a href="781.html" class="area-code-item">781</a>
+                    <a href="784.html" class="area-code-item">784</a>
+                    <a href="785.html" class="area-code-item">785</a>
+                    <a href="786.html" class="area-code-item">786</a>
+                    <a href="787.html" class="area-code-item">787</a>
+                    <a href="800.html" class="area-code-item">800</a>
+                    <a href="801.html" class="area-code-item">801</a>
+                    <a href="802.html" class="area-code-item">802</a>
+                    <a href="803.html" class="area-code-item">803</a>
+                    <a href="804.html" class="area-code-item">804</a>
+                    <a href="805.html" class="area-code-item">805</a>
+                    <a href="806.html" class="area-code-item">806</a>
+                    <a href="808.html" class="area-code-item">808</a>
+                    <a href="809.html" class="area-code-item">809</a>
+                    <a href="810.html" class="area-code-item">810</a>
+                    <a href="812.html" class="area-code-item">812</a>
+                    <a href="813.html" class="area-code-item">813</a>
+                    <a href="814.html" class="area-code-item">814</a>
+                    <a href="815.html" class="area-code-item">815</a>
+                    <a href="816.html" class="area-code-item">816</a>
+                    <a href="817.html" class="area-code-item">817</a>
+                    <a href="818.html" class="area-code-item">818</a>
+                    <a href="820.html" class="area-code-item">820</a>
+                    <a href="825.html" class="area-code-item">825</a>
+                    <a href="828.html" class="area-code-item">828</a>
+                    <a href="829.html" class="area-code-item">829</a>
+                    <a href="830.html" class="area-code-item">830</a>
+                    <a href="831.html" class="area-code-item">831</a>
+                    <a href="832.html" class="area-code-item">832</a>
+                    <a href="833.html" class="area-code-item">833</a>
+                    <a href="835.html" class="area-code-item">835</a>
+                    <a href="838.html" class="area-code-item">838</a>
+                    <a href="839.html" class="area-code-item">839</a>
+                    <a href="840.html" class="area-code-item">840</a>
+                    <a href="843.html" class="area-code-item">843</a>
+                    <a href="844.html" class="area-code-item">844</a>
+                    <a href="845.html" class="area-code-item">845</a>
+                    <a href="847.html" class="area-code-item">847</a>
+                    <a href="848.html" class="area-code-item">848</a>
+                    <a href="849.html" class="area-code-item">849</a>
+                    <a href="850.html" class="area-code-item">850</a>
+                    <a href="854.html" class="area-code-item">854</a>
+                    <a href="855.html" class="area-code-item">855</a>
+                    <a href="856.html" class="area-code-item">856</a>
+                    <a href="857.html" class="area-code-item">857</a>
+                    <a href="858.html" class="area-code-item">858</a>
+                    <a href="859.html" class="area-code-item">859</a>
+                    <a href="860.html" class="area-code-item">860</a>
+                    <a href="862.html" class="area-code-item">862</a>
+                    <a href="863.html" class="area-code-item">863</a>
+                    <a href="864.html" class="area-code-item">864</a>
+                    <a href="865.html" class="area-code-item">865</a>
+                    <a href="866.html" class="area-code-item">866</a>
+                    <a href="868.html" class="area-code-item">868</a>
+                    <a href="869.html" class="area-code-item">869</a>
+                    <a href="870.html" class="area-code-item">870</a>
+                    <a href="872.html" class="area-code-item">872</a>
+                    <a href="876.html" class="area-code-item">876</a>
+                    <a href="877.html" class="area-code-item">877</a>
+                    <a href="878.html" class="area-code-item">878</a>
+                    <a href="888.html" class="area-code-item">888</a>
+                    <a href="901.html" class="area-code-item">901</a>
+                    <a href="902.html" class="area-code-item">902</a>
+                    <a href="903.html" class="area-code-item">903</a>
+                    <a href="904.html" class="area-code-item">904</a>
+                    <a href="905.html" class="area-code-item">905</a>
+                    <a href="906.html" class="area-code-item">906</a>
+                    <a href="907.html" class="area-code-item">907</a>
+                    <a href="908.html" class="area-code-item">908</a>
+                    <a href="909.html" class="area-code-item">909</a>
+                    <a href="910.html" class="area-code-item">910</a>
+                    <a href="912.html" class="area-code-item">912</a>
+                    <a href="913.html" class="area-code-item">913</a>
+                    <a href="914.html" class="area-code-item">914</a>
+                    <a href="915.html" class="area-code-item">915</a>
+                    <a href="916.html" class="area-code-item">916</a>
+                    <a href="917.html" class="area-code-item">917</a>
+                    <a href="918.html" class="area-code-item">918</a>
+                    <a href="919.html" class="area-code-item">919</a>
+                    <a href="920.html" class="area-code-item">920</a>
+                    <a href="925.html" class="area-code-item">925</a>
+                    <a href="928.html" class="area-code-item">928</a>
+                    <a href="929.html" class="area-code-item">929</a>
+                    <a href="930.html" class="area-code-item">930</a>
+                    <a href="931.html" class="area-code-item">931</a>
+                    <a href="934.html" class="area-code-item">934</a>
+                    <a href="936.html" class="area-code-item">936</a>
+                    <a href="937.html" class="area-code-item">937</a>
+                    <a href="938.html" class="area-code-item">938</a>
+                    <a href="939.html" class="area-code-item">939</a>
+                    <a href="940.html" class="area-code-item">940</a>
+                    <a href="941.html" class="area-code-item">941</a>
+                    <a href="947.html" class="area-code-item">947</a>
+                    <a href="949.html" class="area-code-item">949</a>
+                    <a href="951.html" class="area-code-item">951</a>
+                    <a href="952.html" class="area-code-item">952</a>
+                    <a href="954.html" class="area-code-item">954</a>
+                    <a href="956.html" class="area-code-item">956</a>
+                    <a href="959.html" class="area-code-item">959</a>
+                    <a href="970.html" class="area-code-item">970</a>
+                    <a href="971.html" class="area-code-item">971</a>
+                    <a href="972.html" class="area-code-item">972</a>
+                    <a href="973.html" class="area-code-item">973</a>
+                    <a href="978.html" class="area-code-item">978</a>
+                    <a href="979.html" class="area-code-item">979</a>
+                    <a href="980.html" class="area-code-item">980</a>
+                    <a href="984.html" class="area-code-item">984</a>
+                    <a href="985.html" class="area-code-item">985</a>
+                    <a href="989.html" class="area-code-item">989</a>
+                </div>
+
+                <!-- Statistics Card -->
+                <div class="statistics-card">
+                    <h4 class="mb-3">
+                        <i class="fas fa-chart-bar text-primary me-2"></i>
+                        Directory Statistics
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stat-item">
+                                <h5 class="text-primary mb-1" id="totalCount">0</h5>
+                                <small class="text-muted">Total Area Codes</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-item">
+                                <h5 class="text-success mb-1" id="usCount">0</h5>
+                                <small class="text-muted">US States & Territories</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-item">
+                                <h5 class="text-info mb-1" id="canadaCount">0</h5>
+                                <small class="text-muted">Canada Provinces</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <h1 class="display-4 fw-bold mb-3">All Area Codes Directory</h1>
-            <p class="lead mb-0">Browse all US and Canadian area codes by number or location</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Content -->
-    <section class="main-content py-5">
-        <div class="container">
-            <!-- Search Container -->
-            <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="Search by area code or location...">
-            </div>
-            
-            <!-- Sort Tabs and Grid Container -->
-            <div class="sort-tabs text-center">
-                <button class="sort-tab active" data-sort="number">Sort by Number</button>
-                <button class="sort-tab" data-sort="location">Sort by Location</button>
-            </div>
-            
-            <!-- Area Code Grid -->
-            <div id="areaCodeGrid" class="area-code-grid">
-                <!-- Area codes will be populated by JavaScript -->
-            </div>
-            
-            <!-- Statistics Card -->
-            <div class="statistics-card">
-                <h4 class="mb-3">
-                    <i class="fas fa-chart-bar text-primary me-2"></i>
-                    Directory Statistics
-                </h4>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="stat-item">
-                            <h5 class="text-primary mb-1" id="totalCount">0</h5>
-                            <small class="text-muted">Total Area Codes</small>
+                        <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
+                        <p class="text-light">Your trusted source for area code information and safety verification.
+                            Helping users nationwide stay safe from phone scams since 2025.</p>
+                        <div class="mt-3">
+                            <small class="text-light opacity-75">
+                                <i class="fas fa-certificate me-1"></i>
+                                Data verified by FCC & FTC databases
+                            </small>
                         </div>
                     </div>
+
+                    <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
                     <div class="col-md-4">
-                        <div class="stat-item">
-                            <h5 class="text-success mb-1" id="usCount">0</h5>
-                            <small class="text-muted">US States & Territories</small>
+                        <h6>Sister Sites - Top Area Codes</h6>
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://213area.codes" class="text-light text-decoration-none">213 Area
+                                            Code</a></li>
+                                    <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area
+                                            Code</a></li>
+                                    <li><a href="https://917areacode.org" class="text-light text-decoration-none">917
+                                            Area Code</a></li>
+                                    <li><a href="https://929areacode.net" class="text-light text-decoration-none">929
+                                            Area Code</a></li>
+                                    <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area
+                                            Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://areacode.codes/415.html"
+                                            class="text-light text-decoration-none">415 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/206.html"
+                                            class="text-light text-decoration-none">206 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/619.html"
+                                            class="text-light text-decoration-none">619 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/323.html"
+                                            class="text-light text-decoration-none">323 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/310.html"
+                                            class="text-light text-decoration-none">310 Area Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424
+                                            Area Code</a></li>
+                                    <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818
+                                            Area Code</a></li>
+                                    <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747
+                                            Area Code</a></li>
+                                    <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202
+                                            Area Code</a></li>
+                                    <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312
+                                            Area Code</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Safety Resources section -->
                     <div class="col-md-4">
-                        <div class="stat-item">
-                            <h5 class="text-info mb-1" id="canadaCount">0</h5>
-                            <small class="text-muted">Canada Provinces</small>
-                        </div>
+                        <h6>Safety Resources</h6>
+                        <ul class="list-unstyled small">
+                            <li><a href="allareacodelist.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-list me-1"></i>All Area Codes Directory
+                                </a></li>
+                            <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
+                                </a></li>
+                            <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
+                                </a></li>
+                            <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
+                                </a></li>
+                            <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-sms me-1"></i>Text Message Safety
+                                </a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
-                    <p class="text-light">Your trusted source for area code information and safety verification. Helping users nationwide stay safe from phone scams since 2025.</p>
-                    <div class="mt-3">
-                        <small class="text-light opacity-75">
-                            <i class="fas fa-certificate me-1"></i>
-                            Data verified by FCC & FTC databases
-                        </small>
-                    </div>
-                </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
-                <div class="col-md-4">
-                    <h6>Sister Sites - Top Area Codes</h6>
-                    <div class="row">
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://213area.codes" class="text-light text-decoration-none">201 Area Code</a></li>
-                                <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area Code</a></li>
-                                <li><a href="https://917areacode.org" class="text-light text-decoration-none">917 Area Code</a></li>
-                                <li><a href="https://929areacode.net" class="text-light text-decoration-none">929 Area Code</a></li>
-                                <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://areacode.codes/415.html" class="text-light text-decoration-none">415 Area Code</a></li>
-                                <li><a href="https://areacode.codes/206.html" class="text-light text-decoration-none">206 Area Code</a></li>
-                                <li><a href="https://areacode.codes/619.html" class="text-light text-decoration-none">619 Area Code</a></li>
-                                <li><a href="https://areacode.codes/323.html" class="text-light text-decoration-none">323 Area Code</a></li>
-                                <li><a href="https://areacode.codes/310.html" class="text-light text-decoration-none">310 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424 Area Code</a></li>
-                                <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818 Area Code</a></li>
-                                <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747 Area Code</a></li>
-                                <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202 Area Code</a></li>
-                                <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312 Area Code</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <!-- Area Code Data and Interactive Script -->
+        <script>
+            // Complete area code data with locations
+            const areaCodeData = [
+                { code: "201", location: "Jersey City", state: "New Jersey", country: "USA" },
+                { code: "202", location: "Washington", state: "District of Columbia", country: "USA" },
+                { code: "203", location: "New Haven", state: "Connecticut", country: "USA" },
+                { code: "204", location: "Winnipeg", state: "Manitoba", country: "Canada" },
+                { code: "205", location: "Birmingham", state: "Alabama", country: "USA" },
+                { code: "206", location: "Seattle", state: "Washington", country: "USA" },
+                { code: "207", location: "Portland", state: "Maine", country: "USA" },
+                { code: "208", location: "Boise", state: "Idaho", country: "USA" },
+                { code: "209", location: "Stockton", state: "California", country: "USA" },
+                { code: "210", location: "San Antonio", state: "Texas", country: "USA" },
+                { code: "212", location: "Manhattan", state: "New York", country: "USA" },
+                { code: "213", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "214", location: "Dallas", state: "Texas", country: "USA" },
+                { code: "215", location: "Philadelphia", state: "Pennsylvania", country: "USA" },
+                { code: "216", location: "Cleveland", state: "Ohio", country: "USA" },
+                { code: "217", location: "Springfield", state: "Illinois", country: "USA" },
+                { code: "218", location: "Duluth", state: "Minnesota", country: "USA" },
+                { code: "219", location: "Gary", state: "Indiana", country: "USA" },
+                { code: "220", location: "Newark", state: "Ohio", country: "USA" },
+                { code: "224", location: "Elgin", state: "Illinois", country: "USA" },
+                { code: "225", location: "Baton Rouge", state: "Louisiana", country: "USA" },
+                { code: "226", location: "London", state: "Ontario", country: "Canada" },
+                { code: "227", location: "Silver Spring", state: "Maryland", country: "USA" },
+                { code: "228", location: "Gulfport", state: "Mississippi", country: "USA" },
+                { code: "229", location: "Albany", state: "Georgia", country: "USA" },
+                { code: "231", location: "Muskegon", state: "Michigan", country: "USA" },
+                { code: "234", location: "Akron", state: "Ohio", country: "USA" },
+                { code: "236", location: "Vancouver", state: "British Columbia", country: "Canada" },
+                { code: "239", location: "Fort Myers", state: "Florida", country: "USA" },
+                { code: "240", location: "Gaithersburg", state: "Maryland", country: "USA" },
+                { code: "242", location: "Nassau", state: "New Providence", country: "Bahamas" },
+                { code: "246", location: "Bridgetown", state: "Saint Michael", country: "Barbados" },
+                { code: "248", location: "Troy", state: "Michigan", country: "USA" },
+                { code: "250", location: "Victoria", state: "British Columbia", country: "Canada" },
+                { code: "251", location: "Mobile", state: "Alabama", country: "USA" },
+                { code: "252", location: "Greenville", state: "North Carolina", country: "USA" },
+                { code: "253", location: "Tacoma", state: "Washington", country: "USA" },
+                { code: "254", location: "Killeen", state: "Texas", country: "USA" },
+                { code: "256", location: "Huntsville", state: "Alabama", country: "USA" },
+                { code: "260", location: "Fort Wayne", state: "Indiana", country: "USA" },
+                { code: "262", location: "Kenosha", state: "Wisconsin", country: "USA" },
+                { code: "264", location: "The Valley", state: "Anguilla", country: "Anguilla" },
+                { code: "267", location: "Philadelphia", state: "Pennsylvania", country: "USA" },
+                { code: "268", location: "St. John's", state: "Antigua", country: "Antigua and Barbuda" },
+                { code: "269", location: "Kalamazoo", state: "Michigan", country: "USA" },
+                { code: "270", location: "Bowling Green", state: "Kentucky", country: "USA" },
+                { code: "272", location: "Scranton", state: "Pennsylvania", country: "USA" },
+                { code: "276", location: "Bristol", state: "Virginia", country: "USA" },
+                { code: "279", location: "Sacramento", state: "California", country: "USA" },
+                { code: "281", location: "Houston", state: "Texas", country: "USA" },
+                { code: "283", location: "Cincinnati", state: "Ohio", country: "USA" },
+                { code: "284", location: "Road Town", state: "Tortola", country: "British Virgin Islands" },
+                { code: "289", location: "Hamilton", state: "Ontario", country: "Canada" },
+                { code: "301", location: "Rockville", state: "Maryland", country: "USA" },
+                { code: "302", location: "Wilmington", state: "Delaware", country: "USA" },
+                { code: "303", location: "Denver", state: "Colorado", country: "USA" },
+                { code: "304", location: "Charleston", state: "West Virginia", country: "USA" },
+                { code: "305", location: "Miami", state: "Florida", country: "USA" },
+                { code: "306", location: "Saskatoon", state: "Saskatchewan", country: "Canada" },
+                { code: "307", location: "Cheyenne", state: "Wyoming", country: "USA" },
+                { code: "308", location: "North Platte", state: "Nebraska", country: "USA" },
+                { code: "309", location: "Peoria", state: "Illinois", country: "USA" },
+                { code: "310", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "312", location: "Chicago", state: "Illinois", country: "USA" },
+                { code: "313", location: "Detroit", state: "Michigan", country: "USA" },
+                { code: "314", location: "St. Louis", state: "Missouri", country: "USA" },
+                { code: "315", location: "Syracuse", state: "New York", country: "USA" },
+                { code: "316", location: "Wichita", state: "Kansas", country: "USA" },
+                { code: "317", location: "Indianapolis", state: "Indiana", country: "USA" },
+                { code: "318", location: "Shreveport", state: "Louisiana", country: "USA" },
+                { code: "319", location: "Cedar Rapids", state: "Iowa", country: "USA" },
+                { code: "320", location: "St. Cloud", state: "Minnesota", country: "USA" },
+                { code: "321", location: "Orlando", state: "Florida", country: "USA" },
+                { code: "323", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "325", location: "Abilene", state: "Texas", country: "USA" },
+                { code: "326", location: "Bowling Green", state: "Ohio", country: "USA" },
+                { code: "329", location: "Lexington", state: "Kentucky", country: "USA" },
+                { code: "330", location: "Akron", state: "Ohio", country: "USA" },
+                { code: "331", location: "Aurora", state: "Illinois", country: "USA" },
+                { code: "332", location: "New York", state: "New York", country: "USA" },
+                { code: "334", location: "Montgomery", state: "Alabama", country: "USA" },
+                { code: "336", location: "Greensboro", state: "North Carolina", country: "USA" },
+                { code: "337", location: "Lafayette", state: "Louisiana", country: "USA" },
+                { code: "339", location: "Boston", state: "Massachusetts", country: "USA" },
+                { code: "340", location: "Charlotte Amalie", state: "St. Thomas", country: "US Virgin Islands" },
+                { code: "341", location: "Oakland", state: "California", country: "USA" },
+                { code: "343", location: "Ottawa", state: "Ontario", country: "Canada" },
+                { code: "345", location: "George Town", state: "Grand Cayman", country: "Cayman Islands" },
+                { code: "346", location: "Houston", state: "Texas", country: "USA" },
+                { code: "347", location: "Brooklyn", state: "New York", country: "USA" },
+                { code: "350", location: "San Francisco", state: "California", country: "USA" },
+                { code: "351", location: "Boston", state: "Massachusetts", country: "USA" },
+                { code: "352", location: "Gainesville", state: "Florida", country: "USA" },
+                { code: "360", location: "Olympia", state: "Washington", country: "USA" },
+                { code: "361", location: "Corpus Christi", state: "Texas", country: "USA" },
+                { code: "363", location: "Hempstead", state: "New York", country: "USA" },
+                { code: "364", location: "Lexington", state: "Kentucky", country: "USA" },
+                { code: "365", location: "Hamilton", state: "Ontario", country: "Canada" },
+                { code: "380", location: "Columbus", state: "Ohio", country: "USA" },
+                { code: "385", location: "Salt Lake City", state: "Utah", country: "USA" },
+                { code: "386", location: "Daytona Beach", state: "Florida", country: "USA" },
+                { code: "401", location: "Providence", state: "Rhode Island", country: "USA" },
+                { code: "402", location: "Omaha", state: "Nebraska", country: "USA" },
+                { code: "403", location: "Calgary", state: "Alberta", country: "Canada" },
+                { code: "404", location: "Atlanta", state: "Georgia", country: "USA" },
+                { code: "405", location: "Oklahoma City", state: "Oklahoma", country: "USA" },
+                { code: "406", location: "Billings", state: "Montana", country: "USA" },
+                { code: "407", location: "Orlando", state: "Florida", country: "USA" },
+                { code: "408", location: "San Jose", state: "California", country: "USA" },
+                { code: "409", location: "Beaumont", state: "Texas", country: "USA" },
+                { code: "410", location: "Baltimore", state: "Maryland", country: "USA" },
+                { code: "412", location: "Pittsburgh", state: "Pennsylvania", country: "USA" },
+                { code: "413", location: "Springfield", state: "Massachusetts", country: "USA" },
+                { code: "414", location: "Milwaukee", state: "Wisconsin", country: "USA" },
+                { code: "415", location: "San Francisco", state: "California", country: "USA" },
+                { code: "416", location: "Toronto", state: "Ontario", country: "Canada" },
+                { code: "417", location: "Springfield", state: "Missouri", country: "USA" },
+                { code: "419", location: "Toledo", state: "Ohio", country: "USA" },
+                { code: "423", location: "Chattanooga", state: "Tennessee", country: "USA" },
+                { code: "424", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "425", location: "Bellevue", state: "Washington", country: "USA" },
+                { code: "430", location: "Tyler", state: "Texas", country: "USA" },
+                { code: "431", location: "Winnipeg", state: "Manitoba", country: "Canada" },
+                { code: "432", location: "Midland", state: "Texas", country: "USA" },
+                { code: "434", location: "Lynchburg", state: "Virginia", country: "USA" },
+                { code: "435", location: "St. George", state: "Utah", country: "USA" },
+                { code: "437", location: "Toronto", state: "Ontario", country: "Canada" },
+                { code: "438", location: "Montreal", state: "Quebec", country: "Canada" },
+                { code: "440", location: "Cleveland", state: "Ohio", country: "USA" },
+                { code: "441", location: "Hamilton", state: "Pembroke", country: "Bermuda" },
+                { code: "442", location: "Oceanside", state: "California", country: "USA" },
+                { code: "443", location: "Baltimore", state: "Maryland", country: "USA" },
+                { code: "445", location: "Philadelphia", state: "Pennsylvania", country: "USA" },
+                { code: "447", location: "Springfield", state: "Illinois", country: "USA" },
+                { code: "448", location: "Orlando", state: "Florida", country: "USA" },
+                { code: "458", location: "Eugene", state: "Oregon", country: "USA" },
+                { code: "463", location: "Indianapolis", state: "Indiana", country: "USA" },
+                { code: "464", location: "Evansville", state: "Indiana", country: "USA" },
+                { code: "469", location: "Dallas", state: "Texas", country: "USA" },
+                { code: "470", location: "Atlanta", state: "Georgia", country: "USA" },
+                { code: "472", location: "Hartford", state: "Connecticut", country: "USA" },
+                { code: "473", location: "St. George's", state: "Saint George", country: "Grenada" },
+                { code: "475", location: "New Haven", state: "Connecticut", country: "USA" },
+                { code: "478", location: "Macon", state: "Georgia", country: "USA" },
+                { code: "479", location: "Fort Smith", state: "Arkansas", country: "USA" },
+                { code: "480", location: "Scottsdale", state: "Arizona", country: "USA" },
+                { code: "484", location: "Allentown", state: "Pennsylvania", country: "USA" },
+                { code: "501", location: "Little Rock", state: "Arkansas", country: "USA" },
+                { code: "502", location: "Louisville", state: "Kentucky", country: "USA" },
+                { code: "503", location: "Portland", state: "Oregon", country: "USA" },
+                { code: "504", location: "New Orleans", state: "Louisiana", country: "USA" },
+                { code: "505", location: "Albuquerque", state: "New Mexico", country: "USA" },
+                { code: "506", location: "Moncton", state: "New Brunswick", country: "Canada" },
+                { code: "507", location: "Rochester", state: "Minnesota", country: "USA" },
+                { code: "508", location: "Worcester", state: "Massachusetts", country: "USA" },
+                { code: "509", location: "Spokane", state: "Washington", country: "USA" },
+                { code: "510", location: "Oakland", state: "California", country: "USA" },
+                { code: "512", location: "Austin", state: "Texas", country: "USA" },
+                { code: "513", location: "Cincinnati", state: "Ohio", country: "USA" },
+                { code: "514", location: "Montreal", state: "Quebec", country: "Canada" },
+                { code: "515", location: "Des Moines", state: "Iowa", country: "USA" },
+                { code: "516", location: "Hempstead", state: "New York", country: "USA" },
+                { code: "517", location: "Lansing", state: "Michigan", country: "USA" },
+                { code: "518", location: "Albany", state: "New York", country: "USA" },
+                { code: "519", location: "London", state: "Ontario", country: "Canada" },
+                { code: "520", location: "Tucson", state: "Arizona", country: "USA" },
+                { code: "530", location: "Redding", state: "California", country: "USA" },
+                { code: "531", location: "Omaha", state: "Nebraska", country: "USA" },
+                { code: "539", location: "Tulsa", state: "Oklahoma", country: "USA" },
+                { code: "540", location: "Roanoke", state: "Virginia", country: "USA" },
+                { code: "541", location: "Eugene", state: "Oregon", country: "USA" },
+                { code: "551", location: "Jersey City", state: "New Jersey", country: "USA" },
+                { code: "559", location: "Fresno", state: "California", country: "USA" },
+                { code: "561", location: "West Palm Beach", state: "Florida", country: "USA" },
+                { code: "562", location: "Long Beach", state: "California", country: "USA" },
+                { code: "563", location: "Davenport", state: "Iowa", country: "USA" },
+                { code: "564", location: "Everett", state: "Washington", country: "USA" },
+                { code: "567", location: "Toledo", state: "Ohio", country: "USA" },
+                { code: "570", location: "Scranton", state: "Pennsylvania", country: "USA" },
+                { code: "571", location: "Alexandria", state: "Virginia", country: "USA" },
+                { code: "572", location: "Tulsa", state: "Oklahoma", country: "USA" },
+                { code: "573", location: "Columbia", state: "Missouri", country: "USA" },
+                { code: "574", location: "South Bend", state: "Indiana", country: "USA" },
+                { code: "575", location: "Las Cruces", state: "New Mexico", country: "USA" },
+                { code: "580", location: "Lawton", state: "Oklahoma", country: "USA" },
+                { code: "582", location: "Erie", state: "Pennsylvania", country: "USA" },
+                { code: "585", location: "Rochester", state: "New York", country: "USA" },
+                { code: "586", location: "Warren", state: "Michigan", country: "USA" },
+                { code: "587", location: "Calgary", state: "Alberta", country: "Canada" },
+                { code: "588", location: "Flint", state: "Michigan", country: "USA" },
+                { code: "601", location: "Jackson", state: "Mississippi", country: "USA" },
+                { code: "602", location: "Phoenix", state: "Arizona", country: "USA" },
+                { code: "603", location: "Manchester", state: "New Hampshire", country: "USA" },
+                { code: "604", location: "Vancouver", state: "British Columbia", country: "Canada" },
+                { code: "605", location: "Sioux Falls", state: "South Dakota", country: "USA" },
+                { code: "606", location: "Ashland", state: "Kentucky", country: "USA" },
+                { code: "607", location: "Binghamton", state: "New York", country: "USA" },
+                { code: "608", location: "Madison", state: "Wisconsin", country: "USA" },
+                { code: "609", location: "Trenton", state: "New Jersey", country: "USA" },
+                { code: "610", location: "Allentown", state: "Pennsylvania", country: "USA" },
+                { code: "612", location: "Minneapolis", state: "Minnesota", country: "USA" },
+                { code: "613", location: "Ottawa", state: "Ontario", country: "Canada" },
+                { code: "614", location: "Columbus", state: "Ohio", country: "USA" },
+                { code: "615", location: "Nashville", state: "Tennessee", country: "USA" },
+                { code: "616", location: "Grand Rapids", state: "Michigan", country: "USA" },
+                { code: "617", location: "Boston", state: "Massachusetts", country: "USA" },
+                { code: "618", location: "Carbondale", state: "Illinois", country: "USA" },
+                { code: "619", location: "San Diego", state: "California", country: "USA" },
+                { code: "620", location: "Hutchinson", state: "Kansas", country: "USA" },
+                { code: "623", location: "Phoenix", state: "Arizona", country: "USA" },
+                { code: "626", location: "Pasadena", state: "California", country: "USA" },
+                { code: "628", location: "San Francisco", state: "California", country: "USA" },
+                { code: "629", location: "Nashville", state: "Tennessee", country: "USA" },
+                { code: "630", location: "Aurora", state: "Illinois", country: "USA" },
+                { code: "631", location: "Huntington", state: "New York", country: "USA" },
+                { code: "636", location: "O'Fallon", state: "Missouri", country: "USA" },
+                { code: "639", location: "Regina", state: "Saskatchewan", country: "Canada" },
+                { code: "640", location: "San Jose", state: "California", country: "USA" },
+                { code: "641", location: "Mason City", state: "Iowa", country: "USA" },
+                { code: "645", location: "New York", state: "New York", country: "USA" },
+                { code: "646", location: "Manhattan", state: "New York", country: "USA" },
+                { code: "647", location: "Toronto", state: "Ontario", country: "Canada" },
+                { code: "649", location: "Cockburn Town", state: "Grand Turk", country: "Turks and Caicos" },
+                { code: "650", location: "Palo Alto", state: "California", country: "USA" },
+                { code: "651", location: "St. Paul", state: "Minnesota", country: "USA" },
+                { code: "656", location: "St. Petersburg", state: "Florida", country: "USA" },
+                { code: "657", location: "Anaheim", state: "California", country: "USA" },
+                { code: "658", location: "Kingston", state: "Jamaica", country: "Jamaica" },
+                { code: "659", location: "Birmingham", state: "Alabama", country: "USA" },
+                { code: "660", location: "Sedalia", state: "Missouri", country: "USA" },
+                { code: "661", location: "Bakersfield", state: "California", country: "USA" },
+                { code: "662", location: "Tupelo", state: "Mississippi", country: "USA" },
+                { code: "664", location: "Montserrat", state: "Montserrat", country: "Montserrat" },
+                { code: "667", location: "Baltimore", state: "Maryland", country: "USA" },
+                { code: "669", location: "San Jose", state: "California", country: "USA" },
+                { code: "670", location: "Saipan", state: "Northern Mariana Islands", country: "USA" },
+                { code: "671", location: "Hagåtña", state: "Guam", country: "USA" },
+                { code: "672", location: "Vancouver", state: "British Columbia", country: "Canada" },
+                { code: "678", location: "Atlanta", state: "Georgia", country: "USA" },
+                { code: "680", location: "Syracuse", state: "New York", country: "USA" },
+                { code: "681", location: "Charleston", state: "West Virginia", country: "USA" },
+                { code: "682", location: "Fort Worth", state: "Texas", country: "USA" },
+                { code: "684", location: "Pago Pago", state: "American Samoa", country: "USA" },
+                { code: "689", location: "Orlando", state: "Florida", country: "USA" },
+                { code: "701", location: "Fargo", state: "North Dakota", country: "USA" },
+                { code: "702", location: "Las Vegas", state: "Nevada", country: "USA" },
+                { code: "703", location: "Alexandria", state: "Virginia", country: "USA" },
+                { code: "704", location: "Charlotte", state: "North Carolina", country: "USA" },
+                { code: "705", location: "Sudbury", state: "Ontario", country: "Canada" },
+                { code: "706", location: "Augusta", state: "Georgia", country: "USA" },
+                { code: "707", location: "Santa Rosa", state: "California", country: "USA" },
+                { code: "708", location: "Chicago Heights", state: "Illinois", country: "USA" },
+                { code: "712", location: "Sioux City", state: "Iowa", country: "USA" },
+                { code: "713", location: "Houston", state: "Texas", country: "USA" },
+                { code: "714", location: "Anaheim", state: "California", country: "USA" },
+                { code: "715", location: "Eau Claire", state: "Wisconsin", country: "USA" },
+                { code: "716", location: "Buffalo", state: "New York", country: "USA" },
+                { code: "717", location: "Lancaster", state: "Pennsylvania", country: "USA" },
+                { code: "718", location: "Brooklyn", state: "New York", country: "USA" },
+                { code: "719", location: "Colorado Springs", state: "Colorado", country: "USA" },
+                { code: "720", location: "Denver", state: "Colorado", country: "USA" },
+                { code: "724", location: "Washington", state: "Pennsylvania", country: "USA" },
+                { code: "725", location: "Las Vegas", state: "Nevada", country: "USA" },
+                { code: "726", location: "San Antonio", state: "Texas", country: "USA" },
+                { code: "727", location: "St. Petersburg", state: "Florida", country: "USA" },
+                { code: "728", location: "Missoula", state: "Montana", country: "USA" },
+                { code: "731", location: "Jackson", state: "Tennessee", country: "USA" },
+                { code: "732", location: "New Brunswick", state: "New Jersey", country: "USA" },
+                { code: "734", location: "Ann Arbor", state: "Michigan", country: "USA" },
+                { code: "737", location: "Austin", state: "Texas", country: "USA" },
+                { code: "740", location: "Zanesville", state: "Ohio", country: "USA" },
+                { code: "743", location: "Greensboro", state: "North Carolina", country: "USA" },
+                { code: "747", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "754", location: "Fort Lauderdale", state: "Florida", country: "USA" },
+                { code: "757", location: "Virginia Beach", state: "Virginia", country: "USA" },
+                { code: "758", location: "Castries", state: "Castries", country: "Saint Lucia" },
+                { code: "760", location: "Oceanside", state: "California", country: "USA" },
+                { code: "762", location: "Augusta", state: "Georgia", country: "USA" },
+                { code: "763", location: "Brooklyn Park", state: "Minnesota", country: "USA" },
+                { code: "765", location: "Muncie", state: "Indiana", country: "USA" },
+                { code: "767", location: "Roseau", state: "Saint George", country: "Dominica" },
+                { code: "769", location: "Jackson", state: "Mississippi", country: "USA" },
+                { code: "770", location: "Atlanta", state: "Georgia", country: "USA" },
+                { code: "771", location: "Washington", state: "District of Columbia", country: "USA" },
+                { code: "772", location: "Port St. Lucie", state: "Florida", country: "USA" },
+                { code: "773", location: "Chicago", state: "Illinois", country: "USA" },
+                { code: "774", location: "Worcester", state: "Massachusetts", country: "USA" },
+                { code: "775", location: "Reno", state: "Nevada", country: "USA" },
+                { code: "778", location: "Vancouver", state: "British Columbia", country: "Canada" },
+                { code: "779", location: "Rockford", state: "Illinois", country: "USA" },
+                { code: "780", location: "Edmonton", state: "Alberta", country: "Canada" },
+                { code: "781", location: "Boston", state: "Massachusetts", country: "USA" },
+                { code: "784", location: "Kingstown", state: "Saint George", country: "Saint Vincent and Grenadines" },
+                { code: "785", location: "Topeka", state: "Kansas", country: "USA" },
+                { code: "786", location: "Miami", state: "Florida", country: "USA" },
+                { code: "787", location: "San Juan", state: "Puerto Rico", country: "USA" },
+                { code: "800", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "801", location: "Salt Lake City", state: "Utah", country: "USA" },
+                { code: "802", location: "Burlington", state: "Vermont", country: "USA" },
+                { code: "803", location: "Columbia", state: "South Carolina", country: "USA" },
+                { code: "804", location: "Richmond", state: "Virginia", country: "USA" },
+                { code: "805", location: "Santa Barbara", state: "California", country: "USA" },
+                { code: "806", location: "Lubbock", state: "Texas", country: "USA" },
+                { code: "808", location: "Honolulu", state: "Hawaii", country: "USA" },
+                { code: "809", location: "Santo Domingo", state: "Distrito Nacional", country: "Dominican Republic" },
+                { code: "810", location: "Flint", state: "Michigan", country: "USA" },
+                { code: "812", location: "Evansville", state: "Indiana", country: "USA" },
+                { code: "813", location: "Tampa", state: "Florida", country: "USA" },
+                { code: "814", location: "Erie", state: "Pennsylvania", country: "USA" },
+                { code: "815", location: "Rockford", state: "Illinois", country: "USA" },
+                { code: "816", location: "Kansas City", state: "Missouri", country: "USA" },
+                { code: "817", location: "Fort Worth", state: "Texas", country: "USA" },
+                { code: "818", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "820", location: "Los Angeles", state: "California", country: "USA" },
+                { code: "825", location: "Calgary", state: "Alberta", country: "Canada" },
+                { code: "828", location: "Asheville", state: "North Carolina", country: "USA" },
+                { code: "829", location: "Santiago", state: "Santiago", country: "Dominican Republic" },
+                { code: "830", location: "New Braunfels", state: "Texas", country: "USA" },
+                { code: "831", location: "Salinas", state: "California", country: "USA" },
+                { code: "832", location: "Houston", state: "Texas", country: "USA" },
+                { code: "833", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "835", location: "Allentown", state: "Pennsylvania", country: "USA" },
+                { code: "838", location: "Albany", state: "New York", country: "USA" },
+                { code: "839", location: "Columbia", state: "South Carolina", country: "USA" },
+                { code: "840", location: "San Francisco", state: "California", country: "USA" },
+                { code: "843", location: "Charleston", state: "South Carolina", country: "USA" },
+                { code: "844", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "845", location: "Poughkeepsie", state: "New York", country: "USA" },
+                { code: "847", location: "Evanston", state: "Illinois", country: "USA" },
+                { code: "848", location: "New Brunswick", state: "New Jersey", country: "USA" },
+                { code: "849", location: "Santiago", state: "Santiago", country: "Dominican Republic" },
+                { code: "850", location: "Tallahassee", state: "Florida", country: "USA" },
+                { code: "854", location: "Charleston", state: "South Carolina", country: "USA" },
+                { code: "855", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "856", location: "Camden", state: "New Jersey", country: "USA" },
+                { code: "857", location: "Boston", state: "Massachusetts", country: "USA" },
+                { code: "858", location: "San Diego", state: "California", country: "USA" },
+                { code: "859", location: "Lexington", state: "Kentucky", country: "USA" },
+                { code: "860", location: "Hartford", state: "Connecticut", country: "USA" },
+                { code: "862", location: "Newark", state: "New Jersey", country: "USA" },
+                { code: "863", location: "Lakeland", state: "Florida", country: "USA" },
+                { code: "864", location: "Greenville", state: "South Carolina", country: "USA" },
+                { code: "865", location: "Knoxville", state: "Tennessee", country: "USA" },
+                { code: "866", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "868", location: "Port of Spain", state: "Port of Spain", country: "Trinidad and Tobago" },
+                { code: "869", location: "Basseterre", state: "Saint George Basseterre", country: "Saint Kitts and Nevis" },
+                { code: "870", location: "Jonesboro", state: "Arkansas", country: "USA" },
+                { code: "872", location: "Chicago", state: "Illinois", country: "USA" },
+                { code: "876", location: "Kingston", state: "Surrey", country: "Jamaica" },
+                { code: "877", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "878", location: "Pittsburgh", state: "Pennsylvania", country: "USA" },
+                { code: "888", location: "Toll Free", state: "North America", country: "USA/Canada" },
+                { code: "901", location: "Memphis", state: "Tennessee", country: "USA" },
+                { code: "902", location: "Halifax", state: "Nova Scotia", country: "Canada" },
+                { code: "903", location: "Tyler", state: "Texas", country: "USA" },
+                { code: "904", location: "Jacksonville", state: "Florida", country: "USA" },
+                { code: "905", location: "Hamilton", state: "Ontario", country: "Canada" },
+                { code: "906", location: "Marquette", state: "Michigan", country: "USA" },
+                { code: "907", location: "Anchorage", state: "Alaska", country: "USA" },
+                { code: "908", location: "Elizabeth", state: "New Jersey", country: "USA" },
+                { code: "909", location: "San Bernardino", state: "California", country: "USA" },
+                { code: "910", location: "Fayetteville", state: "North Carolina", country: "USA" },
+                { code: "912", location: "Savannah", state: "Georgia", country: "USA" },
+                { code: "913", location: "Kansas City", state: "Kansas", country: "USA" },
+                { code: "914", location: "Yonkers", state: "New York", country: "USA" },
+                { code: "915", location: "El Paso", state: "Texas", country: "USA" },
+                { code: "916", location: "Sacramento", state: "California", country: "USA" },
+                { code: "917", location: "New York", state: "New York", country: "USA" },
+                { code: "918", location: "Tulsa", state: "Oklahoma", country: "USA" },
+                { code: "919", location: "Raleigh", state: "North Carolina", country: "USA" },
+                { code: "920", location: "Green Bay", state: "Wisconsin", country: "USA" },
+                { code: "925", location: "Concord", state: "California", country: "USA" },
+                { code: "928", location: "Flagstaff", state: "Arizona", country: "USA" },
+                { code: "929", location: "New York", state: "New York", country: "USA" },
+                { code: "930", location: "Evansville", state: "Indiana", country: "USA" },
+                { code: "931", location: "Clarksville", state: "Tennessee", country: "USA" },
+                { code: "934", location: "Huntington", state: "New York", country: "USA" },
+                { code: "936", location: "Huntsville", state: "Texas", country: "USA" },
+                { code: "937", location: "Dayton", state: "Ohio", country: "USA" },
+                { code: "938", location: "Huntsville", state: "Alabama", country: "USA" },
+                { code: "939", location: "San Juan", state: "Puerto Rico", country: "USA" },
+                { code: "940", location: "Wichita Falls", state: "Texas", country: "USA" },
+                { code: "941", location: "Sarasota", state: "Florida", country: "USA" },
+                { code: "947", location: "Troy", state: "Michigan", country: "USA" },
+                { code: "949", location: "Irvine", state: "California", country: "USA" },
+                { code: "951", location: "Riverside", state: "California", country: "USA" },
+                { code: "952", location: "Bloomington", state: "Minnesota", country: "USA" },
+                { code: "954", location: "Fort Lauderdale", state: "Florida", country: "USA" },
+                { code: "956", location: "Laredo", state: "Texas", country: "USA" },
+                { code: "959", location: "Hartford", state: "Connecticut", country: "USA" },
+                { code: "970", location: "Fort Collins", state: "Colorado", country: "USA" },
+                { code: "971", location: "Portland", state: "Oregon", country: "USA" },
+                { code: "972", location: "Dallas", state: "Texas", country: "USA" },
+                { code: "973", location: "Newark", state: "New Jersey", country: "USA" },
+                { code: "978", location: "Lowell", state: "Massachusetts", country: "USA" },
+                { code: "979", location: "College Station", state: "Texas", country: "USA" },
+                { code: "980", location: "Charlotte", state: "North Carolina", country: "USA" },
+                { code: "984", location: "Raleigh", state: "North Carolina", country: "USA" },
+                { code: "985", location: "Houma", state: "Louisiana", country: "USA" },
+                { code: "989", location: "Saginaw", state: "Michigan", country: "USA" }
+            ];
 
-                <!-- Safety Resources section -->
-                <div class="col-md-4">
-                    <h6>Safety Resources</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="allareacodelist.html" class="text-light text-decoration-none">
-                            <i class="fas fa-list me-1"></i>All Area Codes Directory
-                        </a></li>
-                        <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
-                        </a></li>
-                        <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
-                        </a></li>
-                        <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
-                        </a></li>
-                        <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-sms me-1"></i>Text Message Safety
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+            let currentSort = 'number';
+            let filteredData = [...areaCodeData];
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            // DOM elements
+            const searchInput = document.getElementById('searchInput');
+            const areaCodeGrid = document.getElementById('areaCodeGrid');
+            const sortTabs = document.querySelectorAll('.sort-tab');
+            const totalCountEl = document.getElementById('totalCount');
+            const usCountEl = document.getElementById('usCount');
+            const canadaCountEl = document.getElementById('canadaCount');
 
-    <!-- Area Code Data and Interactive Script -->
-    <script>
-    // Complete area code data with locations
-    const areaCodeData = [
-        {code: "201", location: "Jersey City", state: "New Jersey", country: "USA"},
-        {code: "202", location: "Washington", state: "District of Columbia", country: "USA"},
-        {code: "203", location: "New Haven", state: "Connecticut", country: "USA"},
-        {code: "204", location: "Winnipeg", state: "Manitoba", country: "Canada"},
-        {code: "205", location: "Birmingham", state: "Alabama", country: "USA"},
-        {code: "206", location: "Seattle", state: "Washington", country: "USA"},
-        {code: "207", location: "Portland", state: "Maine", country: "USA"},
-        {code: "208", location: "Boise", state: "Idaho", country: "USA"},
-        {code: "209", location: "Stockton", state: "California", country: "USA"},
-        {code: "210", location: "San Antonio", state: "Texas", country: "USA"},
-        {code: "212", location: "Manhattan", state: "New York", country: "USA"},
-        {code: "213", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "214", location: "Dallas", state: "Texas", country: "USA"},
-        {code: "215", location: "Philadelphia", state: "Pennsylvania", country: "USA"},
-        {code: "216", location: "Cleveland", state: "Ohio", country: "USA"},
-        {code: "217", location: "Springfield", state: "Illinois", country: "USA"},
-        {code: "218", location: "Duluth", state: "Minnesota", country: "USA"},
-        {code: "219", location: "Gary", state: "Indiana", country: "USA"},
-        {code: "220", location: "Newark", state: "Ohio", country: "USA"},
-        {code: "224", location: "Elgin", state: "Illinois", country: "USA"},
-        {code: "225", location: "Baton Rouge", state: "Louisiana", country: "USA"},
-        {code: "226", location: "London", state: "Ontario", country: "Canada"},
-        {code: "227", location: "Silver Spring", state: "Maryland", country: "USA"},
-        {code: "228", location: "Gulfport", state: "Mississippi", country: "USA"},
-        {code: "229", location: "Albany", state: "Georgia", country: "USA"},
-        {code: "231", location: "Muskegon", state: "Michigan", country: "USA"},
-        {code: "234", location: "Akron", state: "Ohio", country: "USA"},
-        {code: "236", location: "Vancouver", state: "British Columbia", country: "Canada"},
-        {code: "239", location: "Fort Myers", state: "Florida", country: "USA"},
-        {code: "240", location: "Gaithersburg", state: "Maryland", country: "USA"},
-        {code: "242", location: "Nassau", state: "New Providence", country: "Bahamas"},
-        {code: "246", location: "Bridgetown", state: "Saint Michael", country: "Barbados"},
-        {code: "248", location: "Troy", state: "Michigan", country: "USA"},
-        {code: "250", location: "Victoria", state: "British Columbia", country: "Canada"},
-        {code: "251", location: "Mobile", state: "Alabama", country: "USA"},
-        {code: "252", location: "Greenville", state: "North Carolina", country: "USA"},
-        {code: "253", location: "Tacoma", state: "Washington", country: "USA"},
-        {code: "254", location: "Killeen", state: "Texas", country: "USA"},
-        {code: "256", location: "Huntsville", state: "Alabama", country: "USA"},
-        {code: "260", location: "Fort Wayne", state: "Indiana", country: "USA"},
-        {code: "262", location: "Kenosha", state: "Wisconsin", country: "USA"},
-        {code: "264", location: "The Valley", state: "Anguilla", country: "Anguilla"},
-        {code: "267", location: "Philadelphia", state: "Pennsylvania", country: "USA"},
-        {code: "268", location: "St. John's", state: "Antigua", country: "Antigua and Barbuda"},
-        {code: "269", location: "Kalamazoo", state: "Michigan", country: "USA"},
-        {code: "270", location: "Bowling Green", state: "Kentucky", country: "USA"},
-        {code: "272", location: "Scranton", state: "Pennsylvania", country: "USA"},
-        {code: "276", location: "Bristol", state: "Virginia", country: "USA"},
-        {code: "279", location: "Sacramento", state: "California", country: "USA"},
-        {code: "281", location: "Houston", state: "Texas", country: "USA"},
-        {code: "283", location: "Cincinnati", state: "Ohio", country: "USA"},
-        {code: "284", location: "Road Town", state: "Tortola", country: "British Virgin Islands"},
-        {code: "289", location: "Hamilton", state: "Ontario", country: "Canada"},
-        {code: "301", location: "Rockville", state: "Maryland", country: "USA"},
-        {code: "302", location: "Wilmington", state: "Delaware", country: "USA"},
-        {code: "303", location: "Denver", state: "Colorado", country: "USA"},
-        {code: "304", location: "Charleston", state: "West Virginia", country: "USA"},
-        {code: "305", location: "Miami", state: "Florida", country: "USA"},
-        {code: "306", location: "Saskatoon", state: "Saskatchewan", country: "Canada"},
-        {code: "307", location: "Cheyenne", state: "Wyoming", country: "USA"},
-        {code: "308", location: "North Platte", state: "Nebraska", country: "USA"},
-        {code: "309", location: "Peoria", state: "Illinois", country: "USA"},
-        {code: "310", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "312", location: "Chicago", state: "Illinois", country: "USA"},
-        {code: "313", location: "Detroit", state: "Michigan", country: "USA"},
-        {code: "314", location: "St. Louis", state: "Missouri", country: "USA"},
-        {code: "315", location: "Syracuse", state: "New York", country: "USA"},
-        {code: "316", location: "Wichita", state: "Kansas", country: "USA"},
-        {code: "317", location: "Indianapolis", state: "Indiana", country: "USA"},
-        {code: "318", location: "Shreveport", state: "Louisiana", country: "USA"},
-        {code: "319", location: "Cedar Rapids", state: "Iowa", country: "USA"},
-        {code: "320", location: "St. Cloud", state: "Minnesota", country: "USA"},
-        {code: "321", location: "Orlando", state: "Florida", country: "USA"},
-        {code: "323", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "325", location: "Abilene", state: "Texas", country: "USA"},
-        {code: "326", location: "Bowling Green", state: "Ohio", country: "USA"},
-        {code: "329", location: "Lexington", state: "Kentucky", country: "USA"},
-        {code: "330", location: "Akron", state: "Ohio", country: "USA"},
-        {code: "331", location: "Aurora", state: "Illinois", country: "USA"},
-        {code: "332", location: "New York", state: "New York", country: "USA"},
-        {code: "334", location: "Montgomery", state: "Alabama", country: "USA"},
-        {code: "336", location: "Greensboro", state: "North Carolina", country: "USA"},
-        {code: "337", location: "Lafayette", state: "Louisiana", country: "USA"},
-        {code: "339", location: "Boston", state: "Massachusetts", country: "USA"},
-        {code: "340", location: "Charlotte Amalie", state: "St. Thomas", country: "US Virgin Islands"},
-        {code: "341", location: "Oakland", state: "California", country: "USA"},
-        {code: "343", location: "Ottawa", state: "Ontario", country: "Canada"},
-        {code: "345", location: "George Town", state: "Grand Cayman", country: "Cayman Islands"},
-        {code: "346", location: "Houston", state: "Texas", country: "USA"},
-        {code: "347", location: "Brooklyn", state: "New York", country: "USA"},
-        {code: "350", location: "San Francisco", state: "California", country: "USA"},
-        {code: "351", location: "Boston", state: "Massachusetts", country: "USA"},
-        {code: "352", location: "Gainesville", state: "Florida", country: "USA"},
-        {code: "360", location: "Olympia", state: "Washington", country: "USA"},
-        {code: "361", location: "Corpus Christi", state: "Texas", country: "USA"},
-        {code: "363", location: "Hempstead", state: "New York", country: "USA"},
-        {code: "364", location: "Lexington", state: "Kentucky", country: "USA"},
-        {code: "365", location: "Hamilton", state: "Ontario", country: "Canada"},
-        {code: "380", location: "Columbus", state: "Ohio", country: "USA"},
-        {code: "385", location: "Salt Lake City", state: "Utah", country: "USA"},
-        {code: "386", location: "Daytona Beach", state: "Florida", country: "USA"},
-        {code: "401", location: "Providence", state: "Rhode Island", country: "USA"},
-        {code: "402", location: "Omaha", state: "Nebraska", country: "USA"},
-        {code: "403", location: "Calgary", state: "Alberta", country: "Canada"},
-        {code: "404", location: "Atlanta", state: "Georgia", country: "USA"},
-        {code: "405", location: "Oklahoma City", state: "Oklahoma", country: "USA"},
-        {code: "406", location: "Billings", state: "Montana", country: "USA"},
-        {code: "407", location: "Orlando", state: "Florida", country: "USA"},
-        {code: "408", location: "San Jose", state: "California", country: "USA"},
-        {code: "409", location: "Beaumont", state: "Texas", country: "USA"},
-        {code: "410", location: "Baltimore", state: "Maryland", country: "USA"},
-        {code: "412", location: "Pittsburgh", state: "Pennsylvania", country: "USA"},
-        {code: "413", location: "Springfield", state: "Massachusetts", country: "USA"},
-        {code: "414", location: "Milwaukee", state: "Wisconsin", country: "USA"},
-        {code: "415", location: "San Francisco", state: "California", country: "USA"},
-        {code: "416", location: "Toronto", state: "Ontario", country: "Canada"},
-        {code: "417", location: "Springfield", state: "Missouri", country: "USA"},
-        {code: "419", location: "Toledo", state: "Ohio", country: "USA"},
-        {code: "423", location: "Chattanooga", state: "Tennessee", country: "USA"},
-        {code: "424", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "425", location: "Bellevue", state: "Washington", country: "USA"},
-        {code: "430", location: "Tyler", state: "Texas", country: "USA"},
-        {code: "431", location: "Winnipeg", state: "Manitoba", country: "Canada"},
-        {code: "432", location: "Midland", state: "Texas", country: "USA"},
-        {code: "434", location: "Lynchburg", state: "Virginia", country: "USA"},
-        {code: "435", location: "St. George", state: "Utah", country: "USA"},
-        {code: "437", location: "Toronto", state: "Ontario", country: "Canada"},
-        {code: "438", location: "Montreal", state: "Quebec", country: "Canada"},
-        {code: "440", location: "Cleveland", state: "Ohio", country: "USA"},
-        {code: "441", location: "Hamilton", state: "Pembroke", country: "Bermuda"},
-        {code: "442", location: "Oceanside", state: "California", country: "USA"},
-        {code: "443", location: "Baltimore", state: "Maryland", country: "USA"},
-        {code: "445", location: "Philadelphia", state: "Pennsylvania", country: "USA"},
-        {code: "447", location: "Springfield", state: "Illinois", country: "USA"},
-        {code: "448", location: "Orlando", state: "Florida", country: "USA"},
-        {code: "458", location: "Eugene", state: "Oregon", country: "USA"},
-        {code: "463", location: "Indianapolis", state: "Indiana", country: "USA"},
-        {code: "464", location: "Evansville", state: "Indiana", country: "USA"},
-        {code: "469", location: "Dallas", state: "Texas", country: "USA"},
-        {code: "470", location: "Atlanta", state: "Georgia", country: "USA"},
-        {code: "472", location: "Hartford", state: "Connecticut", country: "USA"},
-        {code: "473", location: "St. George's", state: "Saint George", country: "Grenada"},
-        {code: "475", location: "New Haven", state: "Connecticut", country: "USA"},
-        {code: "478", location: "Macon", state: "Georgia", country: "USA"},
-        {code: "479", location: "Fort Smith", state: "Arkansas", country: "USA"},
-        {code: "480", location: "Scottsdale", state: "Arizona", country: "USA"},
-        {code: "484", location: "Allentown", state: "Pennsylvania", country: "USA"},
-        {code: "501", location: "Little Rock", state: "Arkansas", country: "USA"},
-        {code: "502", location: "Louisville", state: "Kentucky", country: "USA"},
-        {code: "503", location: "Portland", state: "Oregon", country: "USA"},
-        {code: "504", location: "New Orleans", state: "Louisiana", country: "USA"},
-        {code: "505", location: "Albuquerque", state: "New Mexico", country: "USA"},
-        {code: "506", location: "Moncton", state: "New Brunswick", country: "Canada"},
-        {code: "507", location: "Rochester", state: "Minnesota", country: "USA"},
-        {code: "508", location: "Worcester", state: "Massachusetts", country: "USA"},
-        {code: "509", location: "Spokane", state: "Washington", country: "USA"},
-        {code: "510", location: "Oakland", state: "California", country: "USA"},
-        {code: "512", location: "Austin", state: "Texas", country: "USA"},
-        {code: "513", location: "Cincinnati", state: "Ohio", country: "USA"},
-        {code: "514", location: "Montreal", state: "Quebec", country: "Canada"},
-        {code: "515", location: "Des Moines", state: "Iowa", country: "USA"},
-        {code: "516", location: "Hempstead", state: "New York", country: "USA"},
-        {code: "517", location: "Lansing", state: "Michigan", country: "USA"},
-        {code: "518", location: "Albany", state: "New York", country: "USA"},
-        {code: "519", location: "London", state: "Ontario", country: "Canada"},
-        {code: "520", location: "Tucson", state: "Arizona", country: "USA"},
-        {code: "530", location: "Redding", state: "California", country: "USA"},
-        {code: "531", location: "Omaha", state: "Nebraska", country: "USA"},
-        {code: "539", location: "Tulsa", state: "Oklahoma", country: "USA"},
-        {code: "540", location: "Roanoke", state: "Virginia", country: "USA"},
-        {code: "541", location: "Eugene", state: "Oregon", country: "USA"},
-        {code: "551", location: "Jersey City", state: "New Jersey", country: "USA"},
-        {code: "559", location: "Fresno", state: "California", country: "USA"},
-        {code: "561", location: "West Palm Beach", state: "Florida", country: "USA"},
-        {code: "562", location: "Long Beach", state: "California", country: "USA"},
-        {code: "563", location: "Davenport", state: "Iowa", country: "USA"},
-        {code: "564", location: "Everett", state: "Washington", country: "USA"},
-        {code: "567", location: "Toledo", state: "Ohio", country: "USA"},
-        {code: "570", location: "Scranton", state: "Pennsylvania", country: "USA"},
-        {code: "571", location: "Alexandria", state: "Virginia", country: "USA"},
-        {code: "572", location: "Tulsa", state: "Oklahoma", country: "USA"},
-        {code: "573", location: "Columbia", state: "Missouri", country: "USA"},
-        {code: "574", location: "South Bend", state: "Indiana", country: "USA"},
-        {code: "575", location: "Las Cruces", state: "New Mexico", country: "USA"},
-        {code: "580", location: "Lawton", state: "Oklahoma", country: "USA"},
-        {code: "582", location: "Erie", state: "Pennsylvania", country: "USA"},
-        {code: "585", location: "Rochester", state: "New York", country: "USA"},
-        {code: "586", location: "Warren", state: "Michigan", country: "USA"},
-        {code: "587", location: "Calgary", state: "Alberta", country: "Canada"},
-        {code: "588", location: "Flint", state: "Michigan", country: "USA"},
-        {code: "601", location: "Jackson", state: "Mississippi", country: "USA"},
-        {code: "602", location: "Phoenix", state: "Arizona", country: "USA"},
-        {code: "603", location: "Manchester", state: "New Hampshire", country: "USA"},
-        {code: "604", location: "Vancouver", state: "British Columbia", country: "Canada"},
-        {code: "605", location: "Sioux Falls", state: "South Dakota", country: "USA"},
-        {code: "606", location: "Ashland", state: "Kentucky", country: "USA"},
-        {code: "607", location: "Binghamton", state: "New York", country: "USA"},
-        {code: "608", location: "Madison", state: "Wisconsin", country: "USA"},
-        {code: "609", location: "Trenton", state: "New Jersey", country: "USA"},
-        {code: "610", location: "Allentown", state: "Pennsylvania", country: "USA"},
-        {code: "612", location: "Minneapolis", state: "Minnesota", country: "USA"},
-        {code: "613", location: "Ottawa", state: "Ontario", country: "Canada"},
-        {code: "614", location: "Columbus", state: "Ohio", country: "USA"},
-        {code: "615", location: "Nashville", state: "Tennessee", country: "USA"},
-        {code: "616", location: "Grand Rapids", state: "Michigan", country: "USA"},
-        {code: "617", location: "Boston", state: "Massachusetts", country: "USA"},
-        {code: "618", location: "Carbondale", state: "Illinois", country: "USA"},
-        {code: "619", location: "San Diego", state: "California", country: "USA"},
-        {code: "620", location: "Hutchinson", state: "Kansas", country: "USA"},
-        {code: "623", location: "Phoenix", state: "Arizona", country: "USA"},
-        {code: "626", location: "Pasadena", state: "California", country: "USA"},
-        {code: "628", location: "San Francisco", state: "California", country: "USA"},
-        {code: "629", location: "Nashville", state: "Tennessee", country: "USA"},
-        {code: "630", location: "Aurora", state: "Illinois", country: "USA"},
-        {code: "631", location: "Huntington", state: "New York", country: "USA"},
-        {code: "636", location: "O'Fallon", state: "Missouri", country: "USA"},
-        {code: "639", location: "Regina", state: "Saskatchewan", country: "Canada"},
-        {code: "640", location: "San Jose", state: "California", country: "USA"},
-        {code: "641", location: "Mason City", state: "Iowa", country: "USA"},
-        {code: "645", location: "New York", state: "New York", country: "USA"},
-        {code: "646", location: "Manhattan", state: "New York", country: "USA"},
-        {code: "647", location: "Toronto", state: "Ontario", country: "Canada"},
-        {code: "649", location: "Cockburn Town", state: "Grand Turk", country: "Turks and Caicos"},
-        {code: "650", location: "Palo Alto", state: "California", country: "USA"},
-        {code: "651", location: "St. Paul", state: "Minnesota", country: "USA"},
-        {code: "656", location: "St. Petersburg", state: "Florida", country: "USA"},
-        {code: "657", location: "Anaheim", state: "California", country: "USA"},
-        {code: "658", location: "Kingston", state: "Jamaica", country: "Jamaica"},
-        {code: "659", location: "Birmingham", state: "Alabama", country: "USA"},
-        {code: "660", location: "Sedalia", state: "Missouri", country: "USA"},
-        {code: "661", location: "Bakersfield", state: "California", country: "USA"},
-        {code: "662", location: "Tupelo", state: "Mississippi", country: "USA"},
-        {code: "664", location: "Montserrat", state: "Montserrat", country: "Montserrat"},
-        {code: "667", location: "Baltimore", state: "Maryland", country: "USA"},
-        {code: "669", location: "San Jose", state: "California", country: "USA"},
-        {code: "670", location: "Saipan", state: "Northern Mariana Islands", country: "USA"},
-        {code: "671", location: "Hagåtña", state: "Guam", country: "USA"},
-        {code: "672", location: "Vancouver", state: "British Columbia", country: "Canada"},
-        {code: "678", location: "Atlanta", state: "Georgia", country: "USA"},
-        {code: "680", location: "Syracuse", state: "New York", country: "USA"},
-        {code: "681", location: "Charleston", state: "West Virginia", country: "USA"},
-        {code: "682", location: "Fort Worth", state: "Texas", country: "USA"},
-        {code: "684", location: "Pago Pago", state: "American Samoa", country: "USA"},
-        {code: "689", location: "Orlando", state: "Florida", country: "USA"},
-        {code: "701", location: "Fargo", state: "North Dakota", country: "USA"},
-        {code: "702", location: "Las Vegas", state: "Nevada", country: "USA"},
-        {code: "703", location: "Alexandria", state: "Virginia", country: "USA"},
-        {code: "704", location: "Charlotte", state: "North Carolina", country: "USA"},
-        {code: "705", location: "Sudbury", state: "Ontario", country: "Canada"},
-        {code: "706", location: "Augusta", state: "Georgia", country: "USA"},
-        {code: "707", location: "Santa Rosa", state: "California", country: "USA"},
-        {code: "708", location: "Chicago Heights", state: "Illinois", country: "USA"},
-        {code: "712", location: "Sioux City", state: "Iowa", country: "USA"},
-        {code: "713", location: "Houston", state: "Texas", country: "USA"},
-        {code: "714", location: "Anaheim", state: "California", country: "USA"},
-        {code: "715", location: "Eau Claire", state: "Wisconsin", country: "USA"},
-        {code: "716", location: "Buffalo", state: "New York", country: "USA"},
-        {code: "717", location: "Lancaster", state: "Pennsylvania", country: "USA"},
-        {code: "718", location: "Brooklyn", state: "New York", country: "USA"},
-        {code: "719", location: "Colorado Springs", state: "Colorado", country: "USA"},
-        {code: "720", location: "Denver", state: "Colorado", country: "USA"},
-        {code: "724", location: "Washington", state: "Pennsylvania", country: "USA"},
-        {code: "725", location: "Las Vegas", state: "Nevada", country: "USA"},
-        {code: "726", location: "San Antonio", state: "Texas", country: "USA"},
-        {code: "727", location: "St. Petersburg", state: "Florida", country: "USA"},
-        {code: "728", location: "Missoula", state: "Montana", country: "USA"},
-        {code: "731", location: "Jackson", state: "Tennessee", country: "USA"},
-        {code: "732", location: "New Brunswick", state: "New Jersey", country: "USA"},
-        {code: "734", location: "Ann Arbor", state: "Michigan", country: "USA"},
-        {code: "737", location: "Austin", state: "Texas", country: "USA"},
-        {code: "740", location: "Zanesville", state: "Ohio", country: "USA"},
-        {code: "743", location: "Greensboro", state: "North Carolina", country: "USA"},
-        {code: "747", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "754", location: "Fort Lauderdale", state: "Florida", country: "USA"},
-        {code: "757", location: "Virginia Beach", state: "Virginia", country: "USA"},
-        {code: "758", location: "Castries", state: "Castries", country: "Saint Lucia"},
-        {code: "760", location: "Oceanside", state: "California", country: "USA"},
-        {code: "762", location: "Augusta", state: "Georgia", country: "USA"},
-        {code: "763", location: "Brooklyn Park", state: "Minnesota", country: "USA"},
-        {code: "765", location: "Muncie", state: "Indiana", country: "USA"},
-        {code: "767", location: "Roseau", state: "Saint George", country: "Dominica"},
-        {code: "769", location: "Jackson", state: "Mississippi", country: "USA"},
-        {code: "770", location: "Atlanta", state: "Georgia", country: "USA"},
-        {code: "771", location: "Washington", state: "District of Columbia", country: "USA"},
-        {code: "772", location: "Port St. Lucie", state: "Florida", country: "USA"},
-        {code: "773", location: "Chicago", state: "Illinois", country: "USA"},
-        {code: "774", location: "Worcester", state: "Massachusetts", country: "USA"},
-        {code: "775", location: "Reno", state: "Nevada", country: "USA"},
-        {code: "778", location: "Vancouver", state: "British Columbia", country: "Canada"},
-        {code: "779", location: "Rockford", state: "Illinois", country: "USA"},
-        {code: "780", location: "Edmonton", state: "Alberta", country: "Canada"},
-        {code: "781", location: "Boston", state: "Massachusetts", country: "USA"},
-        {code: "784", location: "Kingstown", state: "Saint George", country: "Saint Vincent and Grenadines"},
-        {code: "785", location: "Topeka", state: "Kansas", country: "USA"},
-        {code: "786", location: "Miami", state: "Florida", country: "USA"},
-        {code: "787", location: "San Juan", state: "Puerto Rico", country: "USA"},
-        {code: "800", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "801", location: "Salt Lake City", state: "Utah", country: "USA"},
-        {code: "802", location: "Burlington", state: "Vermont", country: "USA"},
-        {code: "803", location: "Columbia", state: "South Carolina", country: "USA"},
-        {code: "804", location: "Richmond", state: "Virginia", country: "USA"},
-        {code: "805", location: "Santa Barbara", state: "California", country: "USA"},
-        {code: "806", location: "Lubbock", state: "Texas", country: "USA"},
-        {code: "808", location: "Honolulu", state: "Hawaii", country: "USA"},
-        {code: "809", location: "Santo Domingo", state: "Distrito Nacional", country: "Dominican Republic"},
-        {code: "810", location: "Flint", state: "Michigan", country: "USA"},
-        {code: "812", location: "Evansville", state: "Indiana", country: "USA"},
-        {code: "813", location: "Tampa", state: "Florida", country: "USA"},
-        {code: "814", location: "Erie", state: "Pennsylvania", country: "USA"},
-        {code: "815", location: "Rockford", state: "Illinois", country: "USA"},
-        {code: "816", location: "Kansas City", state: "Missouri", country: "USA"},
-        {code: "817", location: "Fort Worth", state: "Texas", country: "USA"},
-        {code: "818", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "820", location: "Los Angeles", state: "California", country: "USA"},
-        {code: "825", location: "Calgary", state: "Alberta", country: "Canada"},
-        {code: "828", location: "Asheville", state: "North Carolina", country: "USA"},
-        {code: "829", location: "Santiago", state: "Santiago", country: "Dominican Republic"},
-        {code: "830", location: "New Braunfels", state: "Texas", country: "USA"},
-        {code: "831", location: "Salinas", state: "California", country: "USA"},
-        {code: "832", location: "Houston", state: "Texas", country: "USA"},
-        {code: "833", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "835", location: "Allentown", state: "Pennsylvania", country: "USA"},
-        {code: "838", location: "Albany", state: "New York", country: "USA"},
-        {code: "839", location: "Columbia", state: "South Carolina", country: "USA"},
-        {code: "840", location: "San Francisco", state: "California", country: "USA"},
-        {code: "843", location: "Charleston", state: "South Carolina", country: "USA"},
-        {code: "844", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "845", location: "Poughkeepsie", state: "New York", country: "USA"},
-        {code: "847", location: "Evanston", state: "Illinois", country: "USA"},
-        {code: "848", location: "New Brunswick", state: "New Jersey", country: "USA"},
-        {code: "849", location: "Santiago", state: "Santiago", country: "Dominican Republic"},
-        {code: "850", location: "Tallahassee", state: "Florida", country: "USA"},
-        {code: "854", location: "Charleston", state: "South Carolina", country: "USA"},
-        {code: "855", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "856", location: "Camden", state: "New Jersey", country: "USA"},
-        {code: "857", location: "Boston", state: "Massachusetts", country: "USA"},
-        {code: "858", location: "San Diego", state: "California", country: "USA"},
-        {code: "859", location: "Lexington", state: "Kentucky", country: "USA"},
-        {code: "860", location: "Hartford", state: "Connecticut", country: "USA"},
-        {code: "862", location: "Newark", state: "New Jersey", country: "USA"},
-        {code: "863", location: "Lakeland", state: "Florida", country: "USA"},
-        {code: "864", location: "Greenville", state: "South Carolina", country: "USA"},
-        {code: "865", location: "Knoxville", state: "Tennessee", country: "USA"},
-        {code: "866", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "868", location: "Port of Spain", state: "Port of Spain", country: "Trinidad and Tobago"},
-        {code: "869", location: "Basseterre", state: "Saint George Basseterre", country: "Saint Kitts and Nevis"},
-        {code: "870", location: "Jonesboro", state: "Arkansas", country: "USA"},
-        {code: "872", location: "Chicago", state: "Illinois", country: "USA"},
-        {code: "876", location: "Kingston", state: "Surrey", country: "Jamaica"},
-        {code: "877", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "878", location: "Pittsburgh", state: "Pennsylvania", country: "USA"},
-        {code: "888", location: "Toll Free", state: "North America", country: "USA/Canada"},
-        {code: "901", location: "Memphis", state: "Tennessee", country: "USA"},
-        {code: "902", location: "Halifax", state: "Nova Scotia", country: "Canada"},
-        {code: "903", location: "Tyler", state: "Texas", country: "USA"},
-        {code: "904", location: "Jacksonville", state: "Florida", country: "USA"},
-        {code: "905", location: "Hamilton", state: "Ontario", country: "Canada"},
-        {code: "906", location: "Marquette", state: "Michigan", country: "USA"},
-        {code: "907", location: "Anchorage", state: "Alaska", country: "USA"},
-        {code: "908", location: "Elizabeth", state: "New Jersey", country: "USA"},
-        {code: "909", location: "San Bernardino", state: "California", country: "USA"},
-        {code: "910", location: "Fayetteville", state: "North Carolina", country: "USA"},
-        {code: "912", location: "Savannah", state: "Georgia", country: "USA"},
-        {code: "913", location: "Kansas City", state: "Kansas", country: "USA"},
-        {code: "914", location: "Yonkers", state: "New York", country: "USA"},
-        {code: "915", location: "El Paso", state: "Texas", country: "USA"},
-        {code: "916", location: "Sacramento", state: "California", country: "USA"},
-        {code: "917", location: "New York", state: "New York", country: "USA"},
-        {code: "918", location: "Tulsa", state: "Oklahoma", country: "USA"},
-        {code: "919", location: "Raleigh", state: "North Carolina", country: "USA"},
-        {code: "920", location: "Green Bay", state: "Wisconsin", country: "USA"},
-        {code: "925", location: "Concord", state: "California", country: "USA"},
-        {code: "928", location: "Flagstaff", state: "Arizona", country: "USA"},
-        {code: "929", location: "New York", state: "New York", country: "USA"},
-        {code: "930", location: "Evansville", state: "Indiana", country: "USA"},
-        {code: "931", location: "Clarksville", state: "Tennessee", country: "USA"},
-        {code: "934", location: "Huntington", state: "New York", country: "USA"},
-        {code: "936", location: "Huntsville", state: "Texas", country: "USA"},
-        {code: "937", location: "Dayton", state: "Ohio", country: "USA"},
-        {code: "938", location: "Huntsville", state: "Alabama", country: "USA"},
-        {code: "939", location: "San Juan", state: "Puerto Rico", country: "USA"},
-        {code: "940", location: "Wichita Falls", state: "Texas", country: "USA"},
-        {code: "941", location: "Sarasota", state: "Florida", country: "USA"},
-        {code: "947", location: "Troy", state: "Michigan", country: "USA"},
-        {code: "949", location: "Irvine", state: "California", country: "USA"},
-        {code: "951", location: "Riverside", state: "California", country: "USA"},
-        {code: "952", location: "Bloomington", state: "Minnesota", country: "USA"},
-        {code: "954", location: "Fort Lauderdale", state: "Florida", country: "USA"},
-        {code: "956", location: "Laredo", state: "Texas", country: "USA"},
-        {code: "959", location: "Hartford", state: "Connecticut", country: "USA"},
-        {code: "970", location: "Fort Collins", state: "Colorado", country: "USA"},
-        {code: "971", location: "Portland", state: "Oregon", country: "USA"},
-        {code: "972", location: "Dallas", state: "Texas", country: "USA"},
-        {code: "973", location: "Newark", state: "New Jersey", country: "USA"},
-        {code: "978", location: "Lowell", state: "Massachusetts", country: "USA"},
-        {code: "979", location: "College Station", state: "Texas", country: "USA"},
-        {code: "980", location: "Charlotte", state: "North Carolina", country: "USA"},
-        {code: "984", location: "Raleigh", state: "North Carolina", country: "USA"},
-        {code: "985", location: "Houma", state: "Louisiana", country: "USA"},
-        {code: "989", location: "Saginaw", state: "Michigan", country: "USA"}
-    ];
-
-    let currentSort = 'number';
-    let filteredData = [...areaCodeData];
-
-    // DOM elements
-    const searchInput = document.getElementById('searchInput');
-    const areaCodeGrid = document.getElementById('areaCodeGrid');
-    const sortTabs = document.querySelectorAll('.sort-tab');
-    const totalCountEl = document.getElementById('totalCount');
-    const usCountEl = document.getElementById('usCount');
-    const canadaCountEl = document.getElementById('canadaCount');
-
-    // Initialize page
-    function init() {
-        updateStatistics();
-        renderAreaCodes();
-        setupEventListeners();
-    }
-
-    // Update statistics
-    function updateStatistics() {
-        const usCount = areaCodeData.filter(item => item.country === 'USA').length;
-        const canadaCount = areaCodeData.filter(item => item.country === 'Canada').length;
-        
-        totalCountEl.textContent = areaCodeData.length;
-        usCountEl.textContent = usCount;
-        canadaCountEl.textContent = canadaCount;
-    }
-
-    // Setup event listeners
-    function setupEventListeners() {
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const query = this.value.toLowerCase().trim();
-            if (query === '') {
-                filteredData = [...areaCodeData];
-            } else {
-                filteredData = areaCodeData.filter(item => 
-                    item.code.includes(query) ||
-                    item.location.toLowerCase().includes(query) ||
-                    item.state.toLowerCase().includes(query) ||
-                    item.country.toLowerCase().includes(query)
-                );
+            // Initialize page
+            function init() {
+                updateStatistics();
+                renderAreaCodes();
+                setupEventListeners();
             }
-            renderAreaCodes();
-        });
 
-        // Sort tab functionality
-        sortTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const sortType = this.dataset.sort;
-                if (currentSort !== sortType) {
-                    currentSort = sortType;
-                    updateSortTabs();
+            // Update statistics
+            function updateStatistics() {
+                const usCount = areaCodeData.filter(item => item.country === 'USA').length;
+                const canadaCount = areaCodeData.filter(item => item.country === 'Canada').length;
+
+                totalCountEl.textContent = areaCodeData.length;
+                usCountEl.textContent = usCount;
+                canadaCountEl.textContent = canadaCount;
+            }
+
+            // Setup event listeners
+            function setupEventListeners() {
+                // Search functionality
+                searchInput.addEventListener('input', function () {
+                    const query = this.value.toLowerCase().trim();
+                    if (query === '') {
+                        filteredData = [...areaCodeData];
+                    } else {
+                        filteredData = areaCodeData.filter(item =>
+                            item.code.includes(query) ||
+                            item.location.toLowerCase().includes(query) ||
+                            item.state.toLowerCase().includes(query) ||
+                            item.country.toLowerCase().includes(query)
+                        );
+                    }
                     renderAreaCodes();
-                }
-            });
-        });
-    }
+                });
 
-    // Update sort tab active state
-    function updateSortTabs() {
-        sortTabs.forEach(tab => {
-            if (tab.dataset.sort === currentSort) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
+                // Sort tab functionality
+                sortTabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+                        const sortType = this.dataset.sort;
+                        if (currentSort !== sortType) {
+                            currentSort = sortType;
+                            updateSortTabs();
+                            renderAreaCodes();
+                        }
+                    });
+                });
             }
-        });
-    }
 
-    // Sort data based on current sort type
-    function sortData(data) {
-        if (currentSort === 'number') {
-            return data.sort((a, b) => parseInt(a.code) - parseInt(b.code));
-        } else {
-            return data.sort((a, b) => {
-                const aKey = `${a.state}, ${a.country}`;
-                const bKey = `${b.state}, ${b.country}`;
-                return aKey.localeCompare(bKey);
+            // Update sort tab active state
+            function updateSortTabs() {
+                sortTabs.forEach(tab => {
+                    if (tab.dataset.sort === currentSort) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+            }
+
+            // Sort data based on current sort type
+            function sortData(data) {
+                if (currentSort === 'number') {
+                    return data.sort((a, b) => parseInt(a.code) - parseInt(b.code));
+                } else {
+                    return data.sort((a, b) => {
+                        const aKey = `${a.state}, ${a.country}`;
+                        const bKey = `${b.state}, ${b.country}`;
+                        return aKey.localeCompare(bKey);
+                    });
+                }
+            }
+
+            // Render area codes
+            function renderAreaCodes() {
+                const sortedData = sortData([...filteredData]);
+
+                areaCodeGrid.innerHTML = sortedData.map(item => {
+                    const url = item.code === '404' ? '404areacode.html' : `${item.code}.html`;
+                    return `
+                        <a href="${url}" class="area-code-item">
+                            <div class="area-code-number">${item.code}</div>
+                            <div class="area-code-location">${item.location}</div>
+                            <div class="area-code-state">${item.state}, ${item.country}</div>
+                        </a>
+                    `;
+                }).join('');
+            }
+
+            // Initialize when DOM is loaded
+            document.addEventListener('DOMContentLoaded', init);
+        </script>
+
+        <!-- Performance optimization and page visibility fix -->
+        <script>
+            // Performance optimization: lazy load Bootstrap JS
+            window.addEventListener('load', function () {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+                script.async = true;
+                document.head.appendChild(script);
             });
-        }
-    }
 
-    // Render area codes
-    function renderAreaCodes() {
-        const sortedData = sortData([...filteredData]);
-        
-        areaCodeGrid.innerHTML = sortedData.map(item => `
-            <a href="${item.code}.html" class="area-code-item">
-                <div class="area-code-number">${item.code}</div>
-                <div class="area-code-location">${item.location}</div>
-                <div class="area-code-state">${item.state}, ${item.country}</div>
-            </a>
-        `).join('');
-    }
+            // Show page when loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'opacity 0.3s ease';
+            });
+        </script>
 
-    // Initialize when DOM is loaded
-    document.addEventListener('DOMContentLoaded', init);
-    </script>
+    </body>
 
-    <!-- Performance optimization and page visibility fix -->
-    <script>
-    // Performance optimization: lazy load Bootstrap JS
-    window.addEventListener('load', function() {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-        script.async = true;
-        document.head.appendChild(script);
-    });
-    
-    // Show page when loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.style.opacity = '1';
-        document.body.style.transition = 'opacity 0.3s ease';
-    });
-    </script>
-
-</body>
 </html>

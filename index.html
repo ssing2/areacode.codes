@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area Code Lookup & Scam Check | AreaCode.Codes</title>
-    <meta name="description" content="Free area code lookup, scam risk check, and phone safety tools. Instantly search any North American area code and protect yourself from spam and fraud.">
-    <meta name="keywords" content="area code lookup, phone scam check, spam call, area code search, scam risk, phone safety, caller ID, area code database, North America">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Performance optimization: preconnect and DNS prefetch -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Initial loading style optimization -->
-    <style>
-        body { opacity: 0; }
-        :root {
-            --primary-color: #3b82f6;
-            --success-color: #10b981;
-            --warning-color: #f59e0b;
-            --danger-color: #ef4444;
-            --dark-color: #1e293b;
-            --light-bg: #f1f5f9;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-        }
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            color: white;
-            transition: all 0.2s;
-        }
-        .text-primary { color: var(--primary-color) !important; }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-    </style>
-    
-    <!-- Bootstrap CSS - async loading -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Font Awesome - async loading -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
-    
-    <link rel="stylesheet" href="areacodes.css">
-    <link rel="canonical" href="https://areacode.codes/">
-    <script type="application/ld+json">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Area Code Lookup & Scam Check | AreaCode.Codes</title>
+        <meta name="description"
+            content="Free area code lookup, scam risk check, and phone safety tools. Instantly search any North American area code and protect yourself from spam and fraud.">
+        <meta name="keywords"
+            content="area code lookup, phone scam check, spam call, area code search, scam risk, phone safety, caller ID, area code database, North America">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- Performance optimization: preconnect and DNS prefetch -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+        <!-- Initial loading style optimization -->
+        <style>
+            body {
+                opacity: 0;
+            }
+
+            :root {
+                --primary-color: #3b82f6;
+                --success-color: #10b981;
+                --warning-color: #f59e0b;
+                --danger-color: #ef4444;
+                --dark-color: #1e293b;
+                --light-bg: #f1f5f9;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: var(--dark-color);
+            }
+
+            .btn-primary {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                color: white;
+                transition: all 0.2s;
+            }
+
+            .text-primary {
+                color: var(--primary-color) !important;
+            }
+
+            .container {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+        </style>
+
+        <!-- Bootstrap CSS - async loading -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        </noscript>
+
+        <!-- Font Awesome - async loading -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        </noscript>
+
+        <link rel="stylesheet" href="areacodes.css">
+        <link rel="canonical" href="https://areacode.codes/">
+        <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -63,376 +85,438 @@
       }
     }
     </script>
-</head>
-<body>
-    <!-- Hero Section with Big Search Box -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="row justify-content-center text-center mb-4">
-                <div class="col-lg-12">
-                    <div class="brand-logo mb-3">
-                        <div class="logo-container d-flex align-items-center justify-content-center">
-                            <div class="logo-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="logo-text ms-3">
-                                <div class="logo-main mb-0">
-                                    <a href="https://areacode.codes" class="text-white text-decoration-none" style="font-weight:bold;">AreaCode.Codes</a>
-                                </div>
-                                <p class="logo-sub mb-0">Trusted Area Code Safety Network</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mb-3">
-                <div class="col-lg-10 d-flex justify-content-center">
-                    <div class="badge bg-success me-2 p-2" style="background-color: #059669 !important;"><i class="fas fa-shield-alt me-1"></i> Verified Data</div>
-                    <div class="badge bg-primary me-2 p-2" style="background-color: #3b82f6 !important;"><i class="fas fa-database me-1"></i> FCC Official Source</div>
-                    <div class="badge bg-warning p-2" style="background-color: #f97316 !important; color: white;"><i class="fas fa-exclamation-triangle me-1"></i> Scam Alerts</div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="hero-info-card p-4 mb-4" style="background: #fff; border-radius: 18px; box-shadow: 0 2px 16px 0 rgba(60,72,88,.10);">
-                        <h1 class="h2 mb-4 text-center text-dark">
-                            <i class="fas fa-search me-2" style="color: #4f46e5;"></i>
-                            Area Code Lookup & Scam Check
-                        </h1>
-                        <form class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center mb-3" id="areaSearchForm" autocomplete="off">
-                            <input class="form-control form-control-lg flex-grow-1" id="areaInput" maxlength="3" placeholder="Enter area code, e.g. 213" pattern="\d{3}" required style="min-width:180px; max-width:480px; width:100%; font-size:1.3rem;">
-                            <button class="btn btn-lg btn-primary px-4" type="submit" style="font-size:1.2rem;">Search</button>
-                        </form>
-                        <div class="text-danger text-center" id="searchTip" style="display:none;"></div>
-                        <div class="text-center mt-2 mb-0 text-muted" style="font-size:1.08rem;">Instantly check any North American area code for location, scam risk, and safety tips.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </head>
 
-    <!-- All other content retained (FAQ section removed) -->
-    <!-- Security Alert for Index -->
-    <section class="py-5" id="securitySection">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="security-alert warning" id="default312Alert">
-                        <div class="d-flex align-items-start">
-                            <div class="me-3">
-                                <i class="fas fa-shield-alt fa-2x text-warning"></i>
-                            </div>
-                            <div>
-                                <h3 class="mb-2">⚠️ Area Code Scam & Spam Risk Notice</h3>
-                                <p class="mb-3">
-                                    <strong>Be cautious with unfamiliar area code calls: Many US and international area codes are frequently used in phone scams targeting people nationwide. Common scams include fake IRS calls, tech support fraud, and lottery/prize scams.</strong>
-                                </p>
-                                <div class="mb-3">
-                                    <h4 class="h6">🚨 Scam Warning Signs:</h4>
-                                    <ul class="mb-0">
-                                        <li>Urgent demands for personal information or Social Security numbers</li>
-                                        <li>Requests for immediate payment via gift cards or wire transfers</li>
-                                        <li>Threats of legal action, arrest, or account suspension</li>
-                                        <li>Offers that seem too good to be true (prizes, loans, investments)</li>
-                                        <li>Claims to be from government agencies or utilities</li>
-                                        <li>Pressure tactics saying "act now" or "limited time offer"</li>
-                                    </ul>
+    <body>
+        <!-- Hero Section with Big Search Box -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-4">
+                    <div class="col-lg-12">
+                        <div class="brand-logo mb-3">
+                            <div class="logo-container d-flex align-items-center justify-content-center">
+                                <div class="logo-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
+                                    <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <a href="#protection-tools" class="cta-button" style="background: linear-gradient(135deg, #059669, #10b981);">
-                                        <i class="fas fa-shield-alt me-2"></i>
-                                        Get Call Protection
-                                    </a>
-                                    <button class="btn btn-outline-primary" onclick="showScamPatterns()" style="border-color: #4f46e5; color: #4f46e5;">
-                                        <i class="fas fa-list me-2"></i>
-                                        See Scam Call/text Patterns
-                                    </button>
+                                <div class="logo-text ms-3">
+                                    <div class="logo-main mb-0">
+                                        <a href="https://areacode.codes" class="text-white text-decoration-none"
+                                            style="font-weight:bold;">AreaCode.Codes</a>
+                                    </div>
+                                    <p class="logo-sub mb-0">Trusted Area Code Safety Network</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-10 d-flex justify-content-center">
+                        <div class="badge bg-success me-2 p-2" style="background-color: #059669 !important;"><i
+                                class="fas fa-shield-alt me-1"></i> Verified Data</div>
+                        <div class="badge bg-primary me-2 p-2" style="background-color: #3b82f6 !important;"><i
+                                class="fas fa-database me-1"></i> FCC Official Source</div>
+                        <div class="badge bg-warning p-2" style="background-color: #f97316 !important; color: white;"><i
+                                class="fas fa-exclamation-triangle me-1"></i> Scam Alerts</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="hero-info-card p-4 mb-4"
+                            style="background: #fff; border-radius: 18px; box-shadow: 0 2px 16px 0 rgba(60,72,88,.10);">
+                            <h1 class="h2 mb-4 text-center text-dark">
+                                <i class="fas fa-search me-2" style="color: #4f46e5;"></i>
+                                Area Code Lookup & Scam Check
+                            </h1>
+                            <form
+                                class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center mb-3"
+                                id="areaSearchForm" autocomplete="off">
+                                <input class="form-control form-control-lg flex-grow-1" id="areaInput" maxlength="3"
+                                    placeholder="Enter area code, e.g. 213" pattern="\d{3}" required
+                                    style="min-width:180px; max-width:480px; width:100%; font-size:1.3rem;">
+                                <button class="btn btn-lg btn-primary px-4" type="submit"
+                                    style="font-size:1.2rem;">Search</button>
+                            </form>
+                            <div class="text-danger text-center" id="searchTip" style="display:none;"></div>
+                            <div class="text-center mt-2 mb-0 text-muted" style="font-size:1.08rem;">Instantly check any
+                                North American area code for location, scam risk, and safety tips.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All other content retained (FAQ section removed) -->
+        <!-- Security Alert for Index -->
+        <section class="py-5" id="securitySection">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="security-alert warning" id="default312Alert">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3">
+                                    <i class="fas fa-shield-alt fa-2x text-warning"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-2">⚠️ Area Code Scam & Spam Risk Notice</h3>
+                                    <p class="mb-3">
+                                        <strong>Be cautious with unfamiliar area code calls: Many US and international
+                                            area codes are frequently used in phone scams targeting people nationwide.
+                                            Common scams include fake IRS calls, tech support fraud, and lottery/prize
+                                            scams.</strong>
+                                    </p>
+                                    <div class="mb-3">
+                                        <h4 class="h6">🚨 Scam Warning Signs:</h4>
+                                        <ul class="mb-0">
+                                            <li>Urgent demands for personal information or Social Security numbers</li>
+                                            <li>Requests for immediate payment via gift cards or wire transfers</li>
+                                            <li>Threats of legal action, arrest, or account suspension</li>
+                                            <li>Offers that seem too good to be true (prizes, loans, investments)</li>
+                                            <li>Claims to be from government agencies or utilities</li>
+                                            <li>Pressure tactics saying "act now" or "limited time offer"</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a href="#protection-tools" class="cta-button"
+                                            style="background: linear-gradient(135deg, #059669, #10b981);">
+                                            <i class="fas fa-shield-alt me-2"></i>
+                                            Get Call Protection
+                                        </a>
+                                        <button class="btn btn-outline-primary" onclick="showScamPatterns()"
+                                            style="border-color: #4f46e5; color: #4f46e5;">
+                                            <i class="fas fa-list me-2"></i>
+                                            See Scam Call/text Patterns
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Protection Tools Section -->
-    <section class="feature-section" id="protection-tools">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h2 class="text-center mb-5">
-                        <i class="fas fa-shield-alt text-primary me-3"></i>
-                        Recommended Call Protection Tools
-                    </h2>
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="info-card text-center">
-                                <div class="icon-badge bg-success mx-auto">
-                                    <i class="fas fa-mobile-alt"></i>
+        <!-- Protection Tools Section -->
+        <section class="feature-section" id="protection-tools">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="text-center mb-5">
+                            <i class="fas fa-shield-alt text-primary me-3"></i>
+                            Recommended Call Protection Tools
+                        </h2>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="info-card text-center">
+                                    <div class="icon-badge bg-success mx-auto">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <h4>TrueCaller Premium</h4>
+                                    <p class="text-muted">Identify unknown callers and block spam calls automatically.
+                                        Over 374 million users worldwide trust TrueCaller's database.</p>
+                                    <div class="mb-2">
+                                        <span class="badge bg-primary">$4.99/month</span>
+                                        <span class="badge bg-success">7-day free trial</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="http://bit.ly/4llN5Fl" target="_blank" class="cta-button"
+                                            onclick="trackAffiliateClick('truecaller')">
+                                            <i class="fas fa-download me-2"></i>Try TrueCaller Premium
+                                        </a>
+                                    </div>
                                 </div>
-                                <h4>TrueCaller Premium</h4>
-                                <p class="text-muted">Identify unknown callers and block spam calls automatically. Over 374 million users worldwide trust TrueCaller's database.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-primary">$4.99/month</span>
-                                    <span class="badge bg-success">7-day free trial</span>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card text-center">
+                                    <div class="icon-badge bg-danger mx-auto">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <h4>RoboKiller</h4>
+                                    <p class="text-muted">Block 99% of spam calls and waste scammers' time with
+                                        AI-powered answer bots. Award-winning spam protection.</p>
+                                    <div class="mb-2">
+                                        <span class="badge bg-warning">$4.99/month</span>
+                                        <span class="badge bg-info">Most effective</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="http://bit.ly/4oufwn4" target="_blank" class="cta-button"
+                                            onclick="trackAffiliateClick('robokiller')">
+                                            <i class="fas fa-shield-alt me-2"></i>Get RoboKiller
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="mt-3">
-                                    <a href="http://bit.ly/4llN5Fl" target="_blank" class="cta-button" onclick="trackAffiliateClick('truecaller')">
-                                        <i class="fas fa-download me-2"></i>Try TrueCaller Premium
-                                    </a>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info-card text-center">
+                                    <div class="icon-badge bg-primary mx-auto">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <h4>Google Voice (Free)</h4>
+                                    <p class="text-muted">Get a free second phone number for calls, texts, and
+                                        voicemail. Perfect for online shopping and privacy protection.</p>
+                                    <div class="mb-2">
+                                        <span class="badge bg-success">100% Free</span>
+                                        <span class="badge bg-secondary">Google Account Required</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="https://voice.google.com" target="_blank" class="cta-button"
+                                            onclick="trackAffiliateClick('google-voice')">
+                                            <i class="fas fa-gift me-2"></i>Get Free Number
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="info-card text-center">
-                                <div class="icon-badge bg-danger mx-auto">
-                                    <i class="fas fa-robot"></i>
+                        <!-- Additional Tips -->
+                        <div class="info-card mt-5">
+                            <h3 class="mb-4">
+                                <i class="fas fa-lightbulb text-warning me-2"></i>
+                                Advanced Privacy Protection Strategies
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-phone-slash text-danger me-2"></i>Never Give Out Personal Info
+                                    </h5>
+                                    <p>Legitimate companies won't ask for SSN, passwords, or financial details over the
+                                        phone.</p>
+                                    <h5><i class="fas fa-clock text-primary me-2"></i>Take Your Time</h5>
+                                    <p>Scammers create urgency. Legitimate calls can wait while you verify.</p>
+                                    <h5><i class="fas fa-mobile-alt text-success me-2"></i>Consider a Second Number</h5>
+                                    <p>Use Google Voice (free) or a burner number for online shopping, dating apps, and
+                                        business listings.</p>
                                 </div>
-                                <h4>RoboKiller</h4>
-                                <p class="text-muted">Block 99% of spam calls and waste scammers' time with AI-powered answer bots. Award-winning spam protection.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-warning">$4.99/month</span>
-                                    <span class="badge bg-info">Most effective</span>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="http://bit.ly/4oufwn4" target="_blank" class="cta-button" onclick="trackAffiliateClick('robokiller')">
-                                        <i class="fas fa-shield-alt me-2"></i>Get RoboKiller
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info-card text-center">
-                                <div class="icon-badge bg-primary mx-auto">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <h4>Google Voice (Free)</h4>
-                                <p class="text-muted">Get a free second phone number for calls, texts, and voicemail. Perfect for online shopping and privacy protection.</p>
-                                <div class="mb-2">
-                                    <span class="badge bg-success">100% Free</span>
-                                    <span class="badge bg-secondary">Google Account Required</span>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="https://voice.google.com" target="_blank" class="cta-button" onclick="trackAffiliateClick('google-voice')">
-                                        <i class="fas fa-gift me-2"></i>Get Free Number
-                                    </a>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-search text-success me-2"></i>Verify Independently</h5>
+                                    <p>If they claim to be from a company, hang up and call the official number.</p>
+                                    <h5><i class="fas fa-flag text-warning me-2"></i>Report Scams</h5>
+                                    <p>Report suspicious calls to FTC at <a href="https://reportfraud.ftc.gov"
+                                            target="_blank">reportfraud.ftc.gov</a></p>
+                                    <h5><i class="fas fa-shield-alt text-info me-2"></i>Two-Number Strategy</h5>
+                                    <p>Keep your main number private. Give out your secondary number for deliveries,
+                                        rentals, and online accounts.</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Additional Tips -->
-                    <div class="info-card mt-5">
-                        <h3 class="mb-4">
-                            <i class="fas fa-lightbulb text-warning me-2"></i>
-                            Advanced Privacy Protection Strategies
-                        </h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-phone-slash text-danger me-2"></i>Never Give Out Personal Info</h5>
-                                <p>Legitimate companies won't ask for SSN, passwords, or financial details over the phone.</p>
-                                <h5><i class="fas fa-clock text-primary me-2"></i>Take Your Time</h5>
-                                <p>Scammers create urgency. Legitimate calls can wait while you verify.</p>
-                                <h5><i class="fas fa-mobile-alt text-success me-2"></i>Consider a Second Number</h5>
-                                <p>Use Google Voice (free) or a burner number for online shopping, dating apps, and business listings.</p>
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <h6><i class="fas fa-graduation-cap text-primary me-2"></i>Pro Tip: The Two-Number
+                                    Privacy System</h6>
+                                <p class="mb-2"><strong>Number A (Private):</strong> Family, close friends, work, bank,
+                                    medical</p>
+                                <p class="mb-2"><strong>Number B (Public):</strong> Online shopping, dating apps, food
+                                    delivery, social media, business listings</p>
+                                <p class="mb-0"><small class="text-muted">About 20% of Americans use this strategy.
+                                        Popular options: Google Voice (free), carrier second lines ($10-20/month), or
+                                        dual-SIM phones.</small></p>
                             </div>
-                            <div class="col-md-6">
-                                <h5><i class="fas fa-search text-success me-2"></i>Verify Independently</h5>
-                                <p>If they claim to be from a company, hang up and call the official number.</p>
-                                <h5><i class="fas fa-flag text-warning me-2"></i>Report Scams</h5>
-                                <p>Report suspicious calls to FTC at <a href="https://reportfraud.ftc.gov" target="_blank">reportfraud.ftc.gov</a></p>
-                                <h5><i class="fas fa-shield-alt text-info me-2"></i>Two-Number Strategy</h5>
-                                <p>Keep your main number private. Give out your secondary number for deliveries, rentals, and online accounts.</p>
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-light rounded">
-                            <h6><i class="fas fa-graduation-cap text-primary me-2"></i>Pro Tip: The Two-Number Privacy System</h6>
-                            <p class="mb-2"><strong>Number A (Private):</strong> Family, close friends, work, bank, medical</p>
-                            <p class="mb-2"><strong>Number B (Public):</strong> Online shopping, dating apps, food delivery, social media, business listings</p>
-                            <p class="mb-0"><small class="text-muted">About 20% of Americans use this strategy. Popular options: Google Voice (free), carrier second lines ($10-20/month), or dual-SIM phones.</small></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Government & Authority Links Section -->
-    <section class="py-4 bg-light border-top">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="text-center mb-4">
-                        <h3 class="h5 text-muted mb-3">
-                            <i class="fas fa-certificate text-primary me-2"></i>
-                            Trusted Data Sources & Official Resources
-                        </h3>
-                        <p class="small text-muted mb-4">
-                            All area code geographic assignments and overlay information are sourced directly from the <strong>North American Numbering Plan Administration (NANPA)</strong> official database and <strong>Federal Communications Commission (FCC)</strong> public records. 
-                            Timezone data verified against the <strong>Internet Assigned Numbers Authority (IANA)</strong> timezone database. 
-                            Scam risk assessments based on <strong>Federal Trade Commission (FTC)</strong> Consumer Sentinel Network reports and verified telecommunications security databases.
-                            <br><small class="text-primary">
-                                <i class="fas fa-sync-alt me-1"></i>Data last updated: January 2025 | 
-                                <i class="fas fa-certificate me-1"></i>NANPA Registry Verified
+        <!-- Government & Authority Links Section -->
+        <section class="py-4 bg-light border-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="text-center mb-4">
+                            <h3 class="h5 text-muted mb-3">
+                                <i class="fas fa-certificate text-primary me-2"></i>
+                                Trusted Data Sources & Official Resources
+                            </h3>
+                            <p class="small text-muted mb-4">
+                                All area code geographic assignments and overlay information are sourced directly from
+                                the <strong>North American Numbering Plan Administration (NANPA)</strong> official
+                                database and <strong>Federal Communications Commission (FCC)</strong> public records.
+                                Timezone data verified against the <strong>Internet Assigned Numbers Authority
+                                    (IANA)</strong> timezone database.
+                                Scam risk assessments based on <strong>Federal Trade Commission (FTC)</strong> Consumer
+                                Sentinel Network reports and verified telecommunications security databases.
+                                <br><small class="text-primary">
+                                    <i class="fas fa-sync-alt me-1"></i>Data last updated: January 2025 |
+                                    <i class="fas fa-certificate me-1"></i>NANPA Registry Verified
+                                </small>
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="d-flex flex-wrap justify-content-center gap-3">
+                                    <a href="https://reportfraud.ftc.gov" target="_blank"
+                                        class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-flag me-1"></i>Report Scam (FTC)
+                                    </a>
+                                    <a href="https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts"
+                                        target="_blank" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-phone-slash me-1"></i>FCC Robocall Guide
+                                    </a>
+                                    <a href="https://www.donotcall.gov" target="_blank"
+                                        class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-ban me-1"></i>Do Not Call Registry
+                                    </a>
+                                    <a href="https://www.ic3.gov/Home/ComplaintChoice/default.aspx" target="_blank"
+                                        class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-shield-alt me-1"></i>FBI IC3 Report
+                                    </a>
+                                    <a href="https://www.nanpa.com/area_codes/area_code_maps.html" target="_blank"
+                                        class="btn btn-outline-secondary btn-sm">
+                                        <i class="fas fa-map me-1"></i>NANPA Official
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <small class="text-muted">
+                                <i class="fas fa-database me-1"></i>
+                                Geographic data: <strong>NANPA Official Registry</strong> • Timezone standards:
+                                <strong>IANA Database</strong> •
+                                Scam intelligence: <strong>FTC Consumer Sentinel Network</strong> • Calling rates:
+                                <strong>FCC Telecommunications Guidelines</strong>
+                                <br>
+                                <i class="fas fa-shield-alt me-1 text-success"></i>
+                                All data verified against official government sources and updated regularly for
+                                accuracy.
                             </small>
-                        </p>
+                        </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <a href="https://reportfraud.ftc.gov" target="_blank" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-flag me-1"></i>Report Scam (FTC)
-                                </a>
-                                <a href="https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts" target="_blank" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-phone-slash me-1"></i>FCC Robocall Guide
-                                </a>
-                                <a href="https://www.donotcall.gov" target="_blank" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-ban me-1"></i>Do Not Call Registry
-                                </a>
-                                <a href="https://www.ic3.gov/Home/ComplaintChoice/default.aspx" target="_blank" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fas fa-shield-alt me-1"></i>FBI IC3 Report
-                                </a>
-                                <a href="https://www.nanpa.com/area_codes/area_code_maps.html" target="_blank" class="btn btn-outline-secondary btn-sm">
-                                    <i class="fas fa-map me-1"></i>NANPA Official
-                                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
+                        <p class="text-light">Your trusted source for area code information and safety verification.
+                            Helping users nationwide stay safe from phone scams since 2025.</p>
+                        <div class="mt-3">
+                            <small class="text-light opacity-75">
+                                <i class="fas fa-certificate me-1"></i>
+                                Data verified by FCC & FTC databases
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
+                    <div class="col-md-4">
+                        <h6>Sister Sites - Top Area Codes</h6>
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://213area.codes" class="text-light text-decoration-none">213 Area
+                                            Code</a></li>
+                                    <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area
+                                            Code</a></li>
+                                    <li><a href="https://917areacode.org" class="text-light text-decoration-none">917
+                                            Area Code</a></li>
+                                    <li><a href="https://929areacode.net" class="text-light text-decoration-none">929
+                                            Area Code</a></li>
+                                    <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area
+                                            Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://areacode.codes/415.html"
+                                            class="text-light text-decoration-none">415 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/206.html"
+                                            class="text-light text-decoration-none">206 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/619.html"
+                                            class="text-light text-decoration-none">619 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/323.html"
+                                            class="text-light text-decoration-none">323 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/310.html"
+                                            class="text-light text-decoration-none">310 Area Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424
+                                            Area Code</a></li>
+                                    <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818
+                                            Area Code</a></li>
+                                    <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747
+                                            Area Code</a></li>
+                                    <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202
+                                            Area Code</a></li>
+                                    <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312
+                                            Area Code</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-4 text-center">
-                        <small class="text-muted">
-                            <i class="fas fa-database me-1"></i>
-                            Geographic data: <strong>NANPA Official Registry</strong> • Timezone standards: <strong>IANA Database</strong> • 
-                            Scam intelligence: <strong>FTC Consumer Sentinel Network</strong> • Calling rates: <strong>FCC Telecommunications Guidelines</strong>
-                            <br>
-                            <i class="fas fa-shield-alt me-1 text-success"></i>
-                            All data verified against official government sources and updated regularly for accuracy.
-                        </small>
+
+                    <!-- Safety Resources section -->
+                    <div class="col-md-4">
+                        <h6>Safety Resources</h6>
+                        <ul class="list-unstyled small">
+                            <li><a href="allareacodelist.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-list me-1"></i>All Area Codes Directory
+                                </a></li>
+                            <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
+                                </a></li>
+                            <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
+                                </a></li>
+                            <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
+                                </a></li>
+                            <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-sms me-1"></i>Text Message Safety
+                                </a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
-                    <p class="text-light">Your trusted source for area code information and safety verification. Helping users nationwide stay safe from phone scams since 2025.</p>
-                    <div class="mt-3">
-                        <small class="text-light opacity-75">
-                            <i class="fas fa-certificate me-1"></i>
-                            Data verified by FCC & FTC databases
-                        </small>
-                    </div>
-                </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            // Homepage big search box logic
+            const areaCodeList = [201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 212, 213, 214, 215, 216, 217, 218, 219, 220, 224, 225, 226, 227, 228, 229, 231, 234, 236, 239, 240, 242, 246, 248, 250, 251, 252, 253, 254, 256, 260, 262, 264, 267, 268, 269, 270, 272, 276, 279, 281, 283, 284, 289, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 323, 325, 326, 329, 330, 331, 332, 334, 336, 337, 339, 340, 341, 343, 345, 346, 347, 350, 351, 352, 360, 361, 363, 364, 365, 380, 385, 386, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 412, 413, 414, 415, 416, 417, 419, 423, 424, 425, 430, 431, 432, 434, 435, 437, 438, 440, 441, 442, 443, 445, 447, 448, 458, 463, 464, 469, 470, 472, 473, 475, 478, 479, 480, 484, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 512, 513, 514, 515, 516, 517, 518, 519, 520, 530, 531, 539, 540, 541, 551, 559, 561, 562, 563, 564, 567, 570, 571, 572, 573, 574, 575, 580, 582, 585, 586, 587, 588, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 612, 613, 614, 615, 616, 617, 618, 619, 620, 623, 626, 628, 629, 630, 631, 636, 639, 640, 641, 645, 646, 647, 649, 650, 651, 657, 658, 659, 660, 661, 662, 664, 667, 669, 670, 671, 672, 678, 680, 681, 682, 684, 689, 701, 702, 703, 704, 705, 706, 707, 708, 712, 713, 714, 715, 716, 717, 718, 719, 720, 724, 725, 726, 727, 728, 731, 732, 734, 737, 740, 743, 747, 754, 757, 760, 762, 763, 765, 769, 770, 771, 772, 773, 774, 775, 778, 779, 780, 781, 785, 786, 787, 800, 801, 802, 803, 804, 805, 806, 808, 809, 810, 812, 813, 814, 815, 816, 817, 818, 828, 829, 830, 831, 832, 833, 835, 843, 844, 845, 847, 848, 850, 856, 857, 858, 859, 860, 862, 863, 864, 865, 866, 870, 872, 876, 877, 878, 888, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 912, 913, 914, 915, 916, 917, 918, 919, 920, 925, 928, 931, 936, 937, 938, 939, 940, 941, 947, 949, 951, 952, 954, 956, 959, 970, 971, 972, 973, 978, 979, 980, 984, 985, 989];
+            const form = document.getElementById('areaSearchForm');
+            const input = document.getElementById('areaInput');
+            const tip = document.getElementById('searchTip');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const val = input.value.trim();
+                if (!/^\d{3}$/.test(val)) {
+                    tip.textContent = 'Please enter a valid 3-digit area code (e.g. 213)';
+                    tip.style.display = 'block';
+                    input.classList.add('is-invalid');
+                    input.focus();
+                    return;
+                }
+                if (areaCodeList.includes(Number(val))) {
+                    tip.style.display = 'none';
+                    input.classList.remove('is-invalid');
+                    window.location.href = val + '.html';
+                } else {
+                    tip.textContent = 'This area code is not in our database. Feel free to contact us!';
+                    tip.style.display = 'block';
+                    input.classList.add('is-invalid');
+                    input.focus();
+                }
+            });
+            input.addEventListener('input', function () {
+                tip.style.display = 'none';
+                input.classList.remove('is-invalid');
+            });
 
-                <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
-                <div class="col-md-4">
-                    <h6>Sister Sites - Top Area Codes</h6>
-                    <div class="row">
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://213area.codes" class="text-light text-decoration-none">201 Area Code</a></li>
-                                <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area Code</a></li>
-                                <li><a href="https://917areacode.org" class="text-light text-decoration-none">917 Area Code</a></li>
-                                <li><a href="https://929areacode.net" class="text-light text-decoration-none">929 Area Code</a></li>
-                                <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://areacode.codes/415.html" class="text-light text-decoration-none">415 Area Code</a></li>
-                                <li><a href="https://areacode.codes/206.html" class="text-light text-decoration-none">206 Area Code</a></li>
-                                <li><a href="https://areacode.codes/619.html" class="text-light text-decoration-none">619 Area Code</a></li>
-                                <li><a href="https://areacode.codes/323.html" class="text-light text-decoration-none">323 Area Code</a></li>
-                                <li><a href="https://areacode.codes/310.html" class="text-light text-decoration-none">310 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424 Area Code</a></li>
-                                <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818 Area Code</a></li>
-                                <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747 Area Code</a></li>
-                                <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202 Area Code</a></li>
-                                <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312 Area Code</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            // Performance optimization: lazy load Bootstrap JS
+            window.addEventListener('load', function () {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+                script.async = true;
+                document.head.appendChild(script);
+            });
 
-                <!-- Safety Resources section -->
-                <div class="col-md-4">
-                    <h6>Safety Resources</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="allareacodelist.html" class="text-light text-decoration-none">
-                            <i class="fas fa-list me-1"></i>All Area Codes Directory
-                        </a></li>
-                        <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
-                        </a></li>
-                        <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
-                        </a></li>
-                        <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
-                        </a></li>
-                        <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-sms me-1"></i>Text Message Safety
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+            // Show page when loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'opacity 0.3s ease';
+            });
+        </script>
+    </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    // Homepage big search box logic
-    const areaCodeList = [201,202,203,204,205,206,207,208,209,210,212,213,214,215,216,217,218,219,220,224,225,226,227,228,229,231,234,236,239,240,242,246,248,250,251,252,253,254,256,260,262,264,267,268,269,270,272,276,279,281,283,284,289,301,302,303,304,305,306,307,308,309,310,312,313,314,315,316,317,318,319,320,321,323,325,326,329,330,331,332,334,336,337,339,340,341,343,345,346,347,350,351,352,360,361,363,364,365,380,385,386,401,402,403,404,405,406,407,408,409,410,412,413,414,415,416,417,419,423,424,425,430,431,432,434,435,437,438,440,441,442,443,445,447,448,458,463,464,469,470,472,473,475,478,479,480,484,501,502,503,504,505,506,507,508,509,510,512,513,514,515,516,517,518,519,520,530,531,539,540,541,551,559,561,562,563,564,567,570,571,572,573,574,575,580,582,585,586,587,588,601,602,603,604,605,606,607,608,609,610,612,613,614,615,616,617,618,619,620,623,626,628,629,630,631,636,639,640,641,645,646,647,649,650,651,657,658,659,660,661,662,664,667,669,670,671,672,678,680,681,682,684,689,701,702,703,704,705,706,707,708,712,713,714,715,716,717,718,719,720,724,725,726,727,728,731,732,734,737,740,743,747,754,757,760,762,763,765,769,770,771,772,773,774,775,778,779,780,781,785,786,787,800,801,802,803,804,805,806,808,809,810,812,813,814,815,816,817,818,828,829,830,831,832,833,835,843,844,845,847,848,850,856,857,858,859,860,862,863,864,865,866,870,872,876,877,878,888,901,902,903,904,905,906,907,908,909,910,912,913,914,915,916,917,918,919,920,925,928,931,936,937,938,939,940,941,947,949,951,952,954,956,959,970,971,972,973,978,979,980,984,985,989];
-    const form = document.getElementById('areaSearchForm');
-    const input = document.getElementById('areaInput');
-    const tip = document.getElementById('searchTip');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const val = input.value.trim();
-      if (!/^\d{3}$/.test(val)) {
-        tip.textContent = 'Please enter a valid 3-digit area code (e.g. 213)';
-        tip.style.display = 'block';
-        input.classList.add('is-invalid');
-        input.focus();
-        return;
-      }
-      if (areaCodeList.includes(Number(val))) {
-        tip.style.display = 'none';
-        input.classList.remove('is-invalid');
-        window.location.href = val + '.html';
-      } else {
-        tip.textContent = 'This area code is not in our database. Feel free to contact us!';
-        tip.style.display = 'block';
-        input.classList.add('is-invalid');
-        input.focus();
-      }
-    });
-    input.addEventListener('input', function() {
-      tip.style.display = 'none';
-      input.classList.remove('is-invalid');
-    });
-    
-    // Performance optimization: lazy load Bootstrap JS
-    window.addEventListener('load', function() {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-      script.async = true;
-      document.head.appendChild(script);
-    });
-    
-    // Show page when loaded
-    document.addEventListener('DOMContentLoaded', function() {
-      document.body.style.opacity = '1';
-      document.body.style.transition = 'opacity 0.3s ease';
-    });
-    </script>
-</body>
 </html>

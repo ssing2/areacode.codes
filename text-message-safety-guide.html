@@ -1,864 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Message Safety Guide: Protect Yourself from SMS Scams and Phishing</title>
-    <meta name="description" content="Complete guide to text message safety, SMS scam identification, and mobile security. Learn to protect yourself from smishing attacks and fraudulent text messages.">
-    <meta name="keywords" content="text message safety, SMS scams, smishing, phishing texts, mobile security, spam texts, fraudulent messages, text safety guide">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Text Message Safety: Complete Guide to SMS Security and Scam Protection">
-    <meta property="og:description" content="Comprehensive guide to identifying and avoiding text message scams, SMS phishing, and protecting your mobile device from fraudulent messages.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://areacode.codes/text-message-safety-guide.html">
-    
-    <!-- Canonical URL for SEO -->
-    <link rel="canonical" href="https://areacode.codes/text-message-safety-guide.html">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Performance optimization: preconnect and DNS prefetch -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    
-    <!-- Initial loading style optimization -->
-    <style>
-        body { opacity: 0; }
-        :root {
-            --primary-color: #3b82f6;
-            --success-color: #10b981;
-            --warning-color: #f59e0b;
-            --danger-color: #ef4444;
-            --dark-color: #1e293b;
-            --light-bg: #f1f5f9;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-        }
-        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
-        .text-primary { color: var(--primary-color) !important; }
-        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-    </style>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRG1LR357"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JYRG1LR357');
-    </script>
-    
-    <!-- Bootstrap CSS - async loading optimization -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Font Awesome - async loading -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="areacodes.css">
-</head>
 
-<body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <!-- Unified Brand Header -->
-            <div class="row justify-content-center text-center mb-4">
-                <div class="col-lg-12">
-                    <div class="brand-logo mb-3">
-                        <div class="logo-container d-flex align-items-center justify-content-center">
-                            <div class="logo-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
-                                <i class="fas fa-sms"></i>
-                            </div>
-                            <div class="logo-text ms-3">
-                                <div class="logo-main mb-0">
-                                    <a href="https://areacode.codes" class="text-white text-decoration-none" style="font-weight:bold;">AreaCode.Codes</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Message Safety Guide: Protect Yourself from SMS Scams and Phishing</title>
+        <meta name="description"
+            content="Complete guide to text message safety, SMS scam identification, and mobile security. Learn to protect yourself from smishing attacks and fraudulent text messages.">
+        <meta name="keywords"
+            content="text message safety, SMS scams, smishing, phishing texts, mobile security, spam texts, fraudulent messages, text safety guide">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Text Message Safety: Complete Guide to SMS Security and Scam Protection">
+        <meta property="og:description"
+            content="Comprehensive guide to identifying and avoiding text message scams, SMS phishing, and protecting your mobile device from fraudulent messages.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://areacode.codes/text-message-safety-guide.html">
+
+        <!-- Canonical URL for SEO -->
+        <link rel="canonical" href="https://areacode.codes/text-message-safety-guide.html">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!-- Performance optimization: preconnect and DNS prefetch -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+        <!-- Initial loading style optimization -->
+        <style>
+            body {
+                opacity: 0;
+            }
+
+            :root {
+                --primary-color: #3b82f6;
+                --success-color: #10b981;
+                --warning-color: #f59e0b;
+                --danger-color: #ef4444;
+                --dark-color: #1e293b;
+                --light-bg: #f1f5f9;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                line-height: 1.6;
+                color: var(--dark-color);
+            }
+
+            .btn-primary {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+            }
+
+            .text-primary {
+                color: var(--primary-color) !important;
+            }
+
+            .container {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+        </style>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRG1LR357"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-JYRG1LR357');
+        </script>
+
+        <!-- Bootstrap CSS - async loading optimization -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        </noscript>
+
+        <!-- Font Awesome - async loading -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+            media="print" onload="this.media='all'">
+        <noscript>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        </noscript>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="areacodes.css">
+    </head>
+
+    <body>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <!-- Unified Brand Header -->
+                <div class="row justify-content-center text-center mb-4">
+                    <div class="col-lg-12">
+                        <div class="brand-logo mb-3">
+                            <div class="logo-container d-flex align-items-center justify-content-center">
+                                <div class="logo-icon" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
+                                    <i class="fas fa-sms"></i>
                                 </div>
-                                <p class="logo-sub mb-0">Text Message Security Center</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Trust Badges Banner -->
-            <div class="row justify-content-center mb-3">
-                <div class="col-lg-10 d-flex justify-content-center">
-                    <div class="badge bg-success me-2 p-2" style="background-color: #059669 !important;"><i class="fas fa-mobile-alt me-1"></i> Mobile Security Experts</div>
-                    <div class="badge bg-primary me-2 p-2" style="background-color: #3b82f6 !important;"><i class="fas fa-shield-virus me-1"></i> Anti-Phishing Certified</div>
-                    <div class="badge bg-warning p-2" style="background-color: #f97316 !important; color: white;"><i class="fas fa-clock me-1"></i> Updated Daily</div>
-                </div>
-            </div>
-            
-            <!-- Main Title Section -->
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="hero-info-card">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <h1 class="h2 mb-4 text-white">
-                                    <i class="fas fa-sms me-2" style="color: #22c55e;"></i>
-                                    Text Message Safety: Complete SMS Security Guide
-                                </h1>
-                                <p class="lead text-white mb-4">
-                                    Learn to identify and avoid text message scams (smishing), protect your mobile device, and handle suspicious SMS messages safely. Expert guidance from cybersecurity professionals.
-                                </p>
-                                <div class="text-center">
-                                    <small class="text-white opacity-75">
-                                        <i class="fas fa-chart-bar me-1"></i> <strong>87.8 billion</strong> spam texts sent in 2024 • <strong>1 in 5</strong> Americans received a scam text monthly
-                                    </small>
+                                <div class="logo-text ms-3">
+                                    <div class="logo-main mb-0">
+                                        <a href="https://areacode.codes" class="text-white text-decoration-none"
+                                            style="font-weight:bold;">AreaCode.Codes</a>
+                                    </div>
+                                    <p class="logo-sub mb-0">Text Message Security Center</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Main Content Section -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    
-                    <!-- SMS Threat Landscape -->
-                    <div class="security-alert mb-5">
-                        <div class="d-flex align-items-start">
-                            <div class="me-3">
-                                <i class="fas fa-exclamation-triangle fa-2x text-danger"></i>
+                <!-- Trust Badges Banner -->
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-10 d-flex justify-content-center">
+                        <div class="badge bg-success me-2 p-2" style="background-color: #059669 !important;"><i
+                                class="fas fa-mobile-alt me-1"></i> Mobile Security Experts</div>
+                        <div class="badge bg-primary me-2 p-2" style="background-color: #3b82f6 !important;"><i
+                                class="fas fa-shield-virus me-1"></i> Anti-Phishing Certified</div>
+                        <div class="badge bg-warning p-2" style="background-color: #f97316 !important; color: white;"><i
+                                class="fas fa-clock me-1"></i> Updated Daily</div>
+                    </div>
+                </div>
+
+                <!-- Main Title Section -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="hero-info-card">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h1 class="h2 mb-4 text-white">
+                                        <i class="fas fa-sms me-2" style="color: #22c55e;"></i>
+                                        Text Message Safety: Complete SMS Security Guide
+                                    </h1>
+                                    <p class="lead text-white mb-4">
+                                        Learn to identify and avoid text message scams (smishing), protect your mobile
+                                        device, and handle suspicious SMS messages safely. Expert guidance from
+                                        cybersecurity professionals.
+                                    </p>
+                                    <div class="text-center">
+                                        <small class="text-white opacity-75">
+                                            <i class="fas fa-chart-bar me-1"></i> <strong>87.8 billion</strong> spam
+                                            texts sent in 2024 • <strong>1 in 5</strong> Americans received a scam text
+                                            monthly
+                                        </small>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <h3 class="mb-3">📱 2025 Text Message Threat Landscape</h3>
-                                <p>Text message scams (called "smishing" - SMS phishing) have become the fastest-growing fraud method, with attackers exploiting our trust in mobile communications.</p>
-                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+
+                        <!-- SMS Threat Landscape -->
+                        <div class="security-alert mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3">
+                                    <i class="fas fa-exclamation-triangle fa-2x text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">📱 2025 Text Message Threat Landscape</h3>
+                                    <p>Text message scams (called "smishing" - SMS phishing) have become the
+                                        fastest-growing fraud method, with attackers exploiting our trust in mobile
+                                        communications.</p>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Staggering Statistics:</h5>
+                                            <ul>
+                                                <li><strong>87.8 billion</strong> spam texts sent in 2024</li>
+                                                <li><strong>76% increase</strong> in SMS scams from 2023</li>
+                                                <li><strong>$2.7 billion</strong> lost to text message fraud</li>
+                                                <li><strong>94% success rate</strong> for mobile malware delivery via
+                                                    SMS</li>
+                                                <li><strong>48% of Americans</strong> clicked on a suspicious text link
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Why SMS Scams Are So Effective:</h5>
+                                            <ul>
+                                                <li><strong>Higher open rates:</strong> 98% vs 20% for email</li>
+                                                <li><strong>Mobile vulnerability:</strong> Smaller screens hide URL
+                                                    details</li>
+                                                <li><strong>Urgency factor:</strong> People respond quickly to texts
+                                                </li>
+                                                <li><strong>Trust assumption:</strong> Texts feel more personal</li>
+                                                <li><strong>Bypasses email filters:</strong> SMS goes directly to device
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Common SMS Scam Types -->
+                        <div class="info-card mb-5">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-list text-danger me-2"></i>
+                                Most Common Text Message Scams in 2025
+                            </h2>
+
+                            <!-- Package Delivery Scams -->
+                            <div class="border rounded p-4 mb-4">
+                                <h4 class="text-danger">1. Fake Package Delivery Notifications</h4>
+                                <p><strong>How it works:</strong> Texts claiming packages are undelivered, asking you to
+                                    click links to reschedule delivery or pay fees.</p>
+
+                                <div class="alert alert-warning">
+                                    <h6>Common Message Examples:</h6>
+                                    <ul class="mb-0">
+                                        <li>"USPS: Your package is pending delivery. Confirm address: [link]"</li>
+                                        <li>"FedEx: Delivery attempted. Pay $3.95 shipping fee: [link]"</li>
+                                        <li>"Amazon: Package held at facility. Update payment method: [link]"</li>
+                                        <li>"UPS: Package requires signature. Schedule redelivery: [link]"</li>
+                                    </ul>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h5>Staggering Statistics:</h5>
+                                        <h6 class="text-danger">🚨 Red Flags:</h6>
                                         <ul>
-                                            <li><strong>87.8 billion</strong> spam texts sent in 2024</li>
-                                            <li><strong>76% increase</strong> in SMS scams from 2023</li>
-                                            <li><strong>$2.7 billion</strong> lost to text message fraud</li>
-                                            <li><strong>94% success rate</strong> for mobile malware delivery via SMS</li>
-                                            <li><strong>48% of Americans</strong> clicked on a suspicious text link</li>
+                                            <li>Unexpected delivery notifications</li>
+                                            <li>Generic greetings ("Dear Customer")</li>
+                                            <li>Shortened URLs (bit.ly, tinyurl)</li>
+                                            <li>Requests for personal information</li>
+                                            <li>Payment demands for delivery</li>
+                                            <li>Urgent action required language</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h5>Why SMS Scams Are So Effective:</h5>
+                                        <h6 class="text-success">✅ Protection Tips:</h6>
                                         <ul>
-                                            <li><strong>Higher open rates:</strong> 98% vs 20% for email</li>
-                                            <li><strong>Mobile vulnerability:</strong> Smaller screens hide URL details</li>
-                                            <li><strong>Urgency factor:</strong> People respond quickly to texts</li>
-                                            <li><strong>Trust assumption:</strong> Texts feel more personal</li>
-                                            <li><strong>Bypasses email filters:</strong> SMS goes directly to device</li>
+                                            <li>Check your actual delivery tracking independently</li>
+                                            <li>Log into official carrier websites/apps</li>
+                                            <li>Verify sender number with official carrier numbers</li>
+                                            <li>Don't click links in unexpected delivery texts</li>
+                                            <li>Real carriers don't ask for payment via text</li>
+                                            <li>Use official tracking numbers only</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Common SMS Scam Types -->
-                    <div class="info-card mb-5">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-list text-danger me-2"></i>
-                            Most Common Text Message Scams in 2025
-                        </h2>
+                            <!-- Banking and Financial Scams -->
+                            <div class="border rounded p-4 mb-4">
+                                <h4 class="text-danger">2. Banking and Financial Alerts</h4>
+                                <p><strong>How it works:</strong> Fake security alerts claiming suspicious account
+                                    activity, asking you to verify information or block transactions.</p>
 
-                        <!-- Package Delivery Scams -->
-                        <div class="border rounded p-4 mb-4">
-                            <h4 class="text-danger">1. Fake Package Delivery Notifications</h4>
-                            <p><strong>How it works:</strong> Texts claiming packages are undelivered, asking you to click links to reschedule delivery or pay fees.</p>
-                            
-                            <div class="alert alert-warning">
-                                <h6>Common Message Examples:</h6>
-                                <ul class="mb-0">
-                                    <li>"USPS: Your package is pending delivery. Confirm address: [link]"</li>
-                                    <li>"FedEx: Delivery attempted. Pay $3.95 shipping fee: [link]"</li>
-                                    <li>"Amazon: Package held at facility. Update payment method: [link]"</li>
-                                    <li>"UPS: Package requires signature. Schedule redelivery: [link]"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6 class="text-danger">🚨 Red Flags:</h6>
-                                    <ul>
-                                        <li>Unexpected delivery notifications</li>
-                                        <li>Generic greetings ("Dear Customer")</li>
-                                        <li>Shortened URLs (bit.ly, tinyurl)</li>
-                                        <li>Requests for personal information</li>
-                                        <li>Payment demands for delivery</li>
-                                        <li>Urgent action required language</li>
+                                <div class="alert alert-warning">
+                                    <h6>Common Message Examples:</h6>
+                                    <ul class="mb-0">
+                                        <li>"Bank of America: Suspicious activity detected. Verify account: [link]"</li>
+                                        <li>"Wells Fargo: Your card has been locked. Unlock now: [link]"</li>
+                                        <li>"Chase Alert: $500 transaction pending. Approve or deny: [link]"</li>
+                                        <li>"PayPal: Account limited. Confirm identity to restore access: [link]"</li>
                                     </ul>
                                 </div>
-                                <div class="col-md-6">
-                                    <h6 class="text-success">✅ Protection Tips:</h6>
-                                    <ul>
-                                        <li>Check your actual delivery tracking independently</li>
-                                        <li>Log into official carrier websites/apps</li>
-                                        <li>Verify sender number with official carrier numbers</li>
-                                        <li>Don't click links in unexpected delivery texts</li>
-                                        <li>Real carriers don't ask for payment via text</li>
-                                        <li>Use official tracking numbers only</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Banking and Financial Scams -->
-                        <div class="border rounded p-4 mb-4">
-                            <h4 class="text-danger">2. Banking and Financial Alerts</h4>
-                            <p><strong>How it works:</strong> Fake security alerts claiming suspicious account activity, asking you to verify information or block transactions.</p>
-                            
-                            <div class="alert alert-warning">
-                                <h6>Common Message Examples:</h6>
-                                <ul class="mb-0">
-                                    <li>"Bank of America: Suspicious activity detected. Verify account: [link]"</li>
-                                    <li>"Wells Fargo: Your card has been locked. Unlock now: [link]"</li>
-                                    <li>"Chase Alert: $500 transaction pending. Approve or deny: [link]"</li>
-                                    <li>"PayPal: Account limited. Confirm identity to restore access: [link]"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6 class="text-danger">🚨 Red Flags:</h6>
-                                    <ul>
-                                        <li>Urgent security alerts from banks you don't use</li>
-                                        <li>Generic account references</li>
-                                        <li>Links that don't go to official bank domains</li>
-                                        <li>Requests to confirm login credentials</li>
-                                        <li>Threats of account closure</li>
-                                        <li>Instructions to call non-bank numbers</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6 class="text-success">✅ Protection Protocol:</h6>
-                                    <ul>
-                                        <li>Never click links in financial texts</li>
-                                        <li>Open your banking app directly</li>
-                                        <li>Call your bank using official phone numbers</li>
-                                        <li>Check for real alerts in your account</li>
-                                        <li>Banks never ask for passwords via text</li>
-                                        <li>Enable official bank notifications only</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COVID-19 and Health Scams -->
-                        <div class="border rounded p-4 mb-4">
-                            <h4 class="text-danger">3. Health and Government Benefits</h4>
-                            <p><strong>How it works:</strong> Fake messages about health benefits, vaccine information, government assistance, or medical appointments.</p>
-                            
-                            <div class="alert alert-warning">
-                                <h6>Common Message Examples:</h6>
-                                <ul class="mb-0">
-                                    <li>"CDC: Schedule your free COVID test kit delivery: [link]"</li>
-                                    <li>"Medicare: You qualify for new benefits. Claim now: [link]"</li>
-                                    <li>"IRS: Tax refund of $2,847 approved. Claim here: [link]"</li>
-                                    <li>"Social Security: Verify your SSN to prevent suspension: [link]"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6 class="text-danger">🚨 Red Flags:</h6>
-                                    <ul>
-                                        <li>Unsolicited government benefit offers</li>
-                                        <li>Health-related urgent actions required</li>
-                                        <li>Tax refund notifications via text</li>
-                                        <li>Requests for Social Security numbers</li>
-                                        <li>Medical appointment confirmations you didn't make</li>
-                                        <li>Free benefits requiring personal information</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6 class="text-success">✅ Verification Steps:</h6>
-                                    <ul>
-                                        <li>Government agencies don't initiate contact via text</li>
-                                        <li>Visit official .gov websites directly</li>
-                                        <li>Call your healthcare provider directly</li>
-                                        <li>Verify through official government portals</li>
-                                        <li>IRS doesn't notify about refunds via text</li>
-                                        <li>Medicare contacts through official mail</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Romance and Dating Scams -->
-                        <div class="border rounded p-4 mb-4">
-                            <h4 class="text-danger">4. Romance and Dating App Scams</h4>
-                            <p><strong>How it works:</strong> Scammers move conversations from dating apps to text messages, then request money or personal information.</p>
-                            
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h6 class="text-danger">🚨 Warning Signs:</h6>
-                                    <ul>
-                                        <li>Immediately wants to move off dating app</li>
-                                        <li>Professes love very quickly</li>
-                                        <li>Avoids phone calls or video chats</li>
-                                        <li>Claims to be traveling or overseas</li>
-                                        <li>Requests money for emergencies</li>
-                                        <li>Asks for gift cards or cryptocurrency</li>
-                                        <li>Photos seem too professional</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6">
-                                    <h6 class="text-success">✅ Protection Strategies:</h6>
-                                    <ul>
-                                        <li>Keep conversations on dating platform initially</li>
-                                        <li>Reverse search their photos online</li>
-                                        <li>Insist on video calls before meeting</li>
-                                        <li>Never send money to someone you haven't met</li>
-                                        <li>Be suspicious of urgent financial requests</li>
-                                        <li>Verify their identity through multiple methods</li>
-                                        <li>Trust your instincts about inconsistencies</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Additional Scam Types -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">5. Fake Job Opportunities</h5>
-                                    <p class="small">Work-from-home scams, fake hiring texts, and pyramid scheme recruitment messages targeting job seekers.</p>
-                                </div>
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">6. Prize and Sweepstakes</h5>
-                                    <p class="small">Fake lottery winnings, contest notifications, and "you've won" messages requiring fees or personal information.</p>
-                                </div>
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">7. Tech Support Scams</h5>
-                                    <p class="small">Fake security alerts about viruses, malware, or compromised devices requiring immediate action.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">8. Subscription and Service Scams</h5>
-                                    <p class="small">Fake Netflix, Amazon, or subscription renewal notices asking for payment information updates.</p>
-                                </div>
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">9. Charity and Donation Fraud</h5>
-                                    <p class="small">Fake disaster relief, holiday charity, and urgent donation requests exploiting current events.</p>
-                                </div>
-                                <div class="border rounded p-3 mb-3">
-                                    <h5 class="text-danger">10. Two-Factor Authentication Bypass</h5>
-                                    <p class="small">Sophisticated attacks trying to steal 2FA codes by posing as security verification messages.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Universal SMS Safety Rules -->
-                    <div class="info-card mb-5">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-shield-alt text-success me-2"></i>
-                            Universal Text Message Safety Rules
-                        </h2>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>📲 Before You Click or Respond:</h5>
-                                <ol>
-                                    <li><strong>Pause and analyze</strong> the message content</li>
-                                    <li><strong>Verify the sender</strong> independently</li>
-                                    <li><strong>Check for urgency tactics</strong> and pressure</li>
-                                    <li><strong>Look for spelling/grammar errors</strong></li>
-                                    <li><strong>Examine URLs carefully</strong> (if visible)</li>
-                                    <li><strong>Consider if you were expecting</strong> this message</li>
-                                </ol>
-                                
-                                <h5>🔍 Link Safety Protocol:</h5>
-                                <ul>
-                                    <li><strong>Never click shortened URLs</strong> (bit.ly, tinyurl, etc.)</li>
-                                    <li><strong>Long-press links</strong> to preview destinations</li>
-                                    <li><strong>Look for HTTPS</strong> in legitimate URLs</li>
-                                    <li><strong>Verify domain names</strong> match official sites</li>
-                                    <li><strong>Type URLs manually</strong> instead of clicking</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>❌ Never Do Via Text Message:</h5>
-                                <ul>
-                                    <li>Provide Social Security numbers</li>
-                                    <li>Share banking or credit card information</li>
-                                    <li>Send photos of IDs or documents</li>
-                                    <li>Give passwords or PINs</li>
-                                    <li>Confirm personal details</li>
-                                    <li>Download attachments from unknown senders</li>
-                                    <li>Click links in urgent messages</li>
-                                </ul>
-                                
-                                <h5>✅ Safe Response Practices:</h5>
-                                <ul>
-                                    <li><strong>Verify independently</strong> before any action</li>
-                                    <li><strong>Contact companies directly</strong> using official numbers</li>
-                                    <li><strong>Report and block</strong> suspicious messages</li>
-                                    <li><strong>Delete</strong> messages from unknown senders</li>
-                                    <li><strong>Use official apps</strong> for account management</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Device Security -->
-                    <div class="info-card mb-5">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-mobile-alt text-primary me-2"></i>
-                            Complete Mobile Device Security Setup
-                        </h2>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>iPhone Security Settings:</h5>
-                                
-                                <h6>Message Filtering:</h6>
-                                <ul>
-                                    <li><strong>Settings > Messages > Filter Unknown Senders:</strong> Enable</li>
-                                    <li><strong>Settings > Messages > Send Read Receipts:</strong> Disable</li>
-                                    <li><strong>Settings > Notifications > Messages:</strong> Customize alerts</li>
-                                </ul>
-                                
-                                <h6>Additional Protection:</h6>
-                                <ul>
-                                    <li><strong>Two-Factor Authentication:</strong> Enable for Apple ID</li>
-                                    <li><strong>Automatic Updates:</strong> Keep iOS current</li>
-                                    <li><strong>App Store:</strong> Only download from official store</li>
-                                    <li><strong>Safari:</strong> Enable fraud warnings</li>
-                                </ul>
-                                
-                                <h6>Privacy Controls:</h6>
-                                <ul>
-                                    <li><strong>Settings > Privacy & Security:</strong> Review app permissions</li>
-                                    <li><strong>Settings > Privacy > Location Services:</strong> Limit sharing</li>
-                                    <li><strong>Settings > Privacy > Analytics:</strong> Don't share data</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Android Security Settings:</h5>
-                                
-                                <h6>Message Protection:</h6>
-                                <ul>
-                                    <li><strong>Messages app > Settings > Spam protection:</strong> Enable</li>
-                                    <li><strong>Google Play Protect:</strong> Keep enabled</li>
-                                    <li><strong>Settings > Apps > Default apps:</strong> Use trusted messaging apps</li>
-                                </ul>
-                                
-                                <h6>System Security:</h6>
-                                <ul>
-                                    <li><strong>Two-Factor Authentication:</strong> Enable for Google account</li>
-                                    <li><strong>Security Updates:</strong> Install promptly</li>
-                                    <li><strong>Unknown Sources:</strong> Keep disabled</li>
-                                    <li><strong>Google Safe Browsing:</strong> Enable</li>
-                                </ul>
-                                
-                                <h6>App Permissions:</h6>
-                                <ul>
-                                    <li><strong>Settings > Privacy > Permission Manager:</strong> Review regularly</li>
-                                    <li><strong>Settings > Google > Security:</strong> Monitor account activity</li>
-                                    <li><strong>Play Store:</strong> Review app permissions before installing</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <h5 class="mt-4">Third-Party Security Apps:</h5>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h6>SMS Security Apps:</h6>
-                                <ul>
-                                    <li><strong>Truecaller:</strong> Spam call and SMS identification</li>
-                                    <li><strong>Hiya:</strong> Caller ID and spam block</li>
-                                    <li><strong>RoboKiller:</strong> Advanced spam protection</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h6>Antivirus Solutions:</h6>
-                                <ul>
-                                    <li><strong>Malwarebytes:</strong> Mobile malware protection</li>
-                                    <li><strong>Norton Mobile Security:</strong> Comprehensive protection</li>
-                                    <li><strong>Kaspersky Mobile:</strong> Advanced threat detection</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h6>Password Managers:</h6>
-                                <ul>
-                                    <li><strong>1Password:</strong> Secure password storage</li>
-                                    <li><strong>Bitwarden:</strong> Open-source password manager</li>
-                                    <li><strong>LastPass:</strong> Cross-platform sync</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- What to Do If You've Been Targeted -->
-                    <div class="security-alert mb-5">
-                        <div class="d-flex align-items-start">
-                            <div class="me-3">
-                                <i class="fas fa-first-aid fa-2x text-danger"></i>
-                            </div>
-                            <div>
-                                <h3 class="mb-3">🚨 Emergency Response: If You've Clicked a Suspicious Link</h3>
-                                
-                                <h5>Immediate Actions (First 5 Minutes):</h5>
-                                <ol>
-                                    <li><strong>Don't panic</strong> - quick action can minimize damage</li>
-                                    <li><strong>Close the browser/app</strong> immediately</li>
-                                    <li><strong>Turn on airplane mode</strong> to disconnect from internet</li>
-                                    <li><strong>Take screenshots</strong> of the suspicious message</li>
-                                    <li><strong>Note the time and details</strong> for reporting</li>
-                                </ol>
-                                
-                                <h5>Security Assessment (Next 30 Minutes):</h5>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h6>Check for Immediate Threats:</h6>
+                                        <h6 class="text-danger">🚨 Red Flags:</h6>
                                         <ul>
-                                            <li>Did you enter any personal information?</li>
-                                            <li>Did you download anything?</li>
-                                            <li>Did you provide login credentials?</li>
-                                            <li>Did you enter payment information?</li>
-                                            <li>Did you click "allow" for any permissions?</li>
+                                            <li>Urgent security alerts from banks you don't use</li>
+                                            <li>Generic account references</li>
+                                            <li>Links that don't go to official bank domains</li>
+                                            <li>Requests to confirm login credentials</li>
+                                            <li>Threats of account closure</li>
+                                            <li>Instructions to call non-bank numbers</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
-                                        <h6>Immediate Protection Steps:</h6>
+                                        <h6 class="text-success">✅ Protection Protocol:</h6>
                                         <ul>
-                                            <li><strong>Change passwords</strong> for any accounts you may have compromised</li>
-                                            <li><strong>Enable 2FA</strong> on all important accounts</li>
-                                            <li><strong>Check financial accounts</strong> for unauthorized activity</li>
-                                            <li><strong>Scan your device</strong> with antivirus software</li>
-                                            <li><strong>Monitor credit reports</strong> for suspicious activity</li>
+                                            <li>Never click links in financial texts</li>
+                                            <li>Open your banking app directly</li>
+                                            <li>Call your bank using official phone numbers</li>
+                                            <li>Check for real alerts in your account</li>
+                                            <li>Banks never ask for passwords via text</li>
+                                            <li>Enable official bank notifications only</li>
                                         </ul>
                                     </div>
                                 </div>
-                                
-                                <h5>Long-term Monitoring (Ongoing):</h5>
-                                <ul>
-                                    <li><strong>Set up account alerts</strong> for all financial accounts</li>
-                                    <li><strong>Monitor credit reports</strong> monthly for 6 months</li>
-                                    <li><strong>Watch for unusual activity</strong> on all accounts</li>
-                                    <li><strong>Consider identity theft protection</strong> services</li>
-                                    <li><strong>Document everything</strong> for potential law enforcement reports</li>
-                                </ul>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Advanced Threats and Emerging Scams -->
-                    <div class="info-card mb-5">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-robot text-warning me-2"></i>
-                            Emerging Threats: Advanced SMS Scam Techniques
-                        </h2>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>SIM Swapping Attacks:</h5>
-                                <p><strong>How it works:</strong> Attackers convince your phone carrier to transfer your number to their device, gaining access to 2FA codes.</p>
-                                
-                                <h6>Protection Strategies:</h6>
-                                <ul>
-                                    <li>Add carrier account PIN/password</li>
-                                    <li>Use authenticator apps instead of SMS for 2FA</li>
-                                    <li>Monitor account activity regularly</li>
-                                    <li>Contact carrier immediately if service is lost</li>
-                                </ul>
-                                
-                                <h5>Malware Distribution:</h5>
-                                <p><strong>How it works:</strong> Links in texts download malware that steals data, monitors activity, or hijacks your device.</p>
-                                
-                                <h6>Prevention Measures:</h6>
-                                <ul>
-                                    <li>Never download apps from text links</li>
-                                    <li>Keep operating system updated</li>
-                                    <li>Use mobile antivirus software</li>
-                                    <li>Avoid "sideloading" apps</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Social Engineering via SMS:</h5>
-                                <p><strong>How it works:</strong> Scammers use personal information from social media to create convincing, personalized messages.</p>
-                                
-                                <h6>Defense Tactics:</h6>
-                                <ul>
-                                    <li>Limit personal information on social media</li>
-                                    <li>Use privacy settings on all platforms</li>
-                                    <li>Be suspicious of personalized scam messages</li>
-                                    <li>Verify through alternative communication methods</li>
-                                </ul>
-                                
-                                <h5>Business Email Compromise (BEC) via SMS:</h5>
-                                <p><strong>How it works:</strong> Scammers impersonate executives or vendors via text, requesting urgent payments or information.</p>
-                                
-                                <h6>Corporate Protection:</h6>
-                                <ul>
-                                    <li>Establish verification procedures for financial requests</li>
-                                    <li>Use official communication channels for business</li>
-                                    <li>Train employees on SMS-based BEC tactics</li>
-                                    <li>Implement multi-step approval processes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- COVID-19 and Health Scams -->
+                            <div class="border rounded p-4 mb-4">
+                                <h4 class="text-danger">3. Health and Government Benefits</h4>
+                                <p><strong>How it works:</strong> Fake messages about health benefits, vaccine
+                                    information, government assistance, or medical appointments.</p>
 
-                    <!-- Reporting and Legal Resources -->
-                    <div class="info-card mb-5">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-gavel text-primary me-2"></i>
-                            Reporting SMS Scams and Legal Protections
-                        </h2>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>Where to Report SMS Scams:</h5>
-                                
-                                <h6>Primary Reporting Agencies:</h6>
-                                <ul>
-                                    <li><strong>FTC Consumer Sentinel:</strong> reportfraud.ftc.gov</li>
-                                    <li><strong>FBI IC3:</strong> ic3.gov (for internet crimes)</li>
-                                    <li><strong>FCC Consumer Complaints:</strong> consumercomplaints.fcc.gov</li>
-                                    <li><strong>CTIA Spam Reporting:</strong> Forward to 7726 (SPAM)</li>
-                                </ul>
-                                
-                                <h6>Carrier-Specific Reporting:</h6>
-                                <ul>
-                                    <li><strong>Verizon:</strong> Forward to 9999</li>
-                                    <li><strong>AT&T:</strong> Forward to 7726</li>
-                                    <li><strong>T-Mobile:</strong> Forward to 7726</li>
-                                    <li><strong>Sprint:</strong> Forward to 9999</li>
-                                </ul>
-                                
-                                <h6>Financial Institution Alerts:</h6>
-                                <ul>
-                                    <li>Contact your bank's fraud department</li>
-                                    <li>File reports with credit monitoring agencies</li>
-                                    <li>Alert credit card companies</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Legal Rights and Protections:</h5>
-                                
-                                <h6>Telephone Consumer Protection Act (TCPA):</h6>
-                                <ul>
-                                    <li>Prohibits unsolicited text marketing</li>
-                                    <li>Requires opt-in consent for promotional texts</li>
-                                    <li>Allows damages up to $1,500 per violation</li>
-                                    <li>Gives you the right to opt out</li>
-                                </ul>
-                                
-                                <h6>CAN-SPAM Act:</h6>
-                                <ul>
-                                    <li>Applies to commercial text messages</li>
-                                    <li>Requires honest sender identification</li>
-                                    <li>Mandates opt-out mechanisms</li>
-                                    <li>Prohibits deceptive subject lines</li>
-                                </ul>
-                                
-                                <h6>State Consumer Protection Laws:</h6>
-                                <ul>
-                                    <li>Additional protections vary by state</li>
-                                    <li>Contact state Attorney General</li>
-                                    <li>File complaints with state consumer protection agencies</li>
-                                    <li>Some states allow private lawsuits</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="alert alert-warning">
+                                    <h6>Common Message Examples:</h6>
+                                    <ul class="mb-0">
+                                        <li>"CDC: Schedule your free COVID test kit delivery: [link]"</li>
+                                        <li>"Medicare: You qualify for new benefits. Claim now: [link]"</li>
+                                        <li>"IRS: Tax refund of $2,847 approved. Claim here: [link]"</li>
+                                        <li>"Social Security: Verify your SSN to prevent suspension: [link]"</li>
+                                    </ul>
+                                </div>
 
-                    <!-- Conclusion -->
-                    <div class="info-card">
-                        <h2 class="h3 mb-4">
-                            <i class="fas fa-check-circle text-success me-2"></i>
-                            Your Complete Text Message Safety Action Plan
-                        </h2>
-                        
-                        <p>Text message security requires vigilance, knowledge, and proactive protection. In our mobile-first world, SMS has become a primary attack vector for cybercriminals.</p>
-                        
-                        <h5>The Four Pillars of SMS Security:</h5>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="text-center p-3 border rounded mb-3">
-                                    <i class="fas fa-eye fa-3x text-warning mb-3"></i>
-                                    <h6>Recognition</h6>
-                                    <p class="small">Learn to identify common scam patterns and suspicious message characteristics.</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="text-danger">🚨 Red Flags:</h6>
+                                        <ul>
+                                            <li>Unsolicited government benefit offers</li>
+                                            <li>Health-related urgent actions required</li>
+                                            <li>Tax refund notifications via text</li>
+                                            <li>Requests for Social Security numbers</li>
+                                            <li>Medical appointment confirmations you didn't make</li>
+                                            <li>Free benefits requiring personal information</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-success">✅ Verification Steps:</h6>
+                                        <ul>
+                                            <li>Government agencies don't initiate contact via text</li>
+                                            <li>Visit official .gov websites directly</li>
+                                            <li>Call your healthcare provider directly</li>
+                                            <li>Verify through official government portals</li>
+                                            <li>IRS doesn't notify about refunds via text</li>
+                                            <li>Medicare contacts through official mail</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="text-center p-3 border rounded mb-3">
-                                    <i class="fas fa-pause-circle fa-3x text-primary mb-3"></i>
-                                    <h6>Verification</h6>
-                                    <p class="small">Always verify suspicious messages through independent channels before taking action.</p>
+
+                            <!-- Romance and Dating Scams -->
+                            <div class="border rounded p-4 mb-4">
+                                <h4 class="text-danger">4. Romance and Dating App Scams</h4>
+                                <p><strong>How it works:</strong> Scammers move conversations from dating apps to text
+                                    messages, then request money or personal information.</p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6 class="text-danger">🚨 Warning Signs:</h6>
+                                        <ul>
+                                            <li>Immediately wants to move off dating app</li>
+                                            <li>Professes love very quickly</li>
+                                            <li>Avoids phone calls or video chats</li>
+                                            <li>Claims to be traveling or overseas</li>
+                                            <li>Requests money for emergencies</li>
+                                            <li>Asks for gift cards or cryptocurrency</li>
+                                            <li>Photos seem too professional</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="text-success">✅ Protection Strategies:</h6>
+                                        <ul>
+                                            <li>Keep conversations on dating platform initially</li>
+                                            <li>Reverse search their photos online</li>
+                                            <li>Insist on video calls before meeting</li>
+                                            <li>Never send money to someone you haven't met</li>
+                                            <li>Be suspicious of urgent financial requests</li>
+                                            <li>Verify their identity through multiple methods</li>
+                                            <li>Trust your instincts about inconsistencies</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="text-center p-3 border rounded mb-3">
-                                    <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
-                                    <h6>Protection</h6>
-                                    <p class="small">Use technical safeguards, security settings, and protective apps to filter threats.</p>
+
+                            <!-- Additional Scam Types -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">5. Fake Job Opportunities</h5>
+                                        <p class="small">Work-from-home scams, fake hiring texts, and pyramid scheme
+                                            recruitment messages targeting job seekers.</p>
+                                    </div>
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">6. Prize and Sweepstakes</h5>
+                                        <p class="small">Fake lottery winnings, contest notifications, and "you've won"
+                                            messages requiring fees or personal information.</p>
+                                    </div>
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">7. Tech Support Scams</h5>
+                                        <p class="small">Fake security alerts about viruses, malware, or compromised
+                                            devices requiring immediate action.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="text-center p-3 border rounded mb-3">
-                                    <i class="fas fa-flag fa-3x text-danger mb-3"></i>
-                                    <h6>Reporting</h6>
-                                    <p class="small">Report scams to protect others and help law enforcement track criminal activity.</p>
+                                <div class="col-md-6">
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">8. Subscription and Service Scams</h5>
+                                        <p class="small">Fake Netflix, Amazon, or subscription renewal notices asking
+                                            for payment information updates.</p>
+                                    </div>
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">9. Charity and Donation Fraud</h5>
+                                        <p class="small">Fake disaster relief, holiday charity, and urgent donation
+                                            requests exploiting current events.</p>
+                                    </div>
+                                    <div class="border rounded p-3 mb-3">
+                                        <h5 class="text-danger">10. Two-Factor Authentication Bypass</h5>
+                                        <p class="small">Sophisticated attacks trying to steal 2FA codes by posing as
+                                            security verification messages.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <h5>Essential Daily Practices:</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Before Reading Any Text:</h6>
-                                <ol>
-                                    <li>Check if you recognize the sender</li>
-                                    <li>Be suspicious of urgent language</li>
-                                    <li>Look for personalization vs. generic greetings</li>
-                                    <li>Notice if it's asking for information or action</li>
-                                </ol>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Before Taking Any Action:</h6>
-                                <ol>
-                                    <li>Verify the sender through official channels</li>
-                                    <li>Check if the request makes logical sense</li>
-                                    <li>Consider if you were expecting this message</li>
-                                    <li>When in doubt, delete and report</li>
-                                </ol>
+
+                        <!-- Universal SMS Safety Rules -->
+                        <div class="info-card mb-5">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-shield-alt text-success me-2"></i>
+                                Universal Text Message Safety Rules
+                            </h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>📲 Before You Click or Respond:</h5>
+                                    <ol>
+                                        <li><strong>Pause and analyze</strong> the message content</li>
+                                        <li><strong>Verify the sender</strong> independently</li>
+                                        <li><strong>Check for urgency tactics</strong> and pressure</li>
+                                        <li><strong>Look for spelling/grammar errors</strong></li>
+                                        <li><strong>Examine URLs carefully</strong> (if visible)</li>
+                                        <li><strong>Consider if you were expecting</strong> this message</li>
+                                    </ol>
+
+                                    <h5>🔍 Link Safety Protocol:</h5>
+                                    <ul>
+                                        <li><strong>Never click shortened URLs</strong> (bit.ly, tinyurl, etc.)</li>
+                                        <li><strong>Long-press links</strong> to preview destinations</li>
+                                        <li><strong>Look for HTTPS</strong> in legitimate URLs</li>
+                                        <li><strong>Verify domain names</strong> match official sites</li>
+                                        <li><strong>Type URLs manually</strong> instead of clicking</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>❌ Never Do Via Text Message:</h5>
+                                    <ul>
+                                        <li>Provide Social Security numbers</li>
+                                        <li>Share banking or credit card information</li>
+                                        <li>Send photos of IDs or documents</li>
+                                        <li>Give passwords or PINs</li>
+                                        <li>Confirm personal details</li>
+                                        <li>Download attachments from unknown senders</li>
+                                        <li>Click links in urgent messages</li>
+                                    </ul>
+
+                                    <h5>✅ Safe Response Practices:</h5>
+                                    <ul>
+                                        <li><strong>Verify independently</strong> before any action</li>
+                                        <li><strong>Contact companies directly</strong> using official numbers</li>
+                                        <li><strong>Report and block</strong> suspicious messages</li>
+                                        <li><strong>Delete</strong> messages from unknown senders</li>
+                                        <li><strong>Use official apps</strong> for account management</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="alert alert-success mt-4">
-                            <h6><i class="fas fa-lightbulb me-2"></i>Remember: You Control Your Mobile Security</h6>
-                            <p class="mb-0">Scammers rely on speed, fear, and trust to succeed. By taking time to verify, staying informed about current threats, and using available security tools, you can protect yourself and your family from SMS-based fraud.</p>
+
+                        <!-- Mobile Device Security -->
+                        <div class="info-card mb-5">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-mobile-alt text-primary me-2"></i>
+                                Complete Mobile Device Security Setup
+                            </h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>iPhone Security Settings:</h5>
+
+                                    <h6>Message Filtering:</h6>
+                                    <ul>
+                                        <li><strong>Settings > Messages > Filter Unknown Senders:</strong> Enable</li>
+                                        <li><strong>Settings > Messages > Send Read Receipts:</strong> Disable</li>
+                                        <li><strong>Settings > Notifications > Messages:</strong> Customize alerts</li>
+                                    </ul>
+
+                                    <h6>Additional Protection:</h6>
+                                    <ul>
+                                        <li><strong>Two-Factor Authentication:</strong> Enable for Apple ID</li>
+                                        <li><strong>Automatic Updates:</strong> Keep iOS current</li>
+                                        <li><strong>App Store:</strong> Only download from official store</li>
+                                        <li><strong>Safari:</strong> Enable fraud warnings</li>
+                                    </ul>
+
+                                    <h6>Privacy Controls:</h6>
+                                    <ul>
+                                        <li><strong>Settings > Privacy & Security:</strong> Review app permissions</li>
+                                        <li><strong>Settings > Privacy > Location Services:</strong> Limit sharing</li>
+                                        <li><strong>Settings > Privacy > Analytics:</strong> Don't share data</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Android Security Settings:</h5>
+
+                                    <h6>Message Protection:</h6>
+                                    <ul>
+                                        <li><strong>Messages app > Settings > Spam protection:</strong> Enable</li>
+                                        <li><strong>Google Play Protect:</strong> Keep enabled</li>
+                                        <li><strong>Settings > Apps > Default apps:</strong> Use trusted messaging apps
+                                        </li>
+                                    </ul>
+
+                                    <h6>System Security:</h6>
+                                    <ul>
+                                        <li><strong>Two-Factor Authentication:</strong> Enable for Google account</li>
+                                        <li><strong>Security Updates:</strong> Install promptly</li>
+                                        <li><strong>Unknown Sources:</strong> Keep disabled</li>
+                                        <li><strong>Google Safe Browsing:</strong> Enable</li>
+                                    </ul>
+
+                                    <h6>App Permissions:</h6>
+                                    <ul>
+                                        <li><strong>Settings > Privacy > Permission Manager:</strong> Review regularly
+                                        </li>
+                                        <li><strong>Settings > Google > Security:</strong> Monitor account activity</li>
+                                        <li><strong>Play Store:</strong> Review app permissions before installing</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h5 class="mt-4">Third-Party Security Apps:</h5>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h6>SMS Security Apps:</h6>
+                                    <ul>
+                                        <li><strong>Truecaller:</strong> Spam call and SMS identification</li>
+                                        <li><strong>Hiya:</strong> Caller ID and spam block</li>
+                                        <li><strong>RoboKiller:</strong> Advanced spam protection</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Antivirus Solutions:</h6>
+                                    <ul>
+                                        <li><strong>Malwarebytes:</strong> Mobile malware protection</li>
+                                        <li><strong>Norton Mobile Security:</strong> Comprehensive protection</li>
+                                        <li><strong>Kaspersky Mobile:</strong> Advanced threat detection</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6>Password Managers:</h6>
+                                    <ul>
+                                        <li><strong>1Password:</strong> Secure password storage</li>
+                                        <li><strong>Bitwarden:</strong> Open-source password manager</li>
+                                        <li><strong>LastPass:</strong> Cross-platform sync</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="text-center mt-4">
-                            <a href="https://reportfraud.ftc.gov" target="_blank" class="btn btn-danger me-3">
-                                <i class="fas fa-exclamation-triangle me-2"></i>
-                                Report SMS Scam
-                            </a>
-                            <a href="sms:7726" class="btn btn-warning me-3">
-                                <i class="fas fa-sms me-2"></i>
-                                Forward Spam to 7726
-                            </a>
-                            <a href="https://areacode.codes" class="btn btn-primary">
-                                <i class="fas fa-home me-2"></i>
-                                Return to Security Center
-                            </a>
+
+                        <!-- What to Do If You've Been Targeted -->
+                        <div class="security-alert mb-5">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3">
+                                    <i class="fas fa-first-aid fa-2x text-danger"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-3">🚨 Emergency Response: If You've Clicked a Suspicious Link</h3>
+
+                                    <h5>Immediate Actions (First 5 Minutes):</h5>
+                                    <ol>
+                                        <li><strong>Don't panic</strong> - quick action can minimize damage</li>
+                                        <li><strong>Close the browser/app</strong> immediately</li>
+                                        <li><strong>Turn on airplane mode</strong> to disconnect from internet</li>
+                                        <li><strong>Take screenshots</strong> of the suspicious message</li>
+                                        <li><strong>Note the time and details</strong> for reporting</li>
+                                    </ol>
+
+                                    <h5>Security Assessment (Next 30 Minutes):</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Check for Immediate Threats:</h6>
+                                            <ul>
+                                                <li>Did you enter any personal information?</li>
+                                                <li>Did you download anything?</li>
+                                                <li>Did you provide login credentials?</li>
+                                                <li>Did you enter payment information?</li>
+                                                <li>Did you click "allow" for any permissions?</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Immediate Protection Steps:</h6>
+                                            <ul>
+                                                <li><strong>Change passwords</strong> for any accounts you may have
+                                                    compromised</li>
+                                                <li><strong>Enable 2FA</strong> on all important accounts</li>
+                                                <li><strong>Check financial accounts</strong> for unauthorized activity
+                                                </li>
+                                                <li><strong>Scan your device</strong> with antivirus software</li>
+                                                <li><strong>Monitor credit reports</strong> for suspicious activity</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <h5>Long-term Monitoring (Ongoing):</h5>
+                                    <ul>
+                                        <li><strong>Set up account alerts</strong> for all financial accounts</li>
+                                        <li><strong>Monitor credit reports</strong> monthly for 6 months</li>
+                                        <li><strong>Watch for unusual activity</strong> on all accounts</li>
+                                        <li><strong>Consider identity theft protection</strong> services</li>
+                                        <li><strong>Document everything</strong> for potential law enforcement reports
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Threats and Emerging Scams -->
+                        <div class="info-card mb-5">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-robot text-warning me-2"></i>
+                                Emerging Threats: Advanced SMS Scam Techniques
+                            </h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>SIM Swapping Attacks:</h5>
+                                    <p><strong>How it works:</strong> Attackers convince your phone carrier to transfer
+                                        your number to their device, gaining access to 2FA codes.</p>
+
+                                    <h6>Protection Strategies:</h6>
+                                    <ul>
+                                        <li>Add carrier account PIN/password</li>
+                                        <li>Use authenticator apps instead of SMS for 2FA</li>
+                                        <li>Monitor account activity regularly</li>
+                                        <li>Contact carrier immediately if service is lost</li>
+                                    </ul>
+
+                                    <h5>Malware Distribution:</h5>
+                                    <p><strong>How it works:</strong> Links in texts download malware that steals data,
+                                        monitors activity, or hijacks your device.</p>
+
+                                    <h6>Prevention Measures:</h6>
+                                    <ul>
+                                        <li>Never download apps from text links</li>
+                                        <li>Keep operating system updated</li>
+                                        <li>Use mobile antivirus software</li>
+                                        <li>Avoid "sideloading" apps</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Social Engineering via SMS:</h5>
+                                    <p><strong>How it works:</strong> Scammers use personal information from social
+                                        media to create convincing, personalized messages.</p>
+
+                                    <h6>Defense Tactics:</h6>
+                                    <ul>
+                                        <li>Limit personal information on social media</li>
+                                        <li>Use privacy settings on all platforms</li>
+                                        <li>Be suspicious of personalized scam messages</li>
+                                        <li>Verify through alternative communication methods</li>
+                                    </ul>
+
+                                    <h5>Business Email Compromise (BEC) via SMS:</h5>
+                                    <p><strong>How it works:</strong> Scammers impersonate executives or vendors via
+                                        text, requesting urgent payments or information.</p>
+
+                                    <h6>Corporate Protection:</h6>
+                                    <ul>
+                                        <li>Establish verification procedures for financial requests</li>
+                                        <li>Use official communication channels for business</li>
+                                        <li>Train employees on SMS-based BEC tactics</li>
+                                        <li>Implement multi-step approval processes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reporting and Legal Resources -->
+                        <div class="info-card mb-5">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-gavel text-primary me-2"></i>
+                                Reporting SMS Scams and Legal Protections
+                            </h2>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Where to Report SMS Scams:</h5>
+
+                                    <h6>Primary Reporting Agencies:</h6>
+                                    <ul>
+                                        <li><strong>FTC Consumer Sentinel:</strong> reportfraud.ftc.gov</li>
+                                        <li><strong>FBI IC3:</strong> ic3.gov (for internet crimes)</li>
+                                        <li><strong>FCC Consumer Complaints:</strong> consumercomplaints.fcc.gov</li>
+                                        <li><strong>CTIA Spam Reporting:</strong> Forward to 7726 (SPAM)</li>
+                                    </ul>
+
+                                    <h6>Carrier-Specific Reporting:</h6>
+                                    <ul>
+                                        <li><strong>Verizon:</strong> Forward to 9999</li>
+                                        <li><strong>AT&T:</strong> Forward to 7726</li>
+                                        <li><strong>T-Mobile:</strong> Forward to 7726</li>
+                                        <li><strong>Sprint:</strong> Forward to 9999</li>
+                                    </ul>
+
+                                    <h6>Financial Institution Alerts:</h6>
+                                    <ul>
+                                        <li>Contact your bank's fraud department</li>
+                                        <li>File reports with credit monitoring agencies</li>
+                                        <li>Alert credit card companies</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Legal Rights and Protections:</h5>
+
+                                    <h6>Telephone Consumer Protection Act (TCPA):</h6>
+                                    <ul>
+                                        <li>Prohibits unsolicited text marketing</li>
+                                        <li>Requires opt-in consent for promotional texts</li>
+                                        <li>Allows damages up to $1,500 per violation</li>
+                                        <li>Gives you the right to opt out</li>
+                                    </ul>
+
+                                    <h6>CAN-SPAM Act:</h6>
+                                    <ul>
+                                        <li>Applies to commercial text messages</li>
+                                        <li>Requires honest sender identification</li>
+                                        <li>Mandates opt-out mechanisms</li>
+                                        <li>Prohibits deceptive subject lines</li>
+                                    </ul>
+
+                                    <h6>State Consumer Protection Laws:</h6>
+                                    <ul>
+                                        <li>Additional protections vary by state</li>
+                                        <li>Contact state Attorney General</li>
+                                        <li>File complaints with state consumer protection agencies</li>
+                                        <li>Some states allow private lawsuits</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="info-card">
+                            <h2 class="h3 mb-4">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Your Complete Text Message Safety Action Plan
+                            </h2>
+
+                            <p>Text message security requires vigilance, knowledge, and proactive protection. In our
+                                mobile-first world, SMS has become a primary attack vector for cybercriminals.</p>
+
+                            <h5>The Four Pillars of SMS Security:</h5>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="text-center p-3 border rounded mb-3">
+                                        <i class="fas fa-eye fa-3x text-warning mb-3"></i>
+                                        <h6>Recognition</h6>
+                                        <p class="small">Learn to identify common scam patterns and suspicious message
+                                            characteristics.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center p-3 border rounded mb-3">
+                                        <i class="fas fa-pause-circle fa-3x text-primary mb-3"></i>
+                                        <h6>Verification</h6>
+                                        <p class="small">Always verify suspicious messages through independent channels
+                                            before taking action.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center p-3 border rounded mb-3">
+                                        <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                                        <h6>Protection</h6>
+                                        <p class="small">Use technical safeguards, security settings, and protective
+                                            apps to filter threats.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center p-3 border rounded mb-3">
+                                        <i class="fas fa-flag fa-3x text-danger mb-3"></i>
+                                        <h6>Reporting</h6>
+                                        <p class="small">Report scams to protect others and help law enforcement track
+                                            criminal activity.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5>Essential Daily Practices:</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Before Reading Any Text:</h6>
+                                    <ol>
+                                        <li>Check if you recognize the sender</li>
+                                        <li>Be suspicious of urgent language</li>
+                                        <li>Look for personalization vs. generic greetings</li>
+                                        <li>Notice if it's asking for information or action</li>
+                                    </ol>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Before Taking Any Action:</h6>
+                                    <ol>
+                                        <li>Verify the sender through official channels</li>
+                                        <li>Check if the request makes logical sense</li>
+                                        <li>Consider if you were expecting this message</li>
+                                        <li>When in doubt, delete and report</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <h6><i class="fas fa-lightbulb me-2"></i>Remember: You Control Your Mobile Security</h6>
+                                <p class="mb-0">Scammers rely on speed, fear, and trust to succeed. By taking time to
+                                    verify, staying informed about current threats, and using available security tools,
+                                    you can protect yourself and your family from SMS-based fraud.</p>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="https://reportfraud.ftc.gov" target="_blank" class="btn btn-danger me-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Report SMS Scam
+                                </a>
+                                <a href="sms:7726" class="btn btn-warning me-3">
+                                    <i class="fas fa-sms me-2"></i>
+                                    Forward Spam to 7726
+                                </a>
+                                <a href="https://areacode.codes" class="btn btn-primary">
+                                    <i class="fas fa-home me-2"></i>
+                                    Return to Security Center
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
-                    <p class="text-light">Your trusted source for area code information and safety verification. Helping users nationwide stay safe from phone scams since 2025.</p>
-                    <div class="mt-3">
-                        <small class="text-light opacity-75">
-                            <i class="fas fa-certificate me-1"></i>
-                            Data verified by FCC & FTC databases
-                        </small>
-                    </div>
-                </div>
-
-                <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
-                <div class="col-md-4">
-                    <h6>Sister Sites - Top Area Codes</h6>
-                    <div class="row">
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://213area.codes" class="text-light text-decoration-none">201 Area Code</a></li>
-                                <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area Code</a></li>
-                                <li><a href="https://917areacode.org" class="text-light text-decoration-none">917 Area Code</a></li>
-                                <li><a href="https://929areacode.net" class="text-light text-decoration-none">929 Area Code</a></li>
-                                <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://areacode.codes/415.html" class="text-light text-decoration-none">415 Area Code</a></li>
-                                <li><a href="https://areacode.codes/206.html" class="text-light text-decoration-none">206 Area Code</a></li>
-                                <li><a href="https://areacode.codes/619.html" class="text-light text-decoration-none">619 Area Code</a></li>
-                                <li><a href="https://areacode.codes/323.html" class="text-light text-decoration-none">323 Area Code</a></li>
-                                <li><a href="https://areacode.codes/310.html" class="text-light text-decoration-none">310 Area Code</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <ul class="list-unstyled small">
-                                <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424 Area Code</a></li>
-                                <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818 Area Code</a></li>
-                                <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747 Area Code</a></li>
-                                <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202 Area Code</a></li>
-                                <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312 Area Code</a></li>
-                            </ul>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5><i class="fas fa-shield-alt me-2"></i>AreaCode.Codes Network</h5>
+                        <p class="text-light">Your trusted source for area code information and safety verification.
+                            Helping users nationwide stay safe from phone scams since 2025.</p>
+                        <div class="mt-3">
+                            <small class="text-light opacity-75">
+                                <i class="fas fa-certificate me-1"></i>
+                                Data verified by FCC & FTC databases
+                            </small>
                         </div>
                     </div>
-                </div>
 
-                <!-- Safety Resources section -->
-                <div class="col-md-4">
-                    <h6>Safety Resources</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="allareacodelist.html" class="text-light text-decoration-none">
-                            <i class="fas fa-list me-1"></i>All Area Codes Directory
-                        </a></li>
-                        <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
-                        </a></li>
-                        <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
-                        </a></li>
-                        <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
-                        </a></li>
-                        <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
-                            <i class="fas fa-sms me-1"></i>Text Message Safety
-                        </a></li>
-                    </ul>
+                    <!-- Sister Sites section temporarily disabled to prevent 404 errors -->
+                    <div class="col-md-4">
+                        <h6>Sister Sites - Top Area Codes</h6>
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://213area.codes" class="text-light text-decoration-none">213 Area
+                                            Code</a></li>
+                                    <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area
+                                            Code</a></li>
+                                    <li><a href="https://917areacode.org" class="text-light text-decoration-none">917
+                                            Area Code</a></li>
+                                    <li><a href="https://929areacode.net" class="text-light text-decoration-none">929
+                                            Area Code</a></li>
+                                    <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area
+                                            Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://areacode.codes/415.html"
+                                            class="text-light text-decoration-none">415 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/206.html"
+                                            class="text-light text-decoration-none">206 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/619.html"
+                                            class="text-light text-decoration-none">619 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/323.html"
+                                            class="text-light text-decoration-none">323 Area Code</a></li>
+                                    <li><a href="https://areacode.codes/310.html"
+                                            class="text-light text-decoration-none">310 Area Code</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-unstyled small">
+                                    <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424
+                                            Area Code</a></li>
+                                    <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818
+                                            Area Code</a></li>
+                                    <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747
+                                            Area Code</a></li>
+                                    <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202
+                                            Area Code</a></li>
+                                    <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312
+                                            Area Code</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Safety Resources section -->
+                    <div class="col-md-4">
+                        <h6>Safety Resources</h6>
+                        <ul class="list-unstyled small">
+                            <li><a href="allareacodelist.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-list me-1"></i>All Area Codes Directory
+                                </a></li>
+                            <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
+                                </a></li>
+                            <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
+                                </a></li>
+                            <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
+                                </a></li>
+                            <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
+                                    <i class="fas fa-sms me-1"></i>Text Message Safety
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Performance optimization and page visibility fix -->
-    <script>
-    // Performance optimization: lazy load Bootstrap JS
-    window.addEventListener('load', function() {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-        script.async = true;
-        document.head.appendChild(script);
-    });
-    
-    // Show page when loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.style.opacity = '1';
-        document.body.style.transition = 'opacity 0.3s ease';
-    });
-    </script>
+        <!-- Performance optimization and page visibility fix -->
+        <script>
+            // Performance optimization: lazy load Bootstrap JS
+            window.addEventListener('load', function () {
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+                script.async = true;
+                document.head.appendChild(script);
+            });
 
-</body>
+            // Show page when loaded
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.style.opacity = '1';
+                document.body.style.transition = 'opacity 0.3s ease';
+            });
+        </script>
+
+    </body>
+
 </html>
