@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,32 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
+    <!-- Performance optimization: preconnect and DNS prefetch -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Initial loading style optimization -->
+    <style>
+        body { opacity: 0; }
+        :root {
+            --primary-color: #3b82f6;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-color: #1e293b;
+            --light-bg: #f1f5f9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+        }
+        .btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+        .text-primary { color: var(--primary-color) !important; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
+    </style>
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYRG1LR357"></script>
     <script>
@@ -29,9 +55,13 @@
       gtag('config', 'G-JYRG1LR357');
     </script>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS - async loading optimization -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+    
+    <!-- Font Awesome - async loading -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></noscript>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="areacodes.css">
@@ -675,32 +705,54 @@
                     <div class="row">
                         <div class="col-4">
                             <ul class="list-unstyled small">
-                                <li><a href="https://213area.codes" class="text-light text-decoration-none">330 Akron</a></li>
-                                <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Manhattan</a></li>
+                                <li><a href="https://213area.codes" class="text-light text-decoration-none">201 Area Code</a></li>
+                                <li><a href="https://646area.codes" class="text-light text-decoration-none">646 Area Code</a></li>
                                 <li><a href="https://917areacode.org" class="text-light text-decoration-none">917 Area Code</a></li>
                                 <li><a href="https://929areacode.net" class="text-light text-decoration-none">929 Area Code</a></li>
-                                <li><a href="https://347area.codes" class="text-light text-decoration-none">347 NYC Outer</a></li>
+                                <li><a href="https://347area.codes" class="text-light text-decoration-none">347 Area Code</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
                             <ul class="list-unstyled small">
                                 <li><a href="https://areacode.codes/415.html" class="text-light text-decoration-none">415 Area Code</a></li>
                                 <li><a href="https://areacode.codes/206.html" class="text-light text-decoration-none">206 Area Code</a></li>
-                                <li><a href="https://areacode.codes/404.html" class="text-light text-decoration-none">404 Area Code</a></li>
-                                <li><a href="https://areacode.codes/323.html" class="text-light text-decoration-none">323 Akron</a></li>
-                                <li><a href="https://areacode.codes/310.html" class="text-light text-decoration-none">310 LA West</a></li>
+                                <li><a href="https://areacode.codes/619.html" class="text-light text-decoration-none">619 Area Code</a></li>
+                                <li><a href="https://areacode.codes/323.html" class="text-light text-decoration-none">323 Area Code</a></li>
+                                <li><a href="https://areacode.codes/310.html" class="text-light text-decoration-none">310 Area Code</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
                             <ul class="list-unstyled small">
-                                <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424 LA West</a></li>
-                                <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818 LA Valley</a></li>
-                                <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747 LA Valley</a></li>
-                                <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202 W DC</a></li>
-                                <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312 Chicago</a></li>
+                                <li><a href="https://424.areacode.codes" class="text-light text-decoration-none">424 Area Code</a></li>
+                                <li><a href="https://818.areacode.codes" class="text-light text-decoration-none">818 Area Code</a></li>
+                                <li><a href="https://747.areacode.codes" class="text-light text-decoration-none">747 Area Code</a></li>
+                                <li><a href="https://202.areacode.codes" class="text-light text-decoration-none">202 Area Code</a></li>
+                                <li><a href="https://312.areacode.codes" class="text-light text-decoration-none">312 Area Code</a></li>
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <!-- Safety Resources section -->
+                <div class="col-md-4">
+                    <h6>Safety Resources</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="allareacodelist.html" class="text-light text-decoration-none">
+                            <i class="fas fa-list me-1"></i>All Area Codes Directory
+                        </a></li>
+                        <li><a href="reverse-phone-lookup-guide.html" class="text-light text-decoration-none">
+                            <i class="fas fa-search me-1"></i>Reverse Phone Lookup Guide
+                        </a></li>
+                        <li><a href="phone-scam-types-guide.html" class="text-light text-decoration-none">
+                            <i class="fas fa-exclamation-triangle me-1"></i>Common Phone Scams
+                        </a></li>
+                        <li><a href="suspicious-calls-guide.html" class="text-light text-decoration-none">
+                            <i class="fas fa-phone-slash me-1"></i>Handle Suspicious Calls
+                        </a></li>
+                        <li><a href="text-message-safety-guide.html" class="text-light text-decoration-none">
+                            <i class="fas fa-sms me-1"></i>Text Message Safety
+                        </a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -730,7 +782,42 @@
       }
     }
     updateHeroLocalTime();
+
     setInterval(updateHeroLocalTime, 60000);
+
+    </script>
+
+
+    <!-- Performance optimization and page visibility fix -->
+
+    <script>
+
+    // Performance optimization: lazy load Bootstrap JS
+
+    window.addEventListener('load', function() {
+
+        const script = document.createElement('script');
+
+        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+
+        script.async = true;
+
+        document.head.appendChild(script);
+
+    });
+
+    
+
+    // Show page when loaded - THIS FIXES THE BLANK PAGE
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        document.body.style.opacity = '1';
+
+        document.body.style.transition = 'opacity 0.3s ease';
+
+    });
+
     </script>
 
 </body>

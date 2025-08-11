@@ -1,0 +1,53 @@
+# PowerShell Scripts (临时修复脚本)
+*.ps1
+batch-fix-all.ps1
+comprehensive-fix.ps1
+fix-blank-pages.ps1
+Fix-Remaining-Timezones.ps1
+Fix-Western-Timezones.ps1
+optimize-all-pages.ps1
+quick-fix.ps1
+test-fix-3.ps1
+Timezone-Mapping.ps1
+timezone-stats.ps1
+Update-All-Timezones.ps1
+update-footer-batch.ps1
+Update-Footer.ps1
+Update-TollFree-Timezone.ps1
+verify-fix.ps1
+
+# 测试文件
+*test*.html
+timezone-test.html
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 编辑器临时文件
+.vscode/
+*.code-workspace
+*~
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 压缩文件
+*.zip
+*.rar
+*.7z
+
+# 系统文件
+.env
+.env.local
+.env.production
+.env.staging
+
+# 备份文件
+backup/
+backups/
+*.orig
