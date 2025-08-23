@@ -1355,7 +1355,7 @@
                 const sortedData = sortData([...filteredData]);
 
                 areaCodeGrid.innerHTML = sortedData.map(item => {
-                    const url = item.code === '404' ? '404areacode.html' : `${item.code}.html`;
+                    const url = item.code === '404' ? '404areacode.html' : `${item.code}-area-code.html`;
                     return `
                         <a href="${url}" class="area-code-item">
                             <div class="area-code-number">${item.code}</div>
@@ -1390,5 +1390,3 @@
     </body>
 
 </html>
-
-
